@@ -1,0 +1,859 @@
+@Comment best conferences
+@string{focs="Proceedings of IEEE Symposium on Foundations of Computer Science (FOCS)"}
+@string{stoc="Proceedings of ACM Symposium on Theory of Computing (STOC)"}
+@Comment good conferences
+@string{soda="Proceedings of ACM-SIAM Symposium on Discrete Algorithms (SODA)"}
+@string{sosp="Proceedings of ACM Symposium on Operating Systems Principles (SOSP)"}
+@string{osdi="Proceedings of USENIX Symposium on Opearting Systems Design and Implementation (OSDI)"}
+@string{sigcomm="Proceedings of ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication (SIGCOMM)"}
+@Comment less good conferences
+@string{nsdi="Proceedings of USENIX Conference on Networked Systems Design and Implementation (NSDI)"}
+@string{podc="Proceedings of ACM Symposium on Principles of Distributed Computing (PODC)"}
+@string{disc="Proceedings of International Symposium on Distributed Computing (DISC)"}
+@string{vldb="Proceedings of International Conference on Very Large Data Bases (VLDB)"}
+@string{sigmod="Proceedings of ACM International Conference on Management of Data (SIGMOD)"}
+@string{isca="Proceedings of International Symposium on Computer Architecture (ISCA)"}
+@string{asplos="Proceedings of ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"}
+@string{eurosys="Proceedings of ACM European Conference on Computer Systems (EuroSys)"}
+@string{atc="Proceedings of USENIX Conference on Annual Technical Conference (ATC)"}
+@string{cidr="Biennial Conference on Innovative Data Systems Research (CIDR)"}
+@string{fast="Proceedings of USENIX Conference on File and Storage Technologies (FAST)"}
+@Comment even less good conferences
+@string{sc="Proceedings of International Conference for High Performance Computing, Networking, Storage and Analysis (SC)"}
+@string{socc="Proceedings of ACM Symposium on Cloud Computing (SoCC)"}
+@string{infocom="Proceedings of IEEE International Conference on Computer Communications (InfoCom)"}
+@string{dsn="Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)"}
+@string{ecoop="Proceedings of European Conference on Object-Oriented Programming (ECOOP)"}
+
+@Comment good journals
+@string{tocs="ACM Transactions on Computer Systems (TOCS)"}
+@string{tods="ACM Transactions on Database Systems (TODS)"}
+@string{toplas="ACM Transactions on Programming Languages and Systems (TOPLAS)"}
+@string{csur="ACM Computring Surveys (CSUR)"}
+@string{osr="ACM SIGOPS Operating Systems Review (OSR)"}
+@string{ccr="(CCR)"}
+@Comment less good journals
+@string{vldbj="The International Journal on Very Large Data Bases (VLDBJ)"}
+@string{tkde="IEEE Transactions on Knowledge and Data Engineering (TKDE)"}
+@string{tc="IEEE Transactions on Computers (TC)"}
+
+@inproceedings{isis:sosp87,
+  author    = {Kenneth P. Birman and
+               Thomas A. Joseph},
+  title     = {Exploiting Virtual Synchrony in Distributed Systems},
+  booktitle = sosp,
+  year      = {1987}
+}
+
+@inproceedings{gfs:sosp03,
+  author = {Ghemawat, Sanjay and Gobioff, Howard and Leung, Shun-Tak},
+  title = {The Google file system},
+  booktitle = sosp,
+  year = {2003},
+}
+
+@inproceedings{dynamo:sosp07,
+ author = {DeCandia, Giuseppe and Hastorun, Deniz and Jampani, Madan and Kakulapati, Gunavardhan and Lakshman, Avinash and Pilchin, Alex and Sivasubramanian, Swaminathan and Vosshall, Peter and Vogels, Werner},
+ title = {Dynamo: Amazon's Highly Available Key-value Store},
+ booktitle = sosp,
+ year = {2007}
+} 
+
+@inproceedings{zyzzyva:sosp07,
+  title={Zyzzyva: speculative byzantine fault tolerance},
+  author={Kotla, Ramakrishna and Alvisi, Lorenzo and Dahlin, Mike and Clement, Allen and Wong, Edmund},
+  booktitle=sosp,
+  year={2007},
+}
+
+@inproceedings{sinfonia:sosp07,
+  title={{Sinfonia: a new paradigm for building scalable distributed systems}},
+  author={Aguilera, Marcos K and Merchant, Arif and Shah, Mehul and Veitch, Alistair and Karamanolis, Christos},
+  booktitle=sosp,
+  year={2007},
+}
+
+@inproceedings{azure:sosp11,
+  title={Windows Azure Storage: a highly available cloud storage service with strong consistency},
+  author={Calder, Brad and Wang, Ju and Ogus, Aaron and Nilakantan, Niranjan and Skjolsvold, Arild and McKelvie, Sam and Xu, Yikang and Srivastav, Shashwat and Wu, Jiesheng and Simitci, Huseyin and others},
+  booktitle=sosp,
+  year={2011},
+}
+
+@inproceedings{cops:sosp2011,
+  title={{Don't settle for eventual: scalable causal consistency for wide-area storage with COPS}},
+  author={Lloyd, Wyatt and Freedman, Michael J and Kaminsky, Michael and Andersen, David G},
+  booktitle=sosp,
+  year={2011},
+}
+
+@inproceedings{walter:sosp11,
+  title={{Transactional storage for geo-replicated systems}},
+  author={Sovran, Yair and Power, Russell and Aguilera, Marcos K and Li, Jinyang},
+  booktitle=sosp,
+  year={2011},
+}
+
+@inproceedings{silo:sosp13,
+ author = {Tu, Stephen and Zheng, Wenting and Kohler, Eddie and Liskov, Barbara and Madden, Samuel},
+ title = {Speedy Transactions in Multicore In-memory Databases},
+ booktitle = sosp,
+ year = {2013},
+} 
+
+@inproceedings{lynx:sosp13,
+  title={Transaction chains: achieving serializability with low latency in geo-distributed storage systems},
+  author={Zhang, Yang and Power, Russell and Zhou, Siyuan and Sovran, Yair and Aguilera, Marcos K and Li, Jinyang},
+  booktitle=sosp,
+  year={2013},
+}
+
+@inproceedings{epaxos:sosp13,
+  title={There is more consensus in egalitarian parliaments},
+  author={Moraru, Iulian and Andersen, David G and Kaminsky, Michael},
+  booktitle=sosp,
+  year={2013},
+}
+
+@inproceedings{callas:sosp15,
+  title={{High-performance ACID via modular concurrency control}},
+  author={Chao Xie and Chunzhi Su	and Cody Littley and Lorenzo Alvisi and Manos Kapritsos	and Yang Wang},
+  booktitle=sosp,
+  year = {2015}
+}
+
+@inproceedings{tapir:sosp15,
+	title="Building consistent transactions with inconsistent replication",
+	author="Irene Zhang and Naveen Kr. Sharma and Adriana Szekeres and Arvind Krishnamurthy	and Dan R. K. Ports",
+	booktitle=sosp,
+  year=2015
+}
+
+@inproceedings{chainreplication:osdi04,
+ author = {van Renesse, Robbert and Schneider, Fred B.},
+ title = {{Chain replication for supporting high throughput and availability}},
+ booktitle = osdi,
+ year = {2004},
+} 
+
+@inproceedings{bigtable:osdi06,
+ author = "Fay Chang and Jeffrey Dean and Sanjay Ghemawat and Wilson C. Hsieh and Deborah A. Wallach and Mike Burrows and Tushar Chandra and Andrew Fikes and Robert E. Gruber",
+ title = "Bigtable: A Distributed Storage System for Structured Data",
+ booktitle = osdi,
+ year = 2006,
+}
+
+@inproceedings{ceph:osdi06,
+  title={Ceph: A scalable, high-performance distributed file system},
+  author={Weil, Sage A and Brandt, Scott A and Miller, Ethan L and Long, Darrell DE and Maltzahn, Carlos},
+  booktitle=osdi,
+  year={2006},
+}
+
+@inproceedings{chubby:osdi06,
+  author = {Burrows, Michael},
+  title = {The Chubby Lock Service for Loosely-Coupled Distributed Systems},
+  booktitle = osdi,
+  year = {2006},
+}
+
+@inproceedings{mencius:osdi08,
+  title={Mencius: building efficient replicated state machines for WANs},
+  author={Mao, Yanhua and Junqueira, Flavio Paiva and Marzullo, Keith},
+  booktitle=osdi,
+  year={2008}
+}
+
+@inproceedings{percolator:osdi12,
+  title={{Large-scale incremental processing using distributed transactions and notifications}},
+  author={Peng, Daniel and Dabek, Frank},
+  booktitle=osdi,
+  year={2010},
+}
+
+@inproceedings{ford2010availability,
+  title={Availability in Globally Distributed Storage Systems.},
+  author={Ford, Daniel and Labelle, Fran{\c{c}}ois and Popovici, Florentina I and Stokely, Murray and Truong, Van-Anh and Barroso, Luiz and Grimes, Carrie and Quinlan, Sean},
+  booktitle=osdi,
+  year={2010}
+}
+
+@inproceedings{redblue:osdi12,
+  title={{Making geo-replicated systems fast as possible, consistent when necessary}},
+  author={Li, Cheng and Porto, Daniel and Clement, Allen and Gehrke, Johannes and Pregui{\c{c}}a, Nuno and Rodrigues, Rodrigo},
+  booktitle=osdi,
+  year={2012}
+}
+
+@inproceedings{spanner:osdi12,
+  title={{Spanner: Google’s globally distributed database}},
+  author={Corbett, James C and Dean, Jeffrey and Epstein, Michael and Fikes, Andrew and Frost, Christopher and Furman, JJ and Ghemawat, Sanjay and Gubarev, Andrey and Heiser, Christopher and Hochschild, Peter and others},
+  booktitle=osdi,
+  year={2012},
+}
+
+@inproceedings{rococo:osdi14,
+ author = {Mu, Shuai and Cui, Yang and Zhang, Yang and Lloyd, Wyatt and Li, Jinyang},
+ title = {Extracting more concurrency from distributed transactions},
+ booktitle = osdi,
+ year = {2014},
+} 
+
+@inproceedings{salt:osdi14,
+  title={{Salt: Combining ACID and BASE in a distributed batabase}},
+  author={Xie, Chao and Su, Chunzhi and Kapritsos, Manos and Wang, Yang and Yaghmazadeh, Navid and Alvisi, Lorenzo and Mahajan, Prince},
+  booktitle=osdi,
+  year = {2014}
+}
+
+@inproceedings{f4:osdi14,
+  title={f4: Facebook's warm BLOB storage system},
+  author={Muralidhar, Subramanian and Lloyd, Wyatt and Roy, Sabyasachi and Hill, Cory and Lin, Ernest and Liu, Weiwen and Pan, Satadru and Shankar, Shiva and Sivakumar, Viswanath and Tang, Linpeng and others},
+  booktitle=osdi,
+  year={2014}
+}
+
+@inproceedings{DatabaseHyperdex,
+ author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
+ title = {HyperDex: A Distributed, Searchable Key-value Store},
+ booktitle = sigcomm,
+ year = {2012},
+} 
+
+@inproceedings{glacier:nsdi05,
+  title={Glacier: Highly durable, decentralized storage despite massive correlated failures},
+  author={Haeberlen, Andreas and Mislove, Alan and Druschel, Peter},
+  booktitle=nsdi,
+  year={2005},
+}
+
+@inproceedings{gaios:nsdi11,
+  title={{Paxos replicated state machines as the basis of a high-performance data store}},
+  author={Bolosky, William J and Bradshaw, Dexter and Haagens, Randolph B and Kusters, Norbert P and Li, Peng},
+  booktitle=nsdi,
+  year={2011},
+}
+
+@inproceedings{eiger:nsdi13,
+  title={{Stronger semantics for low-latency geo-replicated storage}},
+  author={Lloyd, Wyatt and Freedman, Michael J and Kaminsky, Michael and Andersen, David G},
+  booktitle=nsdi,
+  year={2013}
+}
+
+@inproceedings{specpaxos:nsdi15,
+  title={Designing distributed systems using approximate synchrony in data center networks},
+  author={Ports, Dan RK and Li, Jialin and Liu, Vincent and Sharma, Naveen Kr and Krishnamurthy, Arvind},
+  booktitle=nsdi,
+  year={2015}
+}
+
+@inproceedings{viewstampedreplication:podc88,
+  title={Viewstamped replication: A new primary copy method to support highly-available distributed systems},
+  author={Oki, Brian M and Liskov, Barbara H},
+  booktitle=podc,
+  year={1988},
+}
+
+@inproceedings{multicoordinatedpaxos:podc07,
+  title={{Multicoordinated Paxos}},
+  author={Camargos, L{\'a}saro Jonas and Schmidt, Rodrigo Malta and Pedone, Fernando},
+  booktitle=podc,
+  year={2007},
+}
+
+@inproceedings{paxosmadelive:podc07,
+  author = {Chandra, Tushar Deepak and Griesemer, Robert and Redstone, Joshua},
+  title = {Paxos made live: an engineering perspective},
+  booktitle = podc,
+  year = {2007},
+}
+
+
+
+@inproceedings{lampson1993new,
+  title={A new presumed commit optimization for two phase commit},
+  author={Lampson, Butler and Lomet, David},
+  booktitle=vldb,
+  year={1993},
+}
+
+@inproceedings{hstore:vldb07,
+  title={{The end of an architectural era:(it's time for a complete rewrite)}},
+  author={Stonebraker, Michael and Madden, Samuel and Abadi, Daniel J and Harizopoulos, Stavros and Hachem, Nabil and Helland, Pat},
+  booktitle=vldb,
+  year={2007},
+}
+
+@inproceedings{hstore:vldb08,
+  title={{H-store: a high-performance, distributed main memory transaction processing system}},
+  author={Kallman, Robert and Kimura, Hideaki and Natkins, Jonathan and Pavlo, Andrew and Rasin, Alexander and Zdonik, Stanley and Jones, Evan PC and Madden, Samuel and Stonebraker, Michael and Zhang, Yang and others},
+  booktitle=vldb,
+  year={2008},
+}
+
+@inproceedings{pnuts:vldb08,
+  title={{PNUTS: Yahoo!'s hosted data serving platform}},
+  author={Cooper, Brian F and Ramakrishnan, Raghu and Srivastava, Utkarsh and Silberstein, Adam and Bohannon, Philip and Jacobsen, Hans-Arno and Puz, Nick and Weaver, Daniel and Yerneni, Ramana},
+  journal=vldb,
+  year={2008},
+}
+
+@inproceedings{thomson2010case,
+  title={{The case for determinism in database systems}},
+  author={Thomson, Alexander and Abadi, Daniel J},
+  booktitle=vldb,
+  year={2010},
+}
+
+@inproceedings{replicatedcommit:vldb13,
+  title={{Low-latency multi-datacenter databases using replicated commit}},
+  author={Mahmoud, Hatem and Nawab, Faisal and Pucher, Alexander and Agrawal, Divyakant and El Abbadi, Amr},
+  booktitle=vldb,
+  year={2013},
+}
+
+@inproceedings{xoring:vldb2013,
+  title={Xoring elephants: Novel erasure codes for big data},
+  author={Sathiamoorthy, Maheswaran and Asteris, Megasthenis and Papailiopoulos, Dimitris and Dimakis, Alexandros G and Vadali, Ramkumar and Chen, Scott and Borthakur, Dhruba},
+  booktitle=vldb,
+  year={2013},
+}
+
+@inproceedings{sagas:sigmod87,
+ author = {Garcia-Molina, Hector and Salem, Kenneth},
+ title = {Sagas},
+ booktitle = sigmod,
+ year = {1987},
+} 
+
+@inproceedings{chopping:sigmod12,
+  title={{Simple rational guidance for chopping up transactions}},
+  author={Shasha, Dennis and Simon, Eric and Valduriez, Patrick},
+  booktitle=sigmod,
+  year={1992},
+}
+@inproceedings{isolationlevel:sigmod95,
+ author = {Berenson, Hal and Bernstein, Phil and Gray, Jim and Melton, Jim and O'Neil, Elizabeth and O'Neil, Patrick},
+ title = {A Critique of ANSI SQL Isolation Levels},
+ booktitle = sigmod,
+ year = {1995},
+} 
+
+@inproceedings{clocc:sigmod95,
+ author = {Adya, Atul and Gruber, Robert and Liskov, Barbara and Maheshwari, Umesh},
+ title = {Efficient Optimistic Concurrency Control Using Loosely Synchronized Clocks},
+ booktitle = sigmod,
+ year = {1995},
+}
+
+@inproceedings{shore:sigmod08,
+  title={{OLTP through the looking glass, and what we found there}},
+  author={Harizopoulos, Stavros and Abadi, Daniel J and Madden, Samuel and Stonebraker, Michael},
+  booktitle=sigmod,
+  year={2008},
+}
+
+@inproceedings{hstore:sigmod10,
+  title={{Low overhead concurrency control for partitioned main memory databases}},
+  author={Jones, Evan PC and Abadi, Daniel J and Madden, Samuel},
+  booktitle=sigmod,
+  year={2010},
+}
+
+@inproceedings{calvin:sigmod12,
+  title={{Calvin: fast distributed transactions for partitioned database systems}},
+  author={Thomson, Alexander and Diamond, Thaddeus and Weng, Shu-Chun and Ren, Kun and Shao, Philip and Abadi, Daniel J},
+  booktitle=sigmod,
+  year={2012},
+}
+
+@inproceedings{depsky:eurosys11,
+ author = {Bessani, Alysson and Correia, Miguel and Quaresma, Bruno and Andr{\'e}, Fernando and Sousa, Paulo},
+ title = {DepSky: dependable and secure storage in a cloud-of-clouds},
+ booktitle = eurosys,
+ year = {2011},
+}
+
+@inproceedings{mdcc:eurosys13,
+  title={{MDCC: Multi-data center consistency}},
+  author={Kraska, Tim and Pang, Gene and Franklin, Michael J and Madden, Samuel and Fekete, Alan},
+  booktitle=eurosys,
+  year={2013},
+}
+
+@inproceedings{rizzo98dummynet,
+ author = {Rizzo, Luigi},
+ title = {Dummynet and forward error correction},
+ booktitle = atc,
+ year = {1998},
+} 
+
+@inproceedings{zookeeper:atc10,
+  title={{ZooKeeper: wait-free coordination for internet-scale systems}},
+  author={Hunt, Patrick and Konar, Mahadev and Junqueira, Flavio P and Reed, Benjamin},
+  booktitle=atc,
+  year={2010}
+}
+
+@inproceedings{gnothi:atc12,
+  title={Gnothi: Separating data and metadata for efficient and available storage replication},
+  author={Wang, Yang and Alvisi, Lorenzo and Dahlin, Mike},
+  booktitle=atc,
+  year={2012}
+}
+
+@inproceedings{azure:atc12,
+  title={Erasure coding in windows azure storage},
+  author={Huang, Cheng and Simitci, Huseyin and Xu, Yikang and Ogus, Aaron and Calder, Brad and Gopalan, Parikshit and Li, Jin and Yekhanin, Sergey and others},
+  booktitle=atc,
+  volume={12},
+  year={2012}
+}
+
+@inproceedings{granola:atc12,
+  title={{Granola: low-overhead distributed transaction coordination}},
+  author={Cowling, James and Liskov, Barbara},
+  booktitle=atc,
+  year={2012},
+}
+
+@inproceedings{tao:atc13,
+ author = {Bronson, Nathan and Amsden, Zachary and Cabrera, George and Chakka, Prasad and Dimov, Peter and Ding, Hui and Ferris, Jack and Giardullo, Anthony and Kulkarni, Sachin and Li, Harry and Marchukov, Mark and Petrov, Dmitri and Puzar, Lovro and Song, Yee Jiun and Venkataramani, Venkat},
+ title = {{TAO: Facebook's distributed data store for the social graph}},
+ booktitle = atc,
+ year = {2013},
+}
+
+@inproceedings{megastore:cidr11,
+  title={Megastore: Providing Scalable, Highly Available Storage for Interactive Services.},
+  author={Baker, Jason and Bond, Chris and Corbett, James and Furman, JJ and Khorlin, Andrey and Larson, James and L{\'e}on, Jean-Michel and Li, Yawei and Lloyd, Alexander and Yushprakh, Vadim},
+  booktitle=cidr,
+  year={2011}
+}
+
+
+@inproceedings{clocc:ecoop99,
+  title={Providing persistent objects in distributed systems},
+  author={Liskov, Barbara and Castro, Miguel and Shrira, Liuba and Adya, Atul},
+  booktitle=ecoop,
+  year={1999},
+}
+
+
+@article{deadlock:tocs83,
+  title={{Distributed deadlock detection}},
+  author={Chandy, K Mani and Misra, Jayadev and Haas, Laura M},
+  journal=tocs,
+  volume={1},
+  number={2},
+  pages={144--156},
+  year={1983},
+  publisher={ACM}
+}
+
+@article{attiya94proofs,
+ author = {Hagit Attiya and Jennifer L. Welch},
+ title = {Sequential consistency versus linearizability},
+ journal = tocs,
+ volume = {12},
+ number = {2},
+ year = {1994},
+}
+
+@article{paxos:tocs98,
+  title={The part-time parliament},
+  author={Lamport, Leslie},
+  journal=tocs,
+  volume={16},
+  number={2},
+  pages={133--169},
+  year={1998},
+}
+
+@article{linearizability:toplas90,
+  title={{Linearizability: A correctness condition for concurrent objects}},
+  author={Herlihy, Maurice P and Wing, Jeannette M},
+  journal=toplas,
+  volume={12},
+  number={3},
+  pages={463--492},
+  year={1990},
+}
+
+@article{TransactionGamma,
+  title={{The Gamma database machine project}},
+  author={DeWitt, David J and Ghandeharizadeh, Shahram and Schneider, Donovan A. and Bricker, Allan and Hsiao, Hui-I and Rasmussen, Rick},
+  journal=tkde,
+  volume={2},
+  number={1},
+  pages={44--62},
+  year={1990},
+  publisher={IEEE}
+}
+
+@article{TransactionBubba,
+  title={{Prototyping Bubba, a highly parallel database system}},
+  author={Boral, Haran and Alexander, William and Clay, Larry and Copeland, George and Danforth, Scott and Franklin, Michael and Hart, Brian and Smith, Marc and Valduriez, Patrick},
+  journal=tkde,
+  volume={2},
+  number={1},
+  pages={4--24},
+  year={1990},
+  publisher={IEEE}
+}
+
+@article{TransactionR,
+  title={{Transaction management in the R* distributed database management system}},
+  author={Mohan, C and Lindsay, Bruce and Obermarck, Ron},
+  journal=tods,
+  volume={11},
+  number={4},
+  pages={378--396},
+  year={1986},
+}
+
+@article{StepDecomposed,
+  title={{Concurrency control for step-decomposed transactions}},
+  author={Bernstein, Arthur J and Gerstl, David S and Lewis, Philip M},
+  journal={Information Systems},
+  volume={24},
+  number={8},
+  pages={673--698},
+  year={1999},
+  publisher={Elsevier}
+}
+
+@article{MultidatabaseOverview,
+  title={{Overview of multidatabase transaction management}},
+  author={Breitbart, Yuri and Garcia-Molina, Hector and Silberschatz, Avi},
+  journal=vldbj,
+  volume={1},
+  number={2},
+  pages={181--239},
+  year={1992},
+  publisher={Springer}
+}
+
+@article{TransactionSemanticKnowledge,
+  title={{Using semantic knowledge for transaction processing in a distributed database}},
+  author={Garcia-Molina, Hector},
+  journal=tods,
+  volume={8},
+  number={2},
+  pages={186--213},
+  year={1983},
+}
+
+
+@article{lamport01paxos,
+  title={{Paxos made simple}},
+  author={Lamport, Leslie},
+  journal={ACM Sigact News},
+  volume={32},
+  number={4},
+  pages={18--25},
+  year={2001}
+}
+
+
+@article{agrawal87concurrency,
+  title={{Concurrency control performance modeling: alternatives and implications}},
+  author={Agrawal, Rakesh and Carey, Michael J and Livny, Miron},
+  journal=tods,
+  volume={12},
+  number={4},
+  pages={609--654},
+  year={1987},
+}
+
+
+@article{chopping:tods95,
+  title={{Transaction chopping: Algorithms and performance studies}},
+  author={Shasha, Dennis and Llirbat, Francois and Simon, Eric and Valduriez, Patrick},
+  journal=tods,
+  volume={20},
+  number={3},
+  pages={325--363},
+  year={1995},
+}
+
+@inproceedings{TransactionSqlC++,
+  title={{High volume transaction processing without concurrency control, two phase commit, sql or c++}},
+  author={Whitney, Arthur and Shasha, Dennis and Apter, Stevan},
+  booktitle={{Seventh International Workshop on High Performance Transaction Systems, Asilomar}},
+  year={1997}
+}
+
+@article{MassiveMemoryMachine,
+  title={{A massive memory machine}},
+  author={Garcia-Molina, Hector and Lipton, Richard J. and Valdes, Jacobo},
+  journal=tc,
+  volume={100},
+  number={5},
+  pages={391--399},
+  year={1984},
+  publisher={IEEE}
+}
+
+@article{MainMemoryDatabase,
+  title={{Main memory database systems: An overview}},
+  author={Garcia-Molina, Hector and Salem, Kenneth},
+  journal=tkde,
+  volume={4},
+  number={6},
+  pages={509--516},
+  year={1992},
+  publisher={IEEE}
+}
+
+@inproceedings{MainMemoryTransaction,
+  title={{Multiprocessor main memory transaction processing}},
+  author={Li, Kai and Naughton, Jeffrey F},
+  booktitle={Proceedings of the First International Symposium on Databases in Parallel and Distributed Systems},
+  year={1988},
+}
+
+@article{DatabaseCassandra,
+  title={{Cassandra: a decentralized structured storage system}},
+  author={Lakshman, Avinash and Malik, Prashant},
+  journal=osr,
+  volume={44},
+  number={2},
+  pages={35--40},
+  year={2010},
+  publisher={ACM}
+}
+
+@article{ConcurrencyControl,
+  title={{Concurrency control in distributed database systems}},
+  author={Bernstein, Philip A and Goodman, Nathan},
+  journal=csur,
+  volume={13},
+  number={2},
+  pages={185--221},
+  year={1981},
+  publisher={ACM}
+}
+
+
+@book{TransactionalInformationSystem,
+  title={{Transactional information systems: theory, algorithms, and the practice of concurrency control and recovery}},
+  author={Weikum, Gerhard and Vossen, Gottfried},
+  year={2001},
+  publisher={Elsevier}
+}
+
+
+@phdthesis{InformationStorageDecentralized,
+ author = {Gifford, David Kenneth},
+ title = {Information Storage in a Decentralized Computer System},
+ year = {1981},
+ note = {AAI8124072},
+ publisher = {Stanford University},
+ address = {Stanford, CA, USA},
+} 
+
+
+@article{occ:tods81,
+  title={{On optimistic methods for concurrency control}},
+  author={Kung, Hsiang-Tsung and Robinson, John T},
+  journal=tods,
+  volume={6},
+  number={2},
+  pages={213--226},
+  year={1981},
+}
+
+
+@article{DepthFirstSearch,
+  title={{Depth-first search and linear graph algorithms}},
+  author={Tarjan, Robert},
+  journal={SIAM journal on computing},
+  volume={1},
+  number={2},
+  pages={146--160},
+  year={1972},
+  publisher={SIAM}
+}
+
+@article{SystemConcurrencyControl,
+  title={{System level concurrency control for distributed database systems}},
+  author={Rosenkrantz, Daniel J and Stearns, Richard E and Lewis II, Philip M},
+  journal=tods,
+  volume={3},
+  number={2},
+  pages={178--198},
+  year={1978},
+}
+
+@article{gray06consensus,
+  title={{Consensus on transaction commit}},
+  author={Gray, Jim and Lamport, Leslie},
+  journal=tods,
+  volume={31},
+  number={1},
+  pages={133--160},
+  year={2006},
+}
+
+@article{lamport78time,
+ author = {Leslie Lamport},
+ title = {Time, clocks, and the ordering of events in a distributed system},
+ journal = CACM,
+ year = {1978},
+}
+
+@article{statemachine,
+ author = {Fred B. Schneider},
+ title = {Implementing fault-tolerant services using the state machine approach: a tutorial},
+ journal = csur,
+ volume = {22},
+ number = {4},
+ month = Dec,
+ year = {1990}
+ }
+
+@article{Papadimitriou79serializability,
+ author = {Christos H. Papadimitriou},
+ title = {The serializability of concurrent database updates},
+ journal = {Journal of the ACM},
+ volume = {26},
+ number = {4},
+ year = 1979,
+}
+
+@techreport{unland1994optimistic,
+  title={{Optimistic concurrency control revisited}},
+  author={Unland, Rainer},
+  year={1994},
+  institution={Arbeitsberichte des Instituts f{\"u}r Wirtschaftsinformatik, Westf{\"a}lische Wilhelms-Universit{\"a}t M{\"u}nster}
+}
+
+@techreport{lipton88pram,
+ author = {Richard J. Lipton and Jonathan S. Sandberg},
+ title = {{PRAM}: A Scalable Shared Memory},
+ institution = {Princeton Univ., Dept. Comp. Sci.},
+ number = {TR-180-88},
+ year = 1988,
+}
+
+@techreport{generalizedpaxos:tr05,
+  title={{Generalized consensus and Paxos}},
+  author={Lamport, Leslie},
+  year={2005},
+  number={MSR-TR-2005-33},
+  institution={Microsoft Research}
+}
+
+@techreport{fastpaxos:tr05,
+	author       = {Leslie Lamport},
+	institution  = {Microsoft Research},
+  number = {MSR-TR-2005-112},
+	year = {2005},
+}
+
+@techreport{viewstampedreplication:tr12,
+  title={Viewstamped replication revisited},
+  author={Liskov, Barbara and Cowling, James},
+  year={2012},
+  number={MIT-CSAIL-TR-2012-021},
+  institution={MIT},
+}
+
+@techreport{warp:tr14,
+  title={{Warp: Lightweight Multi-Key Transactions for Key-Value Stores}},
+  author={Escriva, Robert and Wong, Bernard and Sirer, Emin G{\"u}n},
+  year={2014},
+}
+
+@techreport{rococo:tr14,
+  title={{Extracting More Concurrency from Distribted Transactions}},
+  author={Mu, Shuai and Cui, Yang and Zhang, Yang and Lloyd, Wyatt and Li, Jinyang},
+  institution={New York Univ., Courant Institute of Mathematical Sciences},
+  number={TR2014-970},
+  year={2014},
+}
+
+@techreport{tapir:tr14,
+  title={Building Consistent Transactions with Inconsistent Replication},
+  author={Zhang, Irene and Sharma, Naveen Kr and Szekeres, Adriana and Krishnamurthy, Arvind and Ports, Dan RK},
+  year=2014,
+  institution={Technical Report UW-CSE-2014-12-01, University of Washington}
+}
+
+@techreport{tapir:tr15,
+  title={Building Consistent Transactions with Inconsistent Replication (Extended Version)},
+  author={Zhang, Irene and Sharma, Naveen Kr and Szekeres, Adriana and Krishnamurthy, Arvind and Ports, Dan RK},
+  year=2015,
+  institution={Technical Report UW-CSE-2014-12-01 v2, University of Washington}
+}
+@techreport{janus:tr16,
+  title={Consolidating Concurrency Control and Consensus for Commits under Conflicts},
+  author={Mu, Shuai and Nelson, Lamon and and Lloyd, Wyatt and Li, Jinyang},
+  institution={New York Univ., Courant Institute of Mathematical Sciences},
+  number={TR2016-983},
+  year={2016},
+}
+
+@book{bernstein87concurrency,
+  title={{Concurrency control and recovery in database systems}},
+  author={Bernstein, Philip A and Hadzilacos, Vassos and Goodman, Nathan},
+  volume={370},
+  year={1987},
+  publisher={Addison-wesley New York}
+}
+
+@book{gray92transaction,
+ author = {Gray, Jim and Reuter, Andreas},
+ title = {Transaction Processing: Concepts and Techniques},
+ year = {1992},
+ isbn = {1558601902},
+ edition = {1st},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+} 
+
+@book{gerhard01transactional,
+  title="Transactional Information Systems: Theory, Algorithms, and the Practice of Concurrency Control and Recovery",
+  author="Gerhard Weikum and Gottfried Vossen",
+  publisher = {Morgan Kaufmann},
+  year=2001,
+}
+
+@misc{rubis,
+title={{RUBiS}},
+howpublished={http://rubis.ow2.org/}
+}
+
+@misc{voltdb,
+title={{VoltDB}},
+howpublished={http://www.voltdb.com/}
+}
+
+@misc{retwis,
+title={{Retwis}},
+howpublished={http://retwis.antirez.com/}
+}
+
+@misc{yangrpc,
+title={{Simple RPC in C++}},
+howpublished={https://github.com/santazhang/simple-rpc}
+}
+@misc{kodiaktestbed,
+title={{Kodiak testbeds}},
+howpublished={http://portal.nmc-probe.org/}
+}
+
+@misc{tpcc,
+title={{TPC-C Benchmark}},
+howpublished={http://www.tpc.org/tpcc/}
+}
+
+@misc{awsdynamo,
+  author={Amazon},
+  title={{Cross-Region Replication Using DynamoDB Streams}},
+  howpublished={\url{http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.CrossRegionRepl.html}},
+  year={2016}
+}
+

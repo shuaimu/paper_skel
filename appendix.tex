@@ -1,0 +1,273 @@
+
+\clearpage
+%\onecolumn
+\section*{Appendix: Algorithms (New)}
+
+\input{pc_all}
+
+% \realnewpage
+
+% \section*{Appendix: Algorithms (Old)}
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %safe log ($T$, $p$) on first execute \;
+%   {\bf Dispatch Phase:} \;
+%   generate globally unique $tid$ for $\gamma$ \;
+%   \For{each $i$ in $1...N$} {
+%     send \emph{Dispatch}($tid$, $\alpha_i$) to $S_i$, where $S_i$ is the nearest 
+%     (or distinguished, depending on contention rate) server in the partition 
+%     that $\alpha_i$ belongs to. 
+%   }
+%   wait until receive all $DispatchOK's$ \;
+%   {\bf PreAccept Phase:}\;
+%   $G_\gamma$ {\LAR} Union($G_1, G_2, ..., G_N$) \;
+%   \For{each $i$ in $1...N$} { 
+%    send \emph{PreAccept}($tid$, $\gamma$, $G_\gamma$) to all servers involved.
+%   }
+%   \For{each $i$ in $1...N$} {
+%     expect \emph{PreAcceptOK's} from $\mathcal{F}_i$ of servers, where 
+%     $\mathcal{F}_i$ is a fast quorum of $\alpha_i$; if not achievable,  
+%     wait until receive at least $\mathcal{M}_i$ of \emph{PreAcceptOK} 
+%     responses, where $\mathcal{M}_i$ is a slow quorum (usually a majority 
+%      in the partition) of $\alpha_i$ \;
+%   }
+%   \If{for each $\mathcal{F}_i$ where $i$ in $[1...N]$, received 
+%     \emph{PreAcceptOK's} from all servers in $\mathcal{F}_i$, with identical 
+%     dependency graph $G_i$.} {
+%     $G_\gamma$ = Union($G_1, G_2, ..., G_N$) \;
+%     goto commit phase \;
+%   } \Else { // for some $\alpha_i$, not met a fast quorum; or have a fast quorum 
+%     with diverse dependency graphs \;
+%     \For {each $i$ in $1...N$} {
+%       $G_i$ \LAR Union all graphs in at least $\mathcal{M}$ of \emph{PreAcceptOK's} 
+%     }
+%     $G_\gamma$ = Union($G_1, G_2, ..., G_N$) \;
+%     goto accept phase \;
+%   }
+%   {\bf Accept Phase:} \;
+%   $G_\gamma$ = Union($G_1, G_2, ..., G_N$) \;
+%   \For{each $i$ in $1...N$} {
+%     send \emph{Accept}($tid$, \texttt{MAGIC\_BALLOT}, $\gamma$, 
+%     $G_\gamma$) to at least $\mathcal{M}_i$ \;
+%   }
+%   wait unitl receive at least $\mathcal{S_i}$ of \emph{AcceptOK}'s for each 
+%   partition $i$ \;
+
+%   {\bf Commit Phase:} \;
+%   $G_\gamma[tid].status$ {\LAR} Max($G_\gamma[tid].status$, COMMITTING) \;
+%   send \emph{Commit}($tid, \gamma, G_\gamma$) to all involved servers. \;
+%   return to clients after receiving enough execution results, or retry if
+%   aborts.
+%   \caption{Coordinator $C$::\sc{DoTxn}($\gamma$),
+%     $\gamma$ = $[\alpha_1, \alpha_2, ..., \alpha_N]$ }
+% \end{algorithm}
+
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %safe log ($T$, $p$) on first execute \;
+%   $G_S[tid].status$ {\LAR} Max($G_s[tid].status$, STARTED) \;
+%   \If {$\alpha.type == immediate$} {
+%     Execute($\alpha$), during which read operations read from most 
+%     recent buffers (excluding the aborted transactions), write operations write 
+%     to a buffer in case of aborts.
+%   }
+%   % append $\alpha$ to $G_S[tid].cmd$ \; 
+%   search for $Interf_{S, \alpha}$ \;
+%   \For {each $tid'$ in $Interf_{S, \alpha}$} {
+%     \If {$\alpha.type == immediate$} {
+%       add $tid'$\RARI$tid$ into $G_S$ \;
+%     } \Else {
+%       add $tid'$\RARD$tid$ into $G_S$ \;
+%     }
+%   }
+%   $G$ \RAR NearestG($G_S$, $tid$) \;
+%   reply \emph{DispatchOK}($tid$, $\alpha_i$, $G$) \;
+%   \caption{Server $S$::\sc{Dispatch}($tid, \alpha$)}
+% \end{algorithm}
+
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %safe log ($T$, $p$) on first execute \;
+%   $G_S$ {\LAR} Union($G_S$, $G$) \;
+%   $G_S[tid].status$ {\LAR} Max($G_S[tid].status$, \texttt{ACCEPTED.0}) \;
+%   $G_S[tid].cmd$ {\LAR} $\gamma$ \;
+    
+%   search for $Interf_{S, \gamma}$ \;
+%   \For {each $tid'$ in $Interf_{S, \gamma}$} {
+%     add $tid'$\RAR$tid$ into $G_S$
+%   }
+%   $G$ \RAR NearestG($G_S$, $tid$) \;
+%   reply \emph{PreAcceptOK}($tid$, $G$) \;
+%   \caption{Server $S$::\sc{PreAccept}($tid, \gamma, G$)}
+% \end{algorithm}
+
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %safe log ($T$, $p$) on first execute \;
+%   $G_S$ {\LAR} Union($G_S$, $G$) // override $tid$'s parents \;
+%   $G_S[tid].status$ {\LAR} Max($G_s[tid].status$, \texttt{ACCEPTED}.$ballot$) \;
+%   $G_S[tid].cmd$ {\LAR} $\gamma$ \;
+%   reply \emph{AcceptOK}($tid$, $\gamma$) \;
+%   \caption{Server $S$::\sc{Accept}($tid, ballot, \gamma, G$)}
+% \end{algorithm}
+
+% \vspace{1cm}
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %unsafe log ($T, G$)
+% %  on first execute \;k
+%   $G_S$ \RAR Union($G_S$, $G$) \;
+%   $G_S[tid].cmd = \gamma$ \;
+%   \Repeat {for all $tid'$\TRAR$tid$ in $G_S$ : $G_S[tid'].status \ge$ COMMITTING} { \label{line:wait_commit_begin}
+%     \For{each $tid'$\TRAR$tid$ in $G_
+%       S$ {\bf and} 
+%       $G_S$[$tid'$].$status$ <= STARTED } {
+%       \If{$G_S[tid'].server\_set$ does not contain $S$} {
+%         send an \emph{Inquire}($tid$) request to a nearest server
+%         in $G_S[tid'].server\_set$ \;
+%       }
+%       wait until $G_S[tid'].status \ge$ COMMITTING \;
+%     }
+%   } \label{line:wait_commit_end}
+
+%   $scc${\LAR}StronglyConnectedComponent($G_S$, $tid$) \; 
+% %{\color{red} Our paper says $T' \notin ${\TSCC} {\bf and} $T'$\TRAR$\TSCC$ } 
+% % You are right, should be TRAR
+%   \For{each $tid' \notin scc$ {\bf and} $tid'$\TRAR$tid$ } {
+%     wait until $G_s[tid'].status$ becomes DECIDED or ABORTED \;
+%     \If{$G_S[tid'].server\_set$ contains $S$ {\bf and} $G_S[tid'].status$ is DECIDED} {
+%       wait until $executed_S[tid']$ mark is set \;
+%     }
+%   }
+%   % \If {exists an $scc'$\RARI$scc$ {\bf and} $scc'.status$ == ABORTED} { 
+%   % }
+%   \For {each $tid'$ in $scc$} {
+%     \If {exists $tid''$\RARI$tid'$ {\bf and} $G_S[tid''].status$ == ABORTED} {
+%       $G_S[tid'].status$ {\LAR} Max($G_s[tid'].status$, ABORTED)
+%     }
+%     \If {exists a cycle $tid'$\TRARI$tid'$} {
+%       $G_S[tid'].status$ {\LAR} Max($G_S[tid'].status$, ABORTED)
+%     } 
+%   }
+%   \For {each $tid'$ in DeterministicTopologicalSortExcludingAborted($scc$)} {
+%     $G_S[tid'].status$ {\LAR} Max($G_S[tid'].status$, DECIDED) \;
+    
+%     \If {$G_S[tid'].server\_set$ contains $S$ and $executed_S[tid'] == false$} {
+%       \For{each $\alpha$ in $G_S[tid'].cmd$} {
+%         Execute($\alpha$)
+%       }
+%       $executed_S[tid']$ \LAR $true$ \;
+%       reply \emph{CommitOK} to $C'$, the coordinator of $tid'$;
+%     }
+%   }
+%   \caption{Server $S$::\sc{Commit}($tid$, $\gamma$, $G$)}
+% \end{algorithm}
+
+
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   %safe log ($T$, $p$) on first execute \;
+%   $G_S$ {\LAR} Union($G_S$, $G$) // override $tid$'s parents \;
+%   $G_S[tid].status$ {\LAR} Max($G_S[tid].status$, \texttt{ACCEPTED}.$ballot$) \;
+%   $G_S[tid].cmd$ {\LAR} $\gamma$ \;
+%   reply \emph{AcceptOK}($tid$, $\gamma$) \;
+%   \caption{Server $S$::\sc{Accept}($tid, ballot, \gamma, G$)}
+% \end{algorithm}
+
+% \vspace{1cm}
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   {\bf Prepare Phase:} \;
+%   increment $ballot$ to higher than the highest ballot number that 
+%   $S$ has ever seen \;
+%   send \emph{Prepare}($tid$, $ballot$) to all servers in $G_S[tid].server\_set$ \;
+%   wait until receive at least $\mathcal{M}_i$ of \emph{PrepareOK's} from each partition $i$ \;
+%   $G$ {\LAR} Union(all graphs received in \emph{PrepareOK}'s received) \;
+%   \uIf {$G[tid].status >=$ COMMITTING} {
+%     goto commit phase with $G$
+%   } \uElseIf { $G[tid].status >=$ ACCEPTED.0  } {
+%     goto accept phase with ($tid, ballot, G_S[tid].cmd, G$)
+%   } \Else {
+%     goto accept phase with ($tid, ballot, no$-$op, G$)
+%   }
+  
+%   \caption{Server $S$::\sc{FailureRecovery}($tid$)}
+% \end{algorithm}
+
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   \If {$ballot > G_S[tid].ballot$} {
+%     $G_S[tid].ballot$\LAR$ballot$ \;
+%     $G$ {\LAR} NearestG($G_S, tid$) \;
+%     reply \emph{PrepareOK}($tid, G$) \;
+%   }
+
+%   \caption{Server $S$::\sc{Prepare}($tid, ballot$)}
+% \end{algorithm}
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   // the relationship between status are defined as fowllows: \;
+%   // \ \  UNKOWN < STARTED < ACCEPTED.* < COMMITTING < ABORTED < DECIDED \;
+%   // \ \  ACCEPTED.a < ACCEPTED.b {\bf if} a < b
+  
+%   \For {each $tid$ in both $G_1$ and $G_2$} {
+%     // use $V_1$ as $G_1[tid]$, $V_2$ as $G_2[tid]$ \;
+%     \If{$V_1.status$ == $V_2.status$} {
+%       $V.server\_set$ {\LAR} $V_1.server\_set \cup V_2.server\_set $ \;
+%       $V.deps$ {\LAR} $V_1.deps \cup V_2.deps$, $V.deps$ refers to the direct predecessors of $V$ \;
+%       $V.status$ {\LAR} $V_1.status$
+%     } \Else {
+%       $V$ {\LAR} $V_1.status > V_2.status$ ? $V_1$ : $V_2$
+%     }
+%     insert $V$ into the result graph $G$
+%   }
+
+%   \For{each $V$ in either $G_1$ or $G_2$  but not both} {
+%     insert $V$ into the result graph $G$ \;
+%   }
+%   {\bf return} $G$ \;
+
+%   % // apply following rules when aggregating all edeges and vertexes.  \;
+%   % // rule 2: for tid, if $G_1[tid].status > G_2[tid].status$, 
+%   %            use $G_1[tid]$(including deps, server_set, stauts) \;
+
+
+%   \caption{\sc{Union}($G_1, G_2$), can be extended to arbitrary number of graphs}
+% \end{algorithm}
+
+% \begin{algorithm}
+%   \DontPrintSemicolon
+%   \SetArgSty{textrm}
+%   \If {$G[tid].status$ <= COMMITING} {
+%     $G_r$ {\LAR} for each tid'\TRAR tid, where $G[tid'].status < $ DECIDED \;
+%   } \Else {
+%     // if ABORTED or DECIDED \;
+%     $G_r$ = StronglyConnectedComponent($G$, $tid$) \;
+%   }
+%   {\bf return} $G_r$
+%   \caption{\sc{NearestG}($G, tid$)}
+% \end{algorithm}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
