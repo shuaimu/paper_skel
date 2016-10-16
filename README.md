@@ -1,5 +1,6 @@
-This is a refined version of paper skeleton from CMU Efficient group.
-# https://github.com/efficient/paper_skel.git
+This is a refined version of paper skeleton from [CMU Efficient group](https://github.com/efficient/paper_skel.git).
+
+https://github.com/msmummy/paper_skel.git
 
 Main changes are: 
 
