@@ -237,20 +237,60 @@
 %    style=authoryear-icomp,
 %    sortlocale=de_DE,
 %    natbib=true,
-%    url=false, 
+    url=true, 
 %    doi=true,
     maxbibnames=10,
     eprint=false
 ]{biblatex}
 \bibliography{ref} 
 
-\DeclareFieldFormat[inproceedings]{title}{#1} 
+%%% ACM bib style begin
+% remove colon after "in"
+\renewcommand*{\intitlepunct}{\space}
+
+\AtBeginBibliography{%
+  \renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}%
+  %% commas between authors
+  \renewcommand{\multinamedelim}{\addcomma\space}
+  \renewcommand{\finalnamedelim}{\addcomma\addspace\textsc{and}\space}
+}
+
+\DefineBibliographyStrings{english}{%
+ andothers = {\addcomma\addspace\textsc{et\addabbrvspace al}\adddot},
+ and = {\textsc{and}}
+}
+
+\renewcommand*{\labelnamepunct}{\space\space}
+
 \DeclareFieldFormat
-  [article]
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
   {title}{#1}
-\DeclareFieldFormat
-  [book]
-  {title}{#1}
+
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{%
+  }{%
+    \printtext{\bibstring{in}\intitlepunct}%
+  }%
+}
+
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \setunit*{\addcomma\space}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+\DeclareFieldFormat{pages}{#1}
+
+\renewbibmacro*{publisher+location+date}{%
+  \printlist{publisher}%
+  \setunit*{\addcomma\space}%
+  \printlist{location}%
+  \setunit*{\addcomma\space}%
+  \usebibmacro{date}%
+  \newunit}
+
+%%% ACM bib style end
 
 %%%
 %%%  Footnotes / Endnotes
