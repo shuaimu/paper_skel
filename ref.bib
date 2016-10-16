@@ -12,6 +12,7 @@
 @string{disc="Proceedings of International Symposium on Distributed Computing (DISC)"}
 @string{vldb="Proceedings of International Conference on Very Large Data Bases (VLDB)"}
 @string{sigmod="Proceedings of ACM International Conference on Management of Data (SIGMOD)"}
+@string{ccs="Proceedings of ACM Conference on Computer and Communications Security (CCS)"}
 @string{isca="Proceedings of International Symposium on Computer Architecture (ISCA)"}
 @string{asplos="Proceedings of ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"}
 @string{eurosys="Proceedings of ACM European Conference on Computer Systems (EuroSys)"}
@@ -20,10 +21,14 @@
 @string{fast="Proceedings of USENIX Conference on File and Storage Technologies (FAST)"}
 % even less good conferences
 @string{sc="Proceedings of International Conference for High Performance Computing, Networking, Storage and Analysis (SC)"}
-@string{socc="Proceedings of ACM Symposium on Cloud Computing (SoCC)"}
-@string{infocom="Proceedings of IEEE International Conference on Computer Communications (InfoCom)"}
-@string{dsn="Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)"}
 @string{ecoop="Proceedings of European Conference on Object-Oriented Programming (ECOOP)"}
+@string{socc="Proceedings of ACM Symposium on Cloud Computing (SoCC)"}
+@string{infocom="Proceedings of IEEE International Conference on Computer Communications (InfoCOM)"}
+@string{dsn="Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)"}
+
+% workshops
+@string{hotos="Proceedings of USENIX Workshop on Hot Topics in Operating Systems (HotOS)"}
+@string{iptps="Proceedings of International Workshop on Peer-to-Peer Systems (IPTPS)"}
 
 % good journals
 @string{tocs="ACM Transactions on Computer Systems (TOCS)"}
@@ -36,6 +41,9 @@
 @string{vldbj="The International Journal on Very Large Data Bases (VLDBJ)"}
 @string{tkde="IEEE Transactions on Knowledge and Data Engineering (TKDE)"}
 @string{tc="IEEE Transactions on Computers (TC)"}
+
+% newsletter
+@string{sigact="ACM SIGACT News"}
 
 @inproceedings{isis:sosp87,
   author    = {Kenneth P. Birman and
@@ -67,14 +75,16 @@
   year={2007},
 }
 
-@inproceedings{sinfonia:sosp07,
+@inproceedings{aguilera07sinfonia,
+  ids={sinfonia:sosp07},
   title={{Sinfonia: a new paradigm for building scalable distributed systems}},
   author={Aguilera, Marcos K and Merchant, Arif and Shah, Mehul and Veitch, Alistair and Karamanolis, Christos},
   booktitle=sosp,
   year={2007},
 }
 
-@inproceedings{azure:sosp11,
+@inproceedings{calder11windows,
+  ids={azure:sosp11},
   title={Windows Azure Storage: a highly available cloud storage service with strong consistency},
   author={Calder, Brad and Wang, Ju and Ogus, Aaron and Nilakantan, Niranjan and Skjolsvold, Arild and McKelvie, Sam and Xu, Yikang and Srivastav, Shashwat and Wu, Jiesheng and Simitci, Huseyin and others},
   booktitle=sosp,
@@ -102,14 +112,16 @@
  year = {2013},
 } 
 
-@inproceedings{lynx:sosp13,
+@inproceedings{zhang13transaction,
+  ids={lynx:sosp13},
   title={Transaction chains: achieving serializability with low latency in geo-distributed storage systems},
   author={Zhang, Yang and Power, Russell and Zhou, Siyuan and Sovran, Yair and Aguilera, Marcos K and Li, Jinyang},
   booktitle=sosp,
   year={2013},
 }
 
-@inproceedings{epaxos:sosp13,
+@inproceedings{moraru13there,
+  ids={epaxos:sosp13},
   title={There is more consensus in egalitarian parliaments},
   author={Moraru, Iulian and Andersen, David G and Kaminsky, Michael},
   booktitle=sosp,
@@ -123,42 +135,56 @@
   year = {2015}
 }
 
-@inproceedings{tapir:sosp15,
+@inproceedings{zhang15building,
+  ids={tapir:sosp15},
 	title="Building consistent transactions with inconsistent replication",
 	author="Irene Zhang and Naveen Kr. Sharma and Adriana Szekeres and Arvind Krishnamurthy	and Dan R. K. Ports",
 	booktitle=sosp,
   year=2015
 }
 
-@inproceedings{chainreplication:osdi04,
- author = {van Renesse, Robbert and Schneider, Fred B.},
- title = {{Chain replication for supporting high throughput and availability}},
- booktitle = osdi,
- year = {2004},
+@inproceedings{adya02farsite,
+  ids={farsite:osdi02},
+  title={{FARSITE: Federated, available, and reliable storage for an incompletely trusted environment}},
+  author={Adya, Atul and Bolosky, William J and Castro, Miguel and Cermak, Gerald and Chaiken, Ronnie and Douceur, John R and Howell, Jon and Lorch, Jacob R and Theimer, Marvin and Wattenhofer, Roger P},
+  booktitle=osdi,
+  year={2002},
+}
+
+@inproceedings{renesse04chain,
+  ids={chainreplication:osdi04},
+  author = {van Renesse, Robbert and Schneider, Fred B.},
+  title = {{Chain replication for supporting high throughput and availability}},
+  booktitle = osdi,
+  year = {2004},
 } 
 
-@inproceedings{bigtable:osdi06,
+@inproceedings{chang06bigtable,
+ ids = {bigtable:osdi06},
  author = "Fay Chang and Jeffrey Dean and Sanjay Ghemawat and Wilson C. Hsieh and Deborah A. Wallach and Mike Burrows and Tushar Chandra and Andrew Fikes and Robert E. Gruber",
  title = "Bigtable: A Distributed Storage System for Structured Data",
  booktitle = osdi,
  year = 2006,
 }
 
-@inproceedings{ceph:osdi06,
+@inproceedings{weil06ceph,
+  ids={ceph:osdi06},
   title={Ceph: A scalable, high-performance distributed file system},
   author={Weil, Sage A and Brandt, Scott A and Miller, Ethan L and Long, Darrell DE and Maltzahn, Carlos},
   booktitle=osdi,
   year={2006},
 }
 
-@inproceedings{chubby:osdi06,
+@inproceedings{burrows06chubby,
+  ids = {chubby:osdi06, burrows:osdi06:chubby},
   author = {Burrows, Michael},
   title = {The Chubby Lock Service for Loosely-Coupled Distributed Systems},
   booktitle = osdi,
   year = {2006},
 }
 
-@inproceedings{mencius:osdi08,
+@inproceedings{mao08mencius,
+  ids={mencius:osdi08},
   title={Mencius: building efficient replicated state machines for WANs},
   author={Mao, Yanhua and Junqueira, Flavio Paiva and Marzullo, Keith},
   booktitle=osdi,
@@ -172,7 +198,7 @@
   year={2010},
 }
 
-@inproceedings{ford2010availability,
+@inproceedings{ford10availability,
   title={Availability in Globally Distributed Storage Systems.},
   author={Ford, Daniel and Labelle, Fran{\c{c}}ois and Popovici, Florentina I and Stokely, Murray and Truong, Van-Anh and Barroso, Luiz and Grimes, Carrie and Quinlan, Sean},
   booktitle=osdi,
@@ -186,7 +212,8 @@
   year={2012}
 }
 
-@inproceedings{spanner:osdi12,
+@inproceedings{corbett12spanner,
+  ids={spanner:osdi12},
   title={{Spanner: Google’s globally distributed database}},
   author={Corbett, James C and Dean, Jeffrey and Epstein, Michael and Fikes, Andrew and Frost, Christopher and Furman, JJ and Ghemawat, Sanjay and Gubarev, Andrey and Heiser, Christopher and Hochschild, Peter and others},
   booktitle=osdi,
@@ -207,28 +234,32 @@
   year = {2014}
 }
 
-@inproceedings{f4:osdi14,
-  title={f4: Facebook's warm BLOB storage system},
+@inproceedings{muralidhar14f4,
+  ids={f4:osdi14},
+  title={{F4: Facebook's warm BLOB storage system}},
   author={Muralidhar, Subramanian and Lloyd, Wyatt and Roy, Sabyasachi and Hill, Cory and Lin, Ernest and Liu, Weiwen and Pan, Satadru and Shankar, Shiva and Sivakumar, Viswanath and Tang, Linpeng and others},
   booktitle=osdi,
   year={2014}
 }
 
-@inproceedings{DatabaseHyperdex,
- author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
- title = {HyperDex: A Distributed, Searchable Key-value Store},
- booktitle = sigcomm,
- year = {2012},
+@inproceedings{escriva12hyperdex,
+  ids={Hyperdex:sigcomm12},
+  author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
+  title = {HyperDex: A Distributed, Searchable Key-value Store},
+  booktitle = sigcomm,
+  year = {2012},
 } 
 
-@inproceedings{glacier:nsdi05,
+@inproceedings{haeberlen05glacier,
+  ids={glacier:nsdi05},
   title={Glacier: Highly durable, decentralized storage despite massive correlated failures},
   author={Haeberlen, Andreas and Mislove, Alan and Druschel, Peter},
   booktitle=nsdi,
   year={2005},
 }
 
-@inproceedings{gaios:nsdi11,
+@inproceedings{bolosky11paxos,
+  ids={gaios:nsdi11},
   title={{Paxos replicated state machines as the basis of a high-performance data store}},
   author={Bolosky, William J and Bradshaw, Dexter and Haagens, Randolph B and Kusters, Norbert P and Li, Peng},
   booktitle=nsdi,
@@ -263,14 +294,20 @@
   year={2007},
 }
 
-@inproceedings{paxosmadelive:podc07,
+@inproceedings{chandra07paxos,
+  ids={paxosmadelive:podc07},
   author = {Chandra, Tushar Deepak and Griesemer, Robert and Redstone, Joshua},
   title = {Paxos made live: an engineering perspective},
   booktitle = podc,
   year = {2007},
 }
 
-
+@inproceedings{conrejo12asynchronous,
+  title={Asynchronous failure detectors},
+  author={Conrejo, Alejandro and Lynch, Nancy and Sastry, Srikanth},
+  booktitle=podc,
+  year={2012},
+}
 
 @inproceedings{lampson1993new,
   title={A new presumed commit optimization for two phase commit},
@@ -314,7 +351,8 @@
   year={2013},
 }
 
-@inproceedings{xoring:vldb2013,
+@inproceedings{sathiamoorthy13xoring,
+  ids={xoring:vldb2013},
   title={Xoring elephants: Novel erasure codes for big data},
   author={Sathiamoorthy, Maheswaran and Asteris, Megasthenis and Papailiopoulos, Dimitris and Dimakis, Alexandros G and Vadali, Ramkumar and Chen, Scott and Borthakur, Dhruba},
   booktitle=vldb,
@@ -362,21 +400,50 @@
   year={2010},
 }
 
-@inproceedings{calvin:sigmod12,
+@inproceedings{thomson12calvin,
+  ids={calvin:sigmod12},
   title={{Calvin: fast distributed transactions for partitioned database systems}},
   author={Thomson, Alexander and Diamond, Thaddeus and Weng, Shu-Chun and Ren, Kun and Shao, Philip and Abadi, Daniel J},
   booktitle=sigmod,
   year={2012},
 }
 
-@inproceedings{depsky:eurosys11,
- author = {Bessani, Alysson and Correia, Miguel and Quaresma, Bruno and Andr{\'e}, Fernando and Sousa, Paulo},
- title = {DepSky: dependable and secure storage in a cloud-of-clouds},
- booktitle = eurosys,
- year = {2011},
+@inproceedings{bowers09hail,
+  ids={hail:ccs09},
+  author = {Bowers, Kevin D. and Juels, Ari and Oprea, Alina},
+  title = {{HAIL: a high-availability and integrity layer for cloud storage}},
+  booktitle = ccs,
+  year = {2009},
+} 
+
+
+@inproceedings{kubiatowicz2000oceanstore,
+  ids={oceanstore:asplos00},
+  title={Oceanstore: An architecture for global-scale persistent storage},
+  author={Kubiatowicz, John and Bindel, David and Chen, Yan and Czerwinski, Steven and Eaton, Patrick and Geels, Dennis and Gummadi, Ramakrishan and Rhea, Sean and Weatherspoon, Hakim and Weimer, Westley and others},
+  booktitle=asplos,
+  year={2000},
 }
 
-@inproceedings{mdcc:eurosys13,
+@inproceedings{saito04fab,
+  ids={fab:asplos04},
+  title={{FAB: building distributed enterprise disk arrays from commodity components}},
+  author={Saito, Yasushi and Fr{\o}lund, Svend and Veitch, Alistair and Merchant, Arif and Spence, Susan},
+  booktitle=asplos,
+  year={2004},
+}
+
+
+@inproceedings{bessani11depsky,
+  ids={depsky:eurosys11},
+  author = {Bessani, Alysson and Correia, Miguel and Quaresma, Bruno and Andr{\'e}, Fernando and Sousa, Paulo},
+  title = {DepSky: dependable and secure storage in a cloud-of-clouds},
+  booktitle = eurosys,
+  year = {2011},
+}
+
+@inproceedings{kraska13mdcc,
+  ids={mdcc:eurosys13},
   title={{MDCC: Multi-data center consistency}},
   author={Kraska, Tim and Pang, Gene and Franklin, Michael J and Madden, Samuel and Fekete, Alan},
   booktitle=eurosys,
@@ -390,21 +457,24 @@
  year = {1998},
 } 
 
-@inproceedings{zookeeper:atc10,
+@inproceedings{hunt10zookeeper,
+  ids={zookeeper:atc10},
   title={{ZooKeeper: wait-free coordination for internet-scale systems}},
   author={Hunt, Patrick and Konar, Mahadev and Junqueira, Flavio P and Reed, Benjamin},
   booktitle=atc,
   year={2010}
 }
 
-@inproceedings{gnothi:atc12,
+@inproceedings{wang12gnothi,
+  ids={gnothi:atc12},
   title={Gnothi: Separating data and metadata for efficient and available storage replication},
   author={Wang, Yang and Alvisi, Lorenzo and Dahlin, Mike},
   booktitle=atc,
   year={2012}
 }
 
-@inproceedings{azure:atc12,
+@inproceedings{huang12erasure,
+  ids={azure:atc12},
   title={Erasure coding in windows azure storage},
   author={Huang, Cheng and Simitci, Huseyin and Xu, Yikang and Ogus, Aaron and Calder, Brad and Gopalan, Parikshit and Li, Jin and Yekhanin, Sergey and others},
   booktitle=atc,
@@ -426,7 +496,9 @@
  year = {2013},
 }
 
-@inproceedings{megastore:cidr11,
+
+@inproceedings{baker11megastore,
+  ids={megastore:cidr11},
   title={Megastore: Providing Scalable, Highly Available Storage for Interactive Services.},
   author={Baker, Jason and Bond, Chris and Corbett, James and Furman, JJ and Khorlin, Andrey and Larson, James and L{\'e}on, Jean-Michel and Li, Yawei and Lloyd, Alexander and Yushprakh, Vadim},
   booktitle=cidr,
@@ -434,7 +506,82 @@
 }
 
 
-@inproceedings{clocc:ecoop99,
+@inproceedings{keeton04designing,
+  title={Designing for Disasters},
+  author={Keeton, Kimberly and Santos, Cipriano and Beyer, Dirk and Chase, Jeffrey and 	Wilkes, John},
+  booktitle=fast,
+  year={2004}
+}
+
+@inproceedings{abd05ursa,
+  title={Ursa Minor: Versatile Cluster-based Storage.},
+  author={Abd-El-Malek, Michael and Courtright II, William V and Cranor, Chuck and Ganger, Gregory R and Hendricks, James and Klosterman, Andrew J and Mesnier, Michael P and Prasad, Manish and Salmon, Brandon and Sambasivan, Raja R and others},
+  booktitle=fast,
+  year={2005}
+}
+
+@inproceedings{welch08scalable,
+  title={Scalable Performance of the Panasas Parallel File System.},
+  author={Welch, Brent and Unangst, Marc and Abbasi, Zainul and Gibson, Garth A and Mueller, Brian and Small, Jason and Zelenka, Jim and Zhou, Bin},
+  booktitle=fast,
+  year={2008}
+}
+
+@inproceedings{plank09performance,
+  title={A Performance Evaluation and Examination of Open-Source Erasure Coding Libraries for Storage.},
+  author={Plank, James S and Luo, Jianqiang and Schuman, Catherine D and Xu, Lihao and Wilcox-O'Hearn, Zooko and others},
+  booktitle=fast,
+  year={2009}
+}
+
+@inproceedings{vrable09cumulus,
+ author = {Vrable, Michael and Savage, Stefan and Voelker, Geoffrey M.},
+ title = {Cumulus: Filesystem backup to the cloud},
+ booktitle=fast,
+ year = {2009},
+} 
+
+@inproceedings{meyer11study,
+ author = {Meyer, Dutch T. and Bolosky, William J.},
+ title = {A study of practical deduplication},
+ booktitle=fast,
+ year = {2011},
+} 
+
+
+@inproceedings{khan12rethinking,
+  title={Rethinking erasure codes for cloud file systems: Minimizing I/O for recovery and degraded reads},
+  author={Khan, Osama and Burns, Randal and Plank, James and Pierce, William and Huang, Cheng},
+  booktitle=fast,
+  year={2012}
+}
+
+
+@inproceedings{hu12nccloud,
+  ids={nccloud:fast12},
+  title={{NCCloud: applying network coding for the storage repair in a cloud-of-clouds}},
+  author={Hu, Y. and Chen, H.C.H. and Lee, P.P.C. and Tang, Y.},
+  booktitle=fast,
+  year={2012}
+}
+
+@inproceedings{rhea13pond,
+  ids={pond:fast13},
+  title={Pond: the OceanStore Prototype},
+  author={Rhea, Sean and Eaton, Patrick and Geels, Dennis and Weatherspoon, Hakim and Zhao, Ben and Kubiatowicz, John},
+  booktitle=fast,
+  year={2013},
+}
+
+@inproceedings{zhang16efficient,
+  title={Efficient and available in-memory KV-store with hybrid erasure coding and replication},
+  author={Zhang, Heng and Dong, Mingkai and Chen, Haibo},
+  booktitle=fast,
+  year={2016}
+}
+
+@inproceedings{liscov99providing,
+  ids={clocc:ecoop99},
   title={Providing persistent objects in distributed systems},
   author={Liskov, Barbara and Castro, Miguel and Shrira, Liuba and Adya, Atul},
   booktitle=ecoop,
@@ -442,7 +589,38 @@
 }
 
 
-@article{deadlock:tocs83,
+@inproceedings{dimakis07networkcoding,
+    author = {Ros G. Dimakis and P. Brighten Godfrey and Yunnan Wu and Martin O. Wainwright and Kannan Ramch},
+    title = {Network Coding for Distributed Storage Systems},
+    booktitle = infocom,
+    year = {2007}
+}
+
+
+@inproceedings{abulibdeh10racs,
+  ids={racs:socc10},
+  author = {Abu-Libdeh, Hussam and Princehouse, Lonnie and Weatherspoon, Hakim},
+  title = {{RACS: a case for cloud storage diversity}},
+  booktitle = socc,
+  year = {2010},
+}
+
+@inproceedings{shah07auditing,
+ author = {Shah, Mehul A. and Baker, Mary and Mogul, Jeffrey C. and Swaminathan, Ram},
+ title = {Auditing to keep online storage services honest},
+ booktitle = hotos,
+ year = {2007},
+} 
+
+@inproceedings{weatherspoon02erasure,
+  title={Erasure coding vs. replication: A quantitative comparison},
+  author={Weatherspoon, H. and Kubiatowicz, J.},
+  booktitle=iptps,
+  year={2002},
+}
+
+@article{chandy83distributed,
+  ids={deadlock:tocs83},
   title={{Distributed deadlock detection}},
   author={Chandy, K Mani and Misra, Jayadev and Haas, Laura M},
   journal=tocs,
@@ -453,7 +631,7 @@
   publisher={ACM}
 }
 
-@article{attiya94proofs,
+@article{attiya94sequential,
  author = {Hagit Attiya and Jennifer L. Welch},
  title = {Sequential consistency versus linearizability},
  journal = tocs,
@@ -462,7 +640,19 @@
  year = {1994},
 }
 
-@article{paxos:tocs98,
+@article{wilkes96hp,
+  title={The HP AutoRAID hierarchical storage system},
+  author={Wilkes, John and Golding, Richard and Staelin, Carl and Sullivan, Tim},
+  journal=tocs,
+  volume={14},
+  number={1},
+  pages={108--136},
+  year={1996},
+}
+
+
+@article{lamport98parttime,
+  ids={paxos:tocs98},
   title={The part-time parliament},
   author={Lamport, Leslie},
   journal=tocs,
@@ -472,7 +662,8 @@
   year={1998},
 }
 
-@article{linearizability:toplas90,
+@article{herlihy90linearizability,
+  ids={linearizability:toplas90},
   title={{Linearizability: A correctness condition for concurrent objects}},
   author={Herlihy, Maurice P and Wing, Jeannette M},
   journal=toplas,
@@ -550,13 +741,22 @@
 @article{lamport01paxos,
   title={{Paxos made simple}},
   author={Lamport, Leslie},
-  journal={ACM Sigact News},
+  journal=sigact,
   volume={32},
   number={4},
   pages={18--25},
   year={2001}
 }
 
+@article{lamport10reconfiguring,
+  title={Reconfiguring a state machine},
+  author={Lamport, Leslie and Malkhi, Dahlia and Zhou, Lidong},
+  journal=sigact,
+  volume={41},
+  number={1},
+  pages={63--73},
+  year={2010},
+}
 
 @article{agrawal87concurrency,
   title={{Concurrency control performance modeling: alternatives and implications}},
@@ -569,7 +769,8 @@
 }
 
 
-@article{chopping:tods95,
+@article{shasha95transaction,
+  ids={chopping:tods95},
   title={{Transaction chopping: Algorithms and performance studies}},
   author={Shasha, Dennis and Llirbat, Francois and Simon, Eric and Valduriez, Patrick},
   journal=tods,
@@ -739,7 +940,8 @@
  year = 1988,
 }
 
-@techreport{generalizedpaxos:tr05,
+@techreport{lamport05generalized,
+  ids={generalizedpaxos:tr05},
   title={{Generalized consensus and Paxos}},
   author={Lamport, Leslie},
   year={2005},
@@ -747,7 +949,9 @@
   institution={Microsoft Research}
 }
 
-@techreport{fastpaxos:tr05,
+@techreport{lamport05fast,
+  ids={fastpaxos:tr05},
+  title={{Fast Paxos}},
 	author       = {Leslie Lamport},
 	institution  = {Microsoft Research},
   number = {MSR-TR-2005-112},
@@ -815,6 +1019,14 @@
  address = {San Francisco, CA, USA},
 } 
 
+@book{patterson88case,
+  title={A case for redundant arrays of inexpensive disks (RAID)},
+  author={Patterson, D.A. and Gibson, G. and Katz, R.H.},
+  volume={17},
+  number={3},
+  year={1988},
+  publisher={ACM}
+}
 @book{gerhard01transactional,
   title="Transactional Information Systems: Theory, Algorithms, and the Practice of Concurrency Control and Recovery",
   author="Gerhard Weikum and Gottfried Vossen",
@@ -858,3 +1070,70 @@ howpublished={http://www.tpc.org/tpcc/}
   year={2016}
 }
 
+@inproceedings{zhang04repstore,
+  title={RepStore: a self-managing and self-tuning storage backend with smart bricks},
+  author={Zhang, Zheng and Lin, Shiding and Lian, Qiao and Jin, Chao},
+  booktitle={Proceedings of International Conference on Autonomic Computing},
+  year={2004},
+}
+
+
+@inproceedings{borthakur2010hdfs,
+  title={Hdfs raid},
+  author={Borthakur, D and Schmidt, R and Vadali, R and Chen, S and Kling, P},
+  booktitle={Hadoop user group meeting},
+  year={2010}
+}
+
+@article{fikes2010storage,
+  title={Storage architecture and challenges},
+  author={Fikes, Andrew},
+  journal={Talk at the Google Faculty Summit},
+  year={2010}
+}
+
+
+@electronic{bib:MAREA1,
+  title = {Facebook and Microsoft to Build Fiber Optic Cable Across Atlantic},
+  howpublished = {http://www.wsj.com/articles/facebook\-and-microsoft-to-build-fiber-optic-cable-across-atlantic\-1464298853},
+	month={May},
+	year={2016},
+	publisher={Wall Street Journal}
+};
+
+@electronic{bib:MAREA2,
+  title = {Microsoft, Facebook to lay massive undersea cable},
+  howpublished = {http://www.usatoday.com/story/experience/2016/05/26/microsoft-facebook-undersea-cable-google-marea-amazon/84984882},
+	month={May},
+	year={2016},
+	publisher={USE Today}
+};
+
+@electronic{bib:FA-1,
+  title = {Fiber-Optic Link Around the Globe},
+  howpublished = {https://en.wikipedia.org/wiki/Fiber-Optic\_Link\_Around\_the\_Globe},
+	publisher={Wikipedia}
+};
+
+
+@article{mears1986low,
+  title={Low-threshold tunable CW and Q-switched fibre laser operating at 1.55 $\mu$m},
+  author={Mears, RJ and Reekie, L and Poole, SB and Payne, DN},
+  journal={Electronics Letters},
+  volume={3},
+  number={22},
+  pages={159--160},
+  year={1986}
+}
+
+
+@article{zhu2011112,
+  title={112-Tb/s space-division multiplexed DWDM transmission with 14-b/s/Hz aggregate spectral efficiency over a 76.8-km seven-core fiber},
+  author={Zhu, B and Taunay, TF and Fishteyn, M and Liu, X and Chandrasekhar, S and Yan, MF and Fini, JM and Monberg, EM and Dimarcello, FV},
+  journal={Optics Express},
+  volume={19},
+  number={17},
+  pages={16665--16671},
+  year={2011},
+  publisher={Optical Society of America}
+}

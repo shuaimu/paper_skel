@@ -230,6 +230,7 @@
 %%%
 %\usepackage[numbers,sort]{natbib}
 %\usepackage[backend=bibtex]{biblatex}
+
 \usepackage[
     backend=biber,
     firstinits=true,
@@ -238,9 +239,18 @@
 %    natbib=true,
 %    url=false, 
 %    doi=true,
+    maxbibnames=10,
     eprint=false
 ]{biblatex}
 \bibliography{ref} 
+
+\DeclareFieldFormat[inproceedings]{title}{#1} 
+\DeclareFieldFormat
+  [article]
+  {title}{#1}
+\DeclareFieldFormat
+  [book]
+  {title}{#1}
 
 %%%
 %%%  Footnotes / Endnotes
