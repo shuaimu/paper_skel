@@ -1,2 +1,13 @@
-figs/graphs/**/*pdf
+*.aux
+*.make
+*.temp
+*.bbl
+*.bcf
+*.blg
+*.d
+*.fls
+*.log
+*.out
+*.pdf
+*.xml
 

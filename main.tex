@@ -131,12 +131,8 @@
 %%% Set these variables appropriately
 %%%
 %% Note:  Authors is hardcoded below, this line only used for the PDF info
-\newcommand{\AUTHORS}{Shuai Mu, Lamont Nelson, Wyatt Lloyd, and Jinyang Li}
-%\newcommand{\TITLE}{JANUS: Jesus! Another traNsaction and consensUS protocol}
-%\newcommand{\TITLE}{Unifying Concurrency Control and Consensus for More Commits and Lower Latency}
-%% \newcommand{\TITLE}{Capacity under Conflicts by Consolidating \\
-%%   Concurrency Control and Consensus}
-\newcommand{\TITLE}{Consolidating Concurrency Control and Consensus\\ for Commits under Conflicts}
+\newcommand{\TITLE}{A Good Paper Skeleton Gives an Easier Start}
+\newcommand{\AUTHORS}{Shuai Mu}
 \newcommand{\KEYWORDS}{Put your keywords here}
 \newcommand{\CONFERENCE}{Somewhere}
 \newcommand{\PAGENUMBERS}{no}       % "yes" or "no"
@@ -232,7 +228,19 @@
 %%%
 %%%  Bibliography
 %%%
-\usepackage[numbers,sort]{natbib}
+%\usepackage[numbers,sort]{natbib}
+%\usepackage[backend=bibtex]{biblatex}
+\usepackage[
+    backend=biber,
+    firstinits=true,
+%    style=authoryear-icomp,
+%    sortlocale=de_DE,
+%    natbib=true,
+%    url=false, 
+%    doi=true,
+    eprint=false
+]{biblatex}
+\bibliography{ref} 
 
 %%%
 %%%  Footnotes / Endnotes
@@ -354,8 +362,8 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 
 \date{}
 \title{\textbf{\TITLE}}
-\author{{\large Shuai Mu$^\star$, Lamont Nelson$^\star$, Wyatt Lloyd$^\dag$, and Jinyang Li$^\star$}\\
-\textit{$^\star$New York University, $^\dag$University of Southern California}}
+\author{{\large Shuai Mu$^\star$}\\
+\textit{$^\star$New York University}}
 
 % This needs to be the last thing before \begin{document}
 %\usepackage{microtype}  % SPACE
@@ -401,7 +409,6 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 \input{ack}
 %\realnewpage
 %\input{bg}
-%\input{design}
 
 %\input{appendix_sources}
 
@@ -410,12 +417,14 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 % Comments for people we need to ack in the final version
 
 %% Bibliography
-\setlength{\bibsep}{2pt plus 1pt}  % plus 1pt seems to avoid widows/orphans
+%\setlength{\bibsep}{2pt plus 1pt}  % plus 1pt seems to avoid widows/orphans
 \small 
 % \footnotesize % SPACE
+%\nocite{*}
 \newpage
-\bibliographystyle{abbrvnat}
-\bibliography{ref}
+\printbibliography
+%\bibliographystyle{abbrv}
+%\bibliography{ref}
 %\bibliographystyle{abbrvnat_noaddr} % SPACE
 %\theendnotes % ENDNOTES
 }{% !onlyAbstract
