@@ -14,21 +14,26 @@
 @string{sigmod="Proceedings of ACM International Conference on Management of Data (SIGMOD)"}
 @string{ccs="Proceedings of ACM Conference on Computer and Communications Security (CCS)"}
 @string{isca="Proceedings of International Symposium on Computer Architecture (ISCA)"}
+@string{pldi="Proceedings of ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)"}
 @string{asplos="Proceedings of ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"}
+@string{spaa="Proceedings of ACM Symposium on Parallellism in Algorithms and Architectures (SPAA)"}
+@string{oopsla="Proceedings of ACM Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA)"}
 @string{eurosys="Proceedings of ACM European Conference on Computer Systems (EuroSys)"}
+@string{ppopp="Proceedings of ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP)"}
 @string{atc="Proceedings of USENIX Conference on Annual Technical Conference (ATC)"}
-@string{cidr="Biennial Conference on Innovative Data Systems Research (CIDR)"}
+@string{cidr="Proceedings of Biennial Conference on Innovative Data Systems Research (CIDR)"}
 @string{fast="Proceedings of USENIX Conference on File and Storage Technologies (FAST)"}
 % even less good conferences
 @string{sc="Proceedings of International Conference for High Performance Computing, Networking, Storage and Analysis (SC)"}
 @string{ecoop="Proceedings of European Conference on Object-Oriented Programming (ECOOP)"}
 @string{socc="Proceedings of ACM Symposium on Cloud Computing (SoCC)"}
-@string{infocom="Proceedings of IEEE International Conference on Computer Communications (InfoCOM)"}
+@string{infocom="Proceedings of IEEE International Conference on Computer Communications (INFOCOM)"}
 @string{dsn="Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)"}
 
 % workshops
 @string{hotos="Proceedings of USENIX Workshop on Hot Topics in Operating Systems (HotOS)"}
 @string{iptps="Proceedings of International Workshop on Peer-to-Peer Systems (IPTPS)"}
+@string{transact="Proceedings of ACM SIGPLAN Workshop on Transactional Computing (TRANSACT)"}
 
 % good journals
 @string{tocs="ACM Transactions on Computer Systems (TOCS)"}
@@ -44,6 +49,8 @@
 
 % newsletter
 @string{sigact="ACM SIGACT News"}
+@string{cacm="Communications of the ACM"}
+@string{jacm="Journal of the ACM"}
 
 @inproceedings{isis:sosp87,
   author    = {Kenneth P. Birman and
@@ -91,25 +98,28 @@
   year={2011},
 }
 
-@inproceedings{cops:sosp2011,
+@inproceedings{lloyd11dont,
+  ids={cops:sosp2011},
   title={{Don't settle for eventual: scalable causal consistency for wide-area storage with COPS}},
   author={Lloyd, Wyatt and Freedman, Michael J and Kaminsky, Michael and Andersen, David G},
   booktitle=sosp,
   year={2011},
 }
 
-@inproceedings{walter:sosp11,
+@inproceedings{sovran11transactional,
+  ids={walter:sosp11},
   title={{Transactional storage for geo-replicated systems}},
   author={Sovran, Yair and Power, Russell and Aguilera, Marcos K and Li, Jinyang},
   booktitle=sosp,
   year={2011},
 }
 
-@inproceedings{silo:sosp13,
- author = {Tu, Stephen and Zheng, Wenting and Kohler, Eddie and Liskov, Barbara and Madden, Samuel},
- title = {Speedy Transactions in Multicore In-memory Databases},
- booktitle = sosp,
- year = {2013},
+@inproceedings{tu13speedy,
+  ids={silo:sosp13},
+  author = {Tu, Stephen and Zheng, Wenting and Kohler, Eddie and Liskov, Barbara and Madden, Samuel},
+  title = {Speedy Transactions in Multicore In-memory Databases},
+  booktitle = sosp,
+  year = {2013},
 } 
 
 @inproceedings{zhang13transaction,
@@ -128,7 +138,8 @@
   year={2013},
 }
 
-@inproceedings{callas:sosp15,
+@inproceedings{xie15high,
+  ids={callas:sosp15},
   title={{High-performance ACID via modular concurrency control}},
   author={Chao Xie and Chunzhi Su	and Cody Littley and Lorenzo Alvisi and Manos Kapritsos	and Yang Wang},
   booktitle=sosp,
@@ -191,7 +202,8 @@
   year={2008}
 }
 
-@inproceedings{percolator:osdi12,
+@inproceedings{peng12large,
+  ids={percolator:osdi12},
   title={{Large-scale incremental processing using distributed transactions and notifications}},
   author={Peng, Daniel and Dabek, Frank},
   booktitle=osdi,
@@ -199,13 +211,14 @@
 }
 
 @inproceedings{ford10availability,
-  title={Availability in Globally Distributed Storage Systems.},
+  title={Availability in globally distributed storage systems},
   author={Ford, Daniel and Labelle, Fran{\c{c}}ois and Popovici, Florentina I and Stokely, Murray and Truong, Van-Anh and Barroso, Luiz and Grimes, Carrie and Quinlan, Sean},
   booktitle=osdi,
   year={2010}
 }
 
-@inproceedings{redblue:osdi12,
+@inproceedings{li12making,
+  ids={redblue:osdi12},
   title={{Making geo-replicated systems fast as possible, consistent when necessary}},
   author={Li, Cheng and Porto, Daniel and Clement, Allen and Gehrke, Johannes and Pregui{\c{c}}a, Nuno and Rodrigues, Rodrigo},
   booktitle=osdi,
@@ -227,7 +240,8 @@
  year = {2014},
 } 
 
-@inproceedings{salt:osdi14,
+@inproceedings{xie14salt,
+  ids={salt:osdi14},
   title={{Salt: Combining ACID and BASE in a distributed batabase}},
   author={Xie, Chao and Su, Chunzhi and Kapritsos, Manos and Wang, Yang and Yaghmazadeh, Navid and Alvisi, Lorenzo and Mahajan, Prince},
   booktitle=osdi,
@@ -266,28 +280,32 @@
   year={2011},
 }
 
-@inproceedings{eiger:nsdi13,
+@inproceedings{lloyd13stronger,
+  ids={eiger:nsdi13},
   title={{Stronger semantics for low-latency geo-replicated storage}},
   author={Lloyd, Wyatt and Freedman, Michael J and Kaminsky, Michael and Andersen, David G},
   booktitle=nsdi,
   year={2013}
 }
 
-@inproceedings{specpaxos:nsdi15,
+@inproceedings{ports15designing,
+  ids={specpaxos:nsdi15},
   title={Designing distributed systems using approximate synchrony in data center networks},
   author={Ports, Dan RK and Li, Jialin and Liu, Vincent and Sharma, Naveen Kr and Krishnamurthy, Arvind},
   booktitle=nsdi,
   year={2015}
 }
 
-@inproceedings{viewstampedreplication:podc88,
+@inproceedings{oki88viewstamped,
+  ids={viewstampedreplication:podc88i},
   title={Viewstamped replication: A new primary copy method to support highly-available distributed systems},
   author={Oki, Brian M and Liskov, Barbara H},
   booktitle=podc,
   year={1988},
 }
 
-@inproceedings{multicoordinatedpaxos:podc07,
+@inproceedings{camargos07multicoordinated,
+  ids={multicoordinatedpaxos:podc07},
   title={{Multicoordinated Paxos}},
   author={Camargos, L{\'a}saro Jonas and Schmidt, Rodrigo Malta and Pedone, Fernando},
   booktitle=podc,
@@ -316,21 +334,24 @@
   year={1993},
 }
 
-@inproceedings{hstore:vldb07,
+@inproceedings{stonebraker07end,
+  ids={hstore:vldb07},
   title={{The end of an architectural era:(it's time for a complete rewrite)}},
   author={Stonebraker, Michael and Madden, Samuel and Abadi, Daniel J and Harizopoulos, Stavros and Hachem, Nabil and Helland, Pat},
   booktitle=vldb,
   year={2007},
 }
 
-@inproceedings{hstore:vldb08,
+@inproceedings{kallman08hstore,
+  ids={hstore:vldb08i},
   title={{H-store: a high-performance, distributed main memory transaction processing system}},
   author={Kallman, Robert and Kimura, Hideaki and Natkins, Jonathan and Pavlo, Andrew and Rasin, Alexander and Zdonik, Stanley and Jones, Evan PC and Madden, Samuel and Stonebraker, Michael and Zhang, Yang and others},
   booktitle=vldb,
   year={2008},
 }
 
-@inproceedings{pnuts:vldb08,
+@inproceedings{brian08pnuts,
+  ids={pnuts:vldb08},
   title={{PNUTS: Yahoo!'s hosted data serving platform}},
   author={Cooper, Brian F and Ramakrishnan, Raghu and Srivastava, Utkarsh and Silberstein, Adam and Bohannon, Philip and Jacobsen, Hans-Arno and Puz, Nick and Weaver, Daniel and Yerneni, Ramana},
   journal=vldb,
@@ -344,7 +365,8 @@
   year={2010},
 }
 
-@inproceedings{replicatedcommit:vldb13,
+@inproceedings{mahmoud13low,
+  ids={replicatedcommit:vldb13},
   title={{Low-latency multi-datacenter databases using replicated commit}},
   author={Mahmoud, Hatem and Nawab, Faisal and Pucher, Alexander and Agrawal, Divyakant and El Abbadi, Amr},
   booktitle=vldb,
@@ -359,41 +381,55 @@
   year={2013},
 }
 
-@inproceedings{sagas:sigmod87,
- author = {Garcia-Molina, Hector and Salem, Kenneth},
- title = {Sagas},
- booktitle = sigmod,
- year = {1987},
+@inproceedings{garcia87sagas,
+  ids={sagas:sigmod87},
+  author = {Garcia-Molina, Hector and Salem, Kenneth},
+  title = {Sagas},
+  booktitle = sigmod,
+  year = {1987},
 } 
 
-@inproceedings{chopping:sigmod12,
+@inproceedings{patterson88case,
+  ids={raid:sigmod88},
+  title={A case for redundant arrays of inexpensive disks (RAID)},
+  author={Patterson, D.A. and Gibson, G. and Katz, R.H.},
+  booktitle=sigmod,
+  year={1988},
+}
+
+@inproceedings{shasha92simple,
+  ids={chopping:sigmod92},
   title={{Simple rational guidance for chopping up transactions}},
   author={Shasha, Dennis and Simon, Eric and Valduriez, Patrick},
   booktitle=sigmod,
   year={1992},
 }
-@inproceedings{isolationlevel:sigmod95,
- author = {Berenson, Hal and Bernstein, Phil and Gray, Jim and Melton, Jim and O'Neil, Elizabeth and O'Neil, Patrick},
- title = {A Critique of ANSI SQL Isolation Levels},
- booktitle = sigmod,
- year = {1995},
+@inproceedings{berenson95critique,
+  ids={isolationlevel:sigmod95},
+  author = {Berenson, Hal and Bernstein, Phil and Gray, Jim and Melton, Jim and O'Neil, Elizabeth and O'Neil, Patrick},
+  title = {A Critique of ANSI SQL Isolation Levels},
+  booktitle = sigmod,
+  year = {1995},
 } 
 
-@inproceedings{clocc:sigmod95,
- author = {Adya, Atul and Gruber, Robert and Liskov, Barbara and Maheshwari, Umesh},
- title = {Efficient Optimistic Concurrency Control Using Loosely Synchronized Clocks},
- booktitle = sigmod,
- year = {1995},
+@inproceedings{adya95efficient,
+  ids={clocc:sigmod95},
+  author = {Adya, Atul and Gruber, Robert and Liskov, Barbara and Maheshwari, Umesh},
+  title = {Efficient Optimistic Concurrency Control Using Loosely Synchronized Clocks},
+  booktitle = sigmod,
+  year = {1995},
 }
 
-@inproceedings{shore:sigmod08,
+@inproceedings{harizopoulos08oltp,
+  ids={shore:sigmod08},
   title={{OLTP through the looking glass, and what we found there}},
   author={Harizopoulos, Stavros and Abadi, Daniel J and Madden, Samuel and Stonebraker, Michael},
   booktitle=sigmod,
   year={2008},
 }
 
-@inproceedings{hstore:sigmod10,
+@inproceedings{jones10low,
+  ids={hstore:sigmod10},
   title={{Low overhead concurrency control for partitioned main memory databases}},
   author={Jones, Evan PC and Abadi, Daniel J and Madden, Samuel},
   booktitle=sigmod,
@@ -408,6 +444,20 @@
   year={2012},
 }
 
+@inproceedings{faleiro14lazy,
+  title={Lazy evaluation of transactions in database systems},
+  author={Faleiro, Jose M and Thomson, Alexander and Abadi, Daniel J},
+  booktitle=sigmod,
+  year={2014},
+}
+
+@inproceedings{wang16scaling,
+  title={Scaling multicore databases via constrained parallel execution},
+  author={Wang, Zhaoguo and Mu, Shuai and Yang Cui, Han Yi and Chen, Haibo and Li, Jinyang},
+  year={2016},
+  booktitle=sigmod
+}
+
 @inproceedings{bowers09hail,
   ids={hail:ccs09},
   author = {Bowers, Kevin D. and Juels, Ari and Oprea, Alina},
@@ -416,6 +466,19 @@
   year = {2009},
 } 
 
+@inproceedings{adl06compiler,
+ author = {Adl-Tabatabai, Ali-Reza and Lewis, Brian T. and Menon, Vijay and Murphy, Brian R. and Saha, Bratin and Shpeisman, Tatiana},
+ title = {Compiler and runtime support for efficient software transactional memory},
+ booktitle = pldi,
+ year = {2006},
+} 
+
+@inproceedings{spiegelman16transactional,
+  title={Transactional data structure libraries},
+  author={Spiegelman, Alexander and Golan-Gueta, Guy and Keidar, Idit},
+  booktitle=pldi,
+  year={2016},
+}
 
 @inproceedings{kubiatowicz2000oceanstore,
   ids={oceanstore:asplos00},
@@ -433,6 +496,33 @@
   year={2004},
 }
 
+@inproceedings{zhang16lock,
+  title={Lock-free transactions without rollbacks for linked data structures},
+  author={Zhang, Deli and Dechev, Damian},
+  booktitle=spaa,
+  year={2016},
+}
+
+@inproceedings{saad16extending,
+  title={On extending TM primitives using low level semantics},
+  author={Saad, Mohamed M and Palmieri, Roberto and Hassan, Ahmed and Ravindran, Binoy},
+  year={2016},
+  booktitle=spaa
+}
+
+@inproceedings{golan11automatic,
+  title={Automatic fine-grain locking using shape properties},
+  author={Golan-Gueta, Guy and Bronson, Nathan and Aiken, Alex and Ramalingam, G and Sagiv, Mooly and Yahav, Eran},
+  booktitle=oopsla,
+  year={2011},
+}
+
+@inproceedings{roy09runtime,
+  title={A runtime system for software lock elision},
+  author={Roy, Amitabha and Hand, Steven and Harris, Tim},
+  booktitle=eurosys,
+  year={2009},
+}
 
 @inproceedings{bessani11depsky,
   ids={depsky:eurosys11},
@@ -448,6 +538,20 @@
   author={Kraska, Tim and Pang, Gene and Franklin, Michael J and Madden, Samuel and Fekete, Alan},
   booktitle=eurosys,
   year={2013},
+}
+
+@inproceedings{herman16type,
+  title={Type-aware transactions for faster concurrent code},
+  author={Herman, Nathaniel and Inala, Jeevana Priya and Huang, Yihe and Tsai, Lillian and Kohler, Eddie and Liskov, Barbara and Shrira, Liuba},
+  booktitle=eurosys,
+  year={2016},
+}
+
+@inproceedings{herlihy08transactional,
+  title={Transactional boosting: a methodology for highly-concurrent transactional objects},
+  author={Herlihy, Maurice and Koskinen, Eric},
+  booktitle=ppopp,
+  year={2008},
 }
 
 @inproceedings{rizzo98dummynet,
@@ -478,28 +582,29 @@
   title={Erasure coding in windows azure storage},
   author={Huang, Cheng and Simitci, Huseyin and Xu, Yikang and Ogus, Aaron and Calder, Brad and Gopalan, Parikshit and Li, Jin and Yekhanin, Sergey and others},
   booktitle=atc,
-  volume={12},
   year={2012}
 }
 
-@inproceedings{granola:atc12,
+@inproceedings{cowling12granola,
+  ids={granola:atc12},
   title={{Granola: low-overhead distributed transaction coordination}},
   author={Cowling, James and Liskov, Barbara},
   booktitle=atc,
   year={2012},
 }
 
-@inproceedings{tao:atc13,
- author = {Bronson, Nathan and Amsden, Zachary and Cabrera, George and Chakka, Prasad and Dimov, Peter and Ding, Hui and Ferris, Jack and Giardullo, Anthony and Kulkarni, Sachin and Li, Harry and Marchukov, Mark and Petrov, Dmitri and Puzar, Lovro and Song, Yee Jiun and Venkataramani, Venkat},
- title = {{TAO: Facebook's distributed data store for the social graph}},
- booktitle = atc,
- year = {2013},
+@inproceedings{bronson13tao,
+  ids={tao:atc13},
+  author = {Bronson, Nathan and Amsden, Zachary and Cabrera, George and Chakka, Prasad and Dimov, Peter and Ding, Hui and Ferris, Jack and Giardullo, Anthony and Kulkarni, Sachin and Li, Harry and Marchukov, Mark and Petrov, Dmitri and Puzar, Lovro and Song, Yee Jiun and Venkataramani, Venkat},
+  title = {{TAO: Facebook's distributed data store for the social graph}},
+  booktitle = atc,
+  year = {2013},
 }
 
 
 @inproceedings{baker11megastore,
   ids={megastore:cidr11},
-  title={Megastore: Providing Scalable, Highly Available Storage for Interactive Services.},
+  title={Megastore: providing scalable, highly available storage for interactive services},
   author={Baker, Jason and Bond, Chris and Corbett, James and Furman, JJ and Khorlin, Andrey and Larson, James and L{\'e}on, Jean-Michel and Li, Yawei and Lloyd, Alexander and Yushprakh, Vadim},
   booktitle=cidr,
   year={2011}
@@ -507,14 +612,14 @@
 
 
 @inproceedings{keeton04designing,
-  title={Designing for Disasters},
+  title={Designing for disasters},
   author={Keeton, Kimberly and Santos, Cipriano and Beyer, Dirk and Chase, Jeffrey and 	Wilkes, John},
   booktitle=fast,
   year={2004}
 }
 
 @inproceedings{abd05ursa,
-  title={Ursa Minor: Versatile Cluster-based Storage.},
+  title={Ursa minor: versatile cluster-based storage},
   author={Abd-El-Malek, Michael and Courtright II, William V and Cranor, Chuck and Ganger, Gregory R and Hendricks, James and Klosterman, Andrew J and Mesnier, Michael P and Prasad, Manish and Salmon, Brandon and Sambasivan, Raja R and others},
   booktitle=fast,
   year={2005}
@@ -567,7 +672,7 @@
 
 @inproceedings{rhea13pond,
   ids={pond:fast13},
-  title={Pond: the OceanStore Prototype},
+  title={Pond: the OceanStore prototype},
   author={Rhea, Sean and Eaton, Patrick and Geels, Dennis and Weatherspoon, Hakim and Zhao, Ben and Kubiatowicz, John},
   booktitle=fast,
   year={2013},
@@ -616,7 +721,14 @@
   title={Erasure coding vs. replication: A quantitative comparison},
   author={Weatherspoon, H. and Kubiatowicz, J.},
   booktitle=iptps,
-  year={2002},
+  year=2002,
+}
+
+@inproceedings{riegel08making,
+  title={Making object-based STM practical in unmanaged environments},
+  author={Riegel, Torvald and De Brum, Diogo Becker},
+  booktitle=transact,
+  year={2008}
 }
 
 @article{chandy83distributed,
@@ -644,10 +756,10 @@
   title={The HP AutoRAID hierarchical storage system},
   author={Wilkes, John and Golding, Richard and Staelin, Carl and Sullivan, Tim},
   journal=tocs,
-  volume={14},
-  number={1},
+  volume=14,
+  number=1,
   pages={108--136},
-  year={1996},
+  year=1996,
 }
 
 
@@ -673,7 +785,8 @@
   year={1990},
 }
 
-@article{TransactionGamma,
+@article{dewitt90gamma,
+  ids={gamma:tkde90},
   title={{The Gamma database machine project}},
   author={DeWitt, David J and Ghandeharizadeh, Shahram and Schneider, Donovan A. and Bricker, Allan and Hsiao, Hui-I and Rasmussen, Rick},
   journal=tkde,
@@ -684,7 +797,8 @@
   publisher={IEEE}
 }
 
-@article{TransactionBubba,
+@article{boral90prototyping,
+  ids={TransactionBubba},
   title={{Prototyping Bubba, a highly parallel database system}},
   author={Boral, Haran and Alexander, William and Clay, Larry and Copeland, George and Danforth, Scott and Franklin, Michael and Hart, Brian and Smith, Marc and Valduriez, Patrick},
   journal=tkde,
@@ -695,7 +809,8 @@
   publisher={IEEE}
 }
 
-@article{TransactionR,
+@article{mohan86transaction,
+  ids={r:tods86},
   title={{Transaction management in the R* distributed database management system}},
   author={Mohan, C and Lindsay, Bruce and Obermarck, Ron},
   journal=tods,
@@ -902,7 +1017,7 @@
 @article{lamport78time,
  author = {Leslie Lamport},
  title = {Time, clocks, and the ordering of events in a distributed system},
- journal = CACM,
+ journal = cacm,
  year = {1978},
 }
 
@@ -919,7 +1034,7 @@
 @article{Papadimitriou79serializability,
  author = {Christos H. Papadimitriou},
  title = {The serializability of concurrent database updates},
- journal = {Journal of the ACM},
+ journal = jacm,
  volume = {26},
  number = {4},
  year = 1979,
@@ -1019,14 +1134,6 @@
  address = {San Francisco, CA, USA},
 } 
 
-@book{patterson88case,
-  title={A case for redundant arrays of inexpensive disks (RAID)},
-  author={Patterson, D.A. and Gibson, G. and Katz, R.H.},
-  volume={17},
-  number={3},
-  year={1988},
-  publisher={ACM}
-}
 @book{gerhard01transactional,
   title="Transactional Information Systems: Theory, Algorithms, and the Practice of Concurrency Control and Recovery",
   author="Gerhard Weikum and Gottfried Vossen",
@@ -1093,26 +1200,26 @@ howpublished={http://www.tpc.org/tpcc/}
 }
 
 
-@electronic{bib:MAREA1,
+@misc{bib:MAREA1,
   title = {Facebook and Microsoft to Build Fiber Optic Cable Across Atlantic},
-  howpublished = {http://www.wsj.com/articles/facebook\-and-microsoft-to-build-fiber-optic-cable-across-atlantic\-1464298853},
+  howpublished = {\url{http://www.wsj.com/articles/facebook-and-microsoft-to-build-fiber-optic-cable-across-atlantic-1464298853}},
 	month={May},
 	year={2016},
 	publisher={Wall Street Journal}
 };
 
-@electronic{bib:MAREA2,
+@misc{bib:MAREA2,
   title = {Microsoft, Facebook to lay massive undersea cable},
-  howpublished = {http://www.usatoday.com/story/experience/2016/05/26/microsoft-facebook-undersea-cable-google-marea-amazon/84984882},
+  howpublished = {\url{http://www.usatoday.com/story/experience/2016/05/26/microsoft-facebook-undersea-cable-google-marea-amazon/84984882}},
 	month={May},
 	year={2016},
 	publisher={USE Today}
 };
 
-@electronic{bib:FA-1,
+@misc{bib:FA-1,
   title = {Fiber-Optic Link Around the Globe},
-  howpublished = {https://en.wikipedia.org/wiki/Fiber-Optic\_Link\_Around\_the\_Globe},
-	publisher={Wikipedia}
+  howpublished = {\url{https://en.wikipedia.org/wiki/Fiber-Optic\_Link\_Around\_the\_Globe}},
+  publisher={Wikipedia}
 };
 
 
