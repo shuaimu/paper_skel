@@ -28,12 +28,14 @@
 @string{ecoop="Proceedings of European Conference on Object-Oriented Programming (ECOOP)"}
 @string{socc="Proceedings of ACM Symposium on Cloud Computing (SoCC)"}
 @string{infocom="Proceedings of IEEE International Conference on Computer Communications (INFOCOM)"}
+@string{hpdc="Proceedings of ACM Symposium on High-Performance Parallel and Distributed Computing (HPDC)"}
 @string{dsn="Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)"}
 
 % workshops
 @string{hotos="Proceedings of USENIX Workshop on Hot Topics in Operating Systems (HotOS)"}
 @string{iptps="Proceedings of International Workshop on Peer-to-Peer Systems (IPTPS)"}
 @string{transact="Proceedings of ACM SIGPLAN Workshop on Transactional Computing (TRANSACT)"}
+@string{hpts="International Workshop on High Performance Transaction Systems (HPTS)"}
 
 % good journals
 @string{tocs="ACM Transactions on Computer Systems (TOCS)"}
@@ -41,7 +43,8 @@
 @string{toplas="ACM Transactions on Programming Languages and Systems (TOPLAS)"}
 @string{csur="ACM Computring Surveys (CSUR)"}
 @string{osr="ACM SIGOPS Operating Systems Review (OSR)"}
-@string{ccr="(CCR)"}
+@string{ccr="ACM SIGCOMM Computer Communication Review (CCR)"}
+@string{sicomp="SIAM Journal on Computing (SICOMP)"} 
 % @Comment less good journals
 @string{vldbj="The International Journal on Very Large Data Bases (VLDBJ)"}
 @string{tkde="IEEE Transactions on Knowledge and Data Engineering (TKDE)"}
@@ -77,11 +80,12 @@
   year = {2003},
 }
 
-@inproceedings{dynamo:sosp07,
- author = {DeCandia, Giuseppe and Hastorun, Deniz and Jampani, Madan and Kakulapati, Gunavardhan and Lakshman, Avinash and Pilchin, Alex and Sivasubramanian, Swaminathan and Vosshall, Peter and Vogels, Werner},
- title = {Dynamo: Amazon's Highly Available Key-value Store},
- booktitle = sosp,
- year = {2007}
+@inproceedings{decandia07dynamo,
+  ids={dynamo:sosp07},
+  author = {DeCandia, Giuseppe and Hastorun, Deniz and Jampani, Madan and Kakulapati, Gunavardhan and Lakshman, Avinash and Pilchin, Alex and Sivasubramanian, Swaminathan and Vosshall, Peter and Vogels, Werner},
+  title = {Dynamo: Amazon's highly available key-value store},
+  booktitle = sosp,
+  year = {2007}
 } 
 
 @inproceedings{zyzzyva:sosp07,
@@ -126,7 +130,7 @@
 @inproceedings{tu13speedy,
   ids={silo:sosp13},
   author = {Tu, Stephen and Zheng, Wenting and Kohler, Eddie and Liskov, Barbara and Madden, Samuel},
-  title = {Speedy Transactions in Multicore In-memory Databases},
+  title = {Speedy transactions in multicore in-memory databases},
   booktitle = sosp,
   year = {2013},
 } 
@@ -228,7 +232,7 @@
 
 @inproceedings{li12making,
   ids={redblue:osdi12},
-  title={{Making geo-replicated systems fast as possible, consistent when necessary}},
+  title={Making geo-replicated systems fast as possible, consistent when necessary},
   author={Li, Cheng and Porto, Daniel and Clement, Allen and Gehrke, Johannes and Pregui{\c{c}}a, Nuno and Rodrigues, Rodrigo},
   booktitle=osdi,
   year={2012}
@@ -242,11 +246,12 @@
   year={2012},
 }
 
-@inproceedings{rococo:osdi14,
- author = {Mu, Shuai and Cui, Yang and Zhang, Yang and Lloyd, Wyatt and Li, Jinyang},
- title = {Extracting more concurrency from distributed transactions},
- booktitle = osdi,
- year = {2014},
+@inproceedings{mu14extracting,
+  ids={rococo:osdi14},
+  author = {Mu, Shuai and Cui, Yang and Zhang, Yang and Lloyd, Wyatt and Li, Jinyang},
+  title = {Extracting more concurrency from distributed transactions},
+  booktitle = osdi,
+  year = {2014},
 } 
 
 @inproceedings{xie14salt,
@@ -259,16 +264,31 @@
 
 @inproceedings{muralidhar14f4,
   ids={f4:osdi14},
-  title={{F4: Facebook's warm BLOB storage system}},
+  title={{f4: Facebook's warm BLOB storage system}},
   author={Muralidhar, Subramanian and Lloyd, Wyatt and Roy, Sabyasachi and Hill, Cory and Lin, Ernest and Liu, Weiwen and Pan, Satadru and Shankar, Shiva and Sivakumar, Viswanath and Tang, Linpeng and others},
   booktitle=osdi,
   year={2014}
 }
 
+@inproceedings{mu16consolidating,
+  ids={janus:osdi16},
+  title={Consolidating Concurrency Control and Consensus for Commits under Conflicts},
+  author={Mu, Shuai and Nelson, Lamon and Lloyd, Wyatt and Li, Jinyang},
+  booktitle=osdi,
+  year={2016},
+}
+
+@inproceedings{lu16snow,
+  title={{The SNOW theorem and latency-optimal read-only transactions}},
+  author={Lu, Haonan and Hodsdon, Christopher and Ngo, Khiem and Mu, Shuai and Lloyd, Wyatt},
+  booktitle=osdi,
+  year={2016}
+}
+
 @inproceedings{escriva12hyperdex,
   ids={Hyperdex:sigcomm12},
   author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
-  title = {HyperDex: A Distributed, Searchable Key-value Store},
+  title = {{HyperDex}: A distributed, searchable key-value Store},
   booktitle = sigcomm,
   year = {2012},
 } 
@@ -461,8 +481,9 @@
 }
 
 @inproceedings{wang16scaling,
+  ids={ic3:sigmod16},
   title={Scaling multicore databases via constrained parallel execution},
-  author={Wang, Zhaoguo and Mu, Shuai and Yang Cui, Han Yi and Chen, Haibo and Li, Jinyang},
+  author={Wang, Zhaoguo and Mu, Shuai and Cui, Yang and Yi, Han and Chen, Haibo and Li, Jinyang},
   year={2016},
   booktitle=sigmod
 }
@@ -563,6 +584,20 @@
   year={2008},
 }
 
+@inproceedings{mu14when,
+  title={{When Paxos meets erasure code: reduce network and storage cost in state machine replication}},
+  author={Mu, Shuai and Chen, Kang and Wu, Yongwei and Zheng, Weimin},
+  booktitle=hpdc,
+  year={2014},
+}
+
+@inproceedings{mu12mulibcloud,
+  title={{$\mu$LibCloud: Providing high available and uniform accessing to multiple cloud storages}},
+  author={Mu, Shuai and Chen, Kang and Gao, Pin and Ye, Feng and Wu, Yongwei and Zheng, Weimin},
+  booktitle={Proceedings of ACM/IEEE International Conference on Grid Computing (Grid)},
+  year={2012}
+}
+
 @inproceedings{rizzo98dummynet,
  author = {Rizzo, Luigi},
  title = {Dummynet and forward error correction},
@@ -610,7 +645,6 @@
   year = {2013},
 }
 
-
 @inproceedings{baker11megastore,
   ids={megastore:cidr11},
   title={Megastore: providing scalable, highly available storage for interactive services},
@@ -618,7 +652,6 @@
   booktitle=cidr,
   year={2011}
 }
-
 
 @inproceedings{keeton04designing,
   title={Designing for disasters},
@@ -642,7 +675,7 @@
 }
 
 @inproceedings{plank09performance,
-  title={A Performance Evaluation and Examination of Open-Source Erasure Coding Libraries for Storage.},
+  title={A performance evaluation and examination of open-source erasure coding libraries for storage.},
   author={Plank, James S and Luo, Jianqiang and Schuman, Catherine D and Xu, Lihao and Wilcox-O'Hearn, Zooko and others},
   booktitle=fast,
   year={2009}
@@ -662,14 +695,12 @@
  year = {2011},
 } 
 
-
 @inproceedings{khan12rethinking,
   title={Rethinking erasure codes for cloud file systems: Minimizing I/O for recovery and degraded reads},
   author={Khan, Osama and Burns, Randal and Plank, James and Pierce, William and Huang, Cheng},
   booktitle=fast,
   year={2012}
 }
-
 
 @inproceedings{hu12nccloud,
   ids={nccloud:fast12},
@@ -705,11 +736,10 @@
 
 @inproceedings{dimakis07networkcoding,
     author = {Ros G. Dimakis and P. Brighten Godfrey and Yunnan Wu and Martin O. Wainwright and Kannan Ramch},
-    title = {Network Coding for Distributed Storage Systems},
+    title = {Network coding for distributed storage systems},
     booktitle = infocom,
     year = {2007}
 }
-
 
 @inproceedings{abulibdeh10racs,
   ids={racs:socc10},
@@ -749,7 +779,6 @@
   number={2},
   pages={144--156},
   year={1983},
-  publisher={ACM}
 }
 
 @article{attiya94sequential,
@@ -770,7 +799,6 @@
   pages={108--136},
   year=1996,
 }
-
 
 @article{lamport98parttime,
   ids={paxos:tocs98},
@@ -803,11 +831,10 @@
   number={1},
   pages={44--62},
   year={1990},
-  publisher={IEEE}
 }
 
 @article{boral90prototyping,
-  ids={TransactionBubba},
+  ids={bubba:tkde90},
   title={{Prototyping Bubba, a highly parallel database system}},
   author={Boral, Haran and Alexander, William and Clay, Larry and Copeland, George and Danforth, Scott and Franklin, Michael and Hart, Brian and Smith, Marc and Valduriez, Patrick},
   journal=tkde,
@@ -829,7 +856,7 @@
   year={1986},
 }
 
-@article{StepDecomposed,
+@article{bernstein99concurrency,
   title={{Concurrency control for step-decomposed transactions}},
   author={Bernstein, Arthur J and Gerstl, David S and Lewis, Philip M},
   journal={Information Systems},
@@ -840,7 +867,7 @@
   publisher={Elsevier}
 }
 
-@article{MultidatabaseOverview,
+@article{breitbart92overview,
   title={{Overview of multidatabase transaction management}},
   author={Breitbart, Yuri and Garcia-Molina, Hector and Silberschatz, Avi},
   journal=vldbj,
@@ -848,10 +875,9 @@
   number={2},
   pages={181--239},
   year={1992},
-  publisher={Springer}
 }
 
-@article{TransactionSemanticKnowledge,
+@article{garcia83using,
   title={{Using semantic knowledge for transaction processing in a distributed database}},
   author={Garcia-Molina, Hector},
   journal=tods,
@@ -904,14 +930,14 @@
   year={1995},
 }
 
-@inproceedings{TransactionSqlC++,
+@inproceedings{whitney97high,
   title={{High volume transaction processing without concurrency control, two phase commit, sql or c++}},
   author={Whitney, Arthur and Shasha, Dennis and Apter, Stevan},
-  booktitle={{Seventh International Workshop on High Performance Transaction Systems, Asilomar}},
+  booktitle=hpts,
   year={1997}
 }
 
-@article{MassiveMemoryMachine,
+@article{garcia84massive,
   title={{A massive memory machine}},
   author={Garcia-Molina, Hector and Lipton, Richard J. and Valdes, Jacobo},
   journal=tc,
@@ -919,10 +945,9 @@
   number={5},
   pages={391--399},
   year={1984},
-  publisher={IEEE}
 }
 
-@article{MainMemoryDatabase,
+@article{garcia92main,
   title={{Main memory database systems: An overview}},
   author={Garcia-Molina, Hector and Salem, Kenneth},
   journal=tkde,
@@ -933,14 +958,14 @@
   publisher={IEEE}
 }
 
-@inproceedings{MainMemoryTransaction,
+@inproceedings{li88multiprocessor,
   title={{Multiprocessor main memory transaction processing}},
   author={Li, Kai and Naughton, Jeffrey F},
   booktitle={Proceedings of the First International Symposium on Databases in Parallel and Distributed Systems},
   year={1988},
 }
 
-@article{DatabaseCassandra,
+@article{lakshman10cassandra,
   title={{Cassandra: a decentralized structured storage system}},
   author={Lakshman, Avinash and Malik, Prashant},
   journal=osr,
@@ -951,7 +976,7 @@
   publisher={ACM}
 }
 
-@article{ConcurrencyControl,
+@article{bernstein81concurrency,
   title={{Concurrency control in distributed database systems}},
   author={Bernstein, Philip A and Goodman, Nathan},
   journal=csur,
@@ -962,16 +987,14 @@
   publisher={ACM}
 }
 
-
-@book{TransactionalInformationSystem,
+@book{weikum01transactional,
   title={{Transactional information systems: theory, algorithms, and the practice of concurrency control and recovery}},
   author={Weikum, Gerhard and Vossen, Gottfried},
   year={2001},
   publisher={Elsevier}
 }
 
-
-@phdthesis{InformationStorageDecentralized,
+@phdthesis{gifford81information,
  author = {Gifford, David Kenneth},
  title = {Information Storage in a Decentralized Computer System},
  year = {1981},
@@ -980,8 +1003,8 @@
  address = {Stanford, CA, USA},
 } 
 
-
-@article{occ:tods81,
+@article{kung81optimistic,
+  ids={occ:tods81},
   title={{On optimistic methods for concurrency control}},
   author={Kung, Hsiang-Tsung and Robinson, John T},
   journal=tods,
@@ -991,19 +1014,18 @@
   year={1981},
 }
 
-
-@article{DepthFirstSearch,
+@article{tarjan72depth,
+  ids={dfs},
   title={{Depth-first search and linear graph algorithms}},
   author={Tarjan, Robert},
-  journal={SIAM journal on computing},
+  journal=sicomp,
   volume={1},
   number={2},
   pages={146--160},
   year={1972},
-  publisher={SIAM}
 }
 
-@article{SystemConcurrencyControl,
+@article{rosenkrantz78system,
   title={{System level concurrency control for distributed database systems}},
   author={Rosenkrantz, Daniel J and Stearns, Richard E and Lewis II, Philip M},
   journal=tods,
@@ -1030,7 +1052,7 @@
  year = {1978},
 }
 
-@article{statemachine,
+@article{schneider90implementing,
  author = {Fred B. Schneider},
  title = {Implementing fault-tolerant services using the state machine approach: a tutorial},
  journal = csur,
@@ -1040,7 +1062,7 @@
  year = {1990}
  }
 
-@article{Papadimitriou79serializability,
+@article{papadimitriou79serializability,
  author = {Christos H. Papadimitriou},
  title = {The serializability of concurrent database updates},
  journal = jacm,
@@ -1212,17 +1234,17 @@ howpublished={http://www.tpc.org/tpcc/}
 @misc{bib:MAREA1,
   title = {Facebook and Microsoft to Build Fiber Optic Cable Across Atlantic},
   howpublished = {\url{http://www.wsj.com/articles/facebook-and-microsoft-to-build-fiber-optic-cable-across-atlantic-1464298853}},
-	month={May},
-	year={2016},
-	publisher={Wall Street Journal}
+  month={May},
+  year={2016},
+  publisher={Wall Street Journal}
 };
 
 @misc{bib:MAREA2,
   title = {Microsoft, Facebook to lay massive undersea cable},
   howpublished = {\url{http://www.usatoday.com/story/experience/2016/05/26/microsoft-facebook-undersea-cable-google-marea-amazon/84984882}},
-	month={May},
-	year={2016},
-	publisher={USE Today}
+  month={May},
+  year={2016},
+  publisher={USE Today}
 };
 
 @misc{bib:FA-1,
@@ -1230,7 +1252,6 @@ howpublished={http://www.tpc.org/tpcc/}
   howpublished = {\url{https://en.wikipedia.org/wiki/Fiber-Optic\_Link\_Around\_the\_Globe}},
   publisher={Wikipedia}
 };
-
 
 @article{mears1986low,
   title={Low-threshold tunable CW and Q-switched fibre laser operating at 1.55 $\mu$m},
@@ -1241,7 +1262,6 @@ howpublished={http://www.tpc.org/tpcc/}
   pages={159--160},
   year={1986}
 }
-
 
 @article{zhu2011112,
   title={112-Tb/s space-division multiplexed DWDM transmission with 14-b/s/Hz aggregate spectral efficiency over a 76.8-km seven-core fiber},
