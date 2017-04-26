@@ -1,0 +1,714 @@
+% -*- mode: latex -*-
+% This is stuff that is required for the document to compile. It is not
+% related to formatting. 
+\usepackage[pdftex]{graphicx}
+\usepackage{booktabs}  % for tables
+\usepackage{dcolumn}   % for tables
+%\usepackage{hhline}   % for tables
+\usepackage{multirow}  % for tables
+\usepackage{rotating}
+\usepackage{xspace}
+\usepackage{hyphenat}  % supplies \hyp{}, which tells tex that it can 
+		       % hyphenate at an existing hyphen
+\usepackage{color}
+\usepackage{float}                           % Must appear before hyperref to
+                                             % avoid weird PDF compile issues
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{textpos}
+\usepackage{balance} % making the last page balanced
+\usepackage{cleveref}
+\usepackage{multirow}
+\usepackage[symbol*]{footmisc}
+\usepackage{mathtools}
+
+%\usepackage[square,comma,numbers,sort&compress]{natbib}
+
+%\usepackage{ulem}      % for strikethrough and underlining
+%\mw{above package turns italics to underlines.}
+
+\usepackage{wrapfig}
+%\usepackage{textcomp}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{pifont}
+\usepackage{adjustbox} % textbox as figures
+%\usepackage{natbib}
+%\usepackage{url}
+
+\usepackage{wrapfig}
+
+\usepackage{ulem}
+\normalem
+
+
+% for getting table 1 in hotnets09 submission to work
+\usepackage{colortbl} % colorful columns and rows
+\usepackage{array}    % needed for 'b' argument in tabular preamble
+
+\usepackage{dblfloatfix}
+
+%%%
+%%%  Captions
+%%%
+\usepackage[font=bf]{caption}
+\usepackage{subcaption}
+
+%%%
+%%% SM: select the algorithm package you want to use
+%%%
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\floatname{algorithm}{Pseudocode}
+%\usepackage[linesnumbered,noresetcount,ruled,vlined]{algorithm2e}
+%\usepackage{algpseudocode}
+
+%\algrenewcomment[1]{\hfill// #1}%
+% Hack algpseudocode to be more Python-like
+%\algnotext{EndFunction}
+%\algnotext{EndFor}
+%\algnotext{EndIf}
+%\algnotext{EndWhile}
+%\algnotext{EndLoop}
+%\algrenewcommand{\algorithmicdo}{\hspace{-0.2em}:}
+%\algrenewcommand{\algorithmicthen}{\hspace{-0.2em}:}
+%\algrenewcommand{\algorithmiccomment}[1]{{\color{CadetBlue}\hfill// #1}}
+
+\usepackage{amsmath,amscd}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc,positioning,patterns}
+%\usepackage{mathrsfs}
+%\usepackage{minted}
+%\usemintedstyle{xcode}
+%\usepackage[noeka]{mathrmletter}
+
+\renewcommand{\ttdefault}{cmtt}
+\newcommand{\mintcpp}[1]{\mintinline{cpp}{#1}}
+
+%\newif\iftechreport
+%\newif\ifproof
+%\newif\ifextended
+%\newif\iflongbatching
+%\newif\ifsubmission
+%\newif\ifelementary
+%
+%\ifx\buildextended\undefined
+%\else
+%    \extendedtrue
+%\fi
+%\ifx\buildproof\undefined
+%\else
+%  \prooftrue
+%\fi
+%\techreporttrue
+%\submissiontrue
+
+% Default colors to bright
+% MW commenting out. this is like drawing attention to punctuation.
+% makes no sense. it's not WEKWD (what eddie kohler would do).
+%\definecolor{MyCiteColor}{rgb}{0,0.4,0}
+%\definecolor{MyLinkColor}{rgb}{0,0,0.4}
+
+% peanut gallery comments
+% NOTE: Comment out the line below if you want a draft with no red comments.
+% NOTE: Commenting out this line may replace some of the red comments with 
+%       extra spaces or newlines.
+%
+\newcommand{\zstar}{{$^{\star}$}\xspace}
+\newcommand{\zdag}{{$^{\dagger}$}\xspace}
+\newcommand{\zddag}{{$^{\ddagger}$}\xspace}
+\newcommand{\zsect}{{$^{\S}$}\xspace}
+\newcommand{\zparallel}{{$^{\parallel}$}\xspace}
+%
+
+\newcommand{\textred}[1]{\textcolor{red}{#1}}
+%\newcommand{\textcolor}[2]{\begingroup \color{#1} #2\endgroup}
+\ifx\noeditingmarks\undefined
+   \newcommand{\pgwrapper}[3]{\begingroup \color{#1} #2: #3 \endgroup}
+   \newcommand{\pgwrapperb}[1]{\textbf{#1}}
+\else
+   \newcommand{\pgwrapperb}[1]{}
+   \newcommand{\pgwrapper}[3]{}
+\fi
+\newcommand{\jl}[1]{\pgwrapper{red}{JL}{#1}}
+\newcommand{\mw}[1]{\pgwrapper{green}{MW}{#1}}
+\newcommand{\sm}[1]{\pgwrapper{purple}{SM}{#1}}
+% end peanut gallery comments
+
+% definitions for MP
+\def\hn{\usefont{OT1}{phv}{mc}{n}\selectfont}
+\def\hb{\usefont{OT1}{phv}{bc}{n}\selectfont}
+\newcommand{\mpfont}{\hn\scriptsize}
+
+\ifx\noeditingmarks\undefined
+    \newcommand{\MPworker}[2]{{\color{#1}\vrule\vrule}{\marginpar{\color{#1}\mpfont #2}}}
+\else
+    \newcommand{\MPworker}[2]{}
+\fi
+
+\newcommand{\JL}[1]{\MPworker{red}{MW: #1}}
+\newcommand{\SP}[1]{\MPworker{blue}{SGA: #1}}
+\newcommand{\ST}[1]{\MPworker{green}{SM: #1}}
+\newcommand{\MPcheck}[1][]{\MPworker{blue}{CHECK #1}\xspace}
+
+\ifx\noeditingmarks\undefined
+    \newcommand{\changebars}[2]{%
+    [{\color{magenta}\em \begingroup {#1} \endgroup}][{\color{magenta}\sout{#2}}]}
+\else
+    \newcommand{\changebars}[2]{#1}
+\fi
+
+\newcommand{\changebarsii}[2]{#1}
+
+ 
+% ref appendix in different styles, depending on whether it's the
+% extended version and depending on what the text is trying to do.
+\newcommand{\refappendixplain}[1]{%
+\ifextended%
+Appendix~#1%
+\else%
+%Appendix #1~\cite{extended_version}%
+Appendix #1~\cite{braun13verifyingextended}%
+\fi%
+\xspace
+}
+
+\newcommand{\refappendixinside}[2][shown in]{%
+\ifextended%
+\ (#1 Appendix~#2)%
+\else%
+%~\cite[Appendix #2]{extended_version}%
+~\textred{[TR, Apdx. #2]}
+\fi%
+\xspace
+}
+
+\setlength{\marginparwidth}{15mm}
+\setlength{\marginparsep}{0.35mm}
+
+\newcommand{\sha}{{\mathrm{SHA{\mathchar"002D}1}}}
+\newcommand{\hyph}{{\mathchar"002D}}
+
+\newcommand{\sys}{Mesto\xspace} 
+\newcommand{\Sys}{\sys}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}[lemma]{Claim} 
+\newtheorem{corollary}[lemma]{Corollary}
+%\newenvironment{proof}[1][Proof]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+% customize thanks symbols
+\makeatletter
+\renewcommand*{\@fnsymbol}[1]{\ensuremath{\ifcase#1\or \star\or \dagger\or \ddagger\or
+   \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+
+\newcommand{\circledone}{\ding{192}\xspace}
+\newcommand{\circledtwo}{\ding{193}\xspace}
+\newcommand{\circledthree}{\ding{194}\xspace}
+\newcommand{\circledfour}{\ding{195}\xspace}
+\newcommand{\circledfive}{\ding{196}\xspace}
+\newcommand{\filledone}{\ding{202}\xspace}
+\newcommand{\filledtwo}{\ding{203}\xspace}
+\newcommand{\filledthree}{\ding{204}\xspace}
+\newcommand{\filledfour}{\ding{205}\xspace}
+\newcommand{\filledfive}{\ding{206}\xspace}
+
+% latex shortcuts. No notation hard-coded here.
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\Vpcp}{\mathcal{V}_\text{pcp}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\Pb}{\mathcal{P}}
+\newcommand{\Vsc}{\V_\mathrm{SC}}
+\newcommand{\Pbsc}{\Pb_\mathrm{SC}}
+\newcommand{\ha}{\hat\alpha}
+\newcommand{\tf}{\tilde{f}}
+\newcommand{\vq}{\vec{q}}
+\newcommand{\ext}{{\small\textsf{Ext}}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\myvec}[1]{\mathbf{#1}}
+\newcommand{\prover}{prover\xspace}
+\newcommand{\verifier}{verifier\xspace}
+\newcommand{\Cbound}{\C(X{=}x,Y{=}y)}
+\newcommand{\multidecommit}{{\small\textsf{Commit+Multidecommit}}\xspace}
+\newcommand{\batchedmultidecommit}{{\small\textsf{BatchedCommit+Multidecommit}}\xspace}
+\newcommand{\keygen}{{\small\textsf{KeyGen}}}
+\newcommand{\commit}{{\small\textsf{Commit}}}
+\newcommand{\gensmall}{{\small\textsf{Gen}}}
+\newcommand{\encsmall}{{\small{Enc}}}
+\newcommand{\decsmall}{{\small{Dec}}}
+\newcommand{\gen}{{Gen}}
+\newcommand{\enc}{{Enc}}
+\newcommand{\dec}{{Dec}}
+%
+\newcommand{\dist}[1]{{\small\textsf{Dist}(#1)}}
+\newcommand{\rej}[1]{{\small\textsf{Rej}(#1)}}
+\newcommand{\smulsmall}{{\small\textsf{HMul}}}
+\newcommand{\psmulsmall}{{\small\textsf{PHMul}}}
+\newcommand{\haddsmall}{{\small\textsf{HAdd}}}
+\newcommand{\phaddsmall}{{\small\textsf{PHAdd}}}
+\newcommand{\bintreereduce}{{\small\textsf{BintreeReduce}}}
+\newcommand{\mmul}{{\small\textsf{SSLShaderModMul}}}
+\newcommand{\mexp}{{\small\textsf{SSLShaderModExp}}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\ipsmall}[2]{\langle#1,\,#2\rangle}
+\newcommand{\op}[2]{#1\otimes#2}
+\newcommand{\opsub}[3]{#1\otimes_#3 #2}
+\newcommand{\vp}[2]{#1\oslash#2}
+\newcommand{\ceil}[1]{\lceil#1\rceil}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\usec}{$\mu\mathrm{s}$}
+\newcommand{\accept}{\texttt{accept}\xspace}
+\newcommand{\reject}{\texttt{reject}\xspace}
+\newcommand{\bigproof}{\boldsymbol{\pi}}
+
+\newcommand{\lcm}{\operatorname{lcm}}
+
+\newcommand{\tV}{\tilde{V}}
+\newcommand{\tE}{\tilde{E}}
+\newcommand{\add}{\mathrm{add}}
+\newcommand{\mult}{\mathrm{mult}}
+\newcommand{\tadd}{\tilde{\add}}
+\newcommand{\tmult}{\tilde{\mult}}
+\newcommand{\qeq}{\stackrel{?}{=}}
+\newcommand{\dEq}{d_\mathrm{eq}}
+\newcommand{\GEq}{G_\mathrm{eq}}
+\newcommand{\Gck}{G_\mathrm{ck}}
+\newcommand{\Gcp}{G_{\Psi,\text{prop}}}
+\newcommand{\Gcpck}{G_{\Psi,\text{ck}}}
+%\newcommand{\dEq}{d_\mathrm{cmp}}
+%\newcommand{\GEq}{G_\mathrm{cmp}}
+
+\newcommand{\Xlt}{X^{(\ttlt)}}
+\newcommand{\Xne}{X^{(\ttne)}}
+\newcommand{\Mlt}{M^{(\ttlt)}}
+\newcommand{\Mne}{M^{(\ttne)}}
+
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+
+% constants/parameters for Pantry. first decide what kind of thing they
+% are.
+\newcommand{\constant}{constant\xspace}
+\newcommand{\chandley}{c_1}
+\newcommand{\ccreatequery}{c_2}
+\newcommand{\cperinsttests}{c_3}
+\newcommand{\cperinputtests}{c_4}
+\newcommand{\creplyquery}{c_5}
+\newcommand{\cproofvector}{c_6}
+\newcommand{\cquerylength}{c_7}
+\newcommand{\creplylength}{c_8}
+
+\newcommand{\Ch}{\C_{\hash}}
+\newcommand{\Chinv}{\C_{\hashinv}}
+\newcommand{\Cmapper}{\C_{\text{Mapper}}}
+\newcommand{\Creducer}{\C_{\text{Reducer}}}
+\newcommand{\Cload}{\C_{\text{Load}}}
+\newcommand{\Cstore}{\C_{\text{Store}}}
+
+\newcommand{\mapout}{\textit{map\_out}}
+\newcommand{\reducein}{\textit{reduce\_in}}
+\newcommand{\chunk}{\textit{ch}}
+\newcommand{\Tmap}{T_\text{mapper}}
+%\newcommand{\cmap}{c_\text{map}}
+\newcommand{\Zmapper}{Z_\text{mapper}}
+\newcommand{\Tmapper}{T_\text{mapper}}
+
+\newcommand{\digest}{digest\xspace}
+
+\newcommand{\bigconstant}{10^9}
+\newcommand{\bigconstanttwo}{96}
+\newcommand{\bigexponent}{6}
+
+\newcommand{\orderssavedbythreerefinements}{17\xspace}
+\newcommand{\orderssavedbyfourrefinements}{20\xspace}
+%\newcommand{\orderssavedbyoliveprime}{17}\MP{check}\xspace}
+
+\newcommand{\empiricalbatchmm}{\textred{50}}
+\newcommand{\empiricalbatchdii}{\textred{50}}
+\newcommand{\empiricalbatchdiii}{\textred{50}}
+
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+% Here is where our notation begins. Note, please see file NOTATION
+\newcommand{\z}{z}
+\newcommand{\bcircuit}{\mathcal{C}}
+%\newcommand{\poly}{P}
+%\newcommand{\prewf}{\Phi}
+\newcommand{\asstmm}[3]{z^{#1}_{#2,#3}}
+\newcommand{\varmm}[3]{Z^{#1}_{#2,#3}}
+\newcommand{\randommm}[3]{v^{#1}_{#2,#3}}
+\newcommand{\field}{\F}
+\newcommand{\fracfield}[1]{\mathrm{Frac}({#1})}
+\newcommand{\zmodp}{\mathbb{Z}/p}
+\newcommand{\qmodp}{\mathbb{Q}/p}
+\newcommand{\distq}{q}
+\newcommand{\negl}{\textrm{neg}}
+\newcommand{\rep}{\rho} 
+\newcommand{\nbatch}{\beta} 
+\newcommand{\nbatches}{\nbatch} 
+%\newcommand{\nconst}{\chi}
+\newcommand{\nconst}{{|\C|}}
+\newcommand{\nqueriespepper}{\approx1000}
+\newcommand{\nquerypepper}{\nqueries}
+\newcommand{\nqueries}{\mu}
+\newcommand{\conq}{t}  % consistency query
+%\newcommand{\pcpkappa}{6/7}
+
+% QAP stuff
+\newcommand{\poly}[2]{#1(#2)}
+\newcommand{\polyvar}{t}
+\newcommand{\apolynotat}{A}
+\newcommand{\bpolynotat}{B}
+\newcommand{\cpolynotat}{C}
+\newcommand{\divpolynotat}{D}
+\newcommand{\hpolynotat}{H}
+\newcommand{\apoly}[2][\polyvar]{\poly{\apolynotat_{#2}}{#1}}
+\newcommand{\bpoly}[2][\polyvar]{\poly{\bpolynotat_{#2}}{#1}}
+\newcommand{\cpoly}[2][\polyvar]{\poly{\cpolynotat_{#2}}{#1}}
+\newcommand{\divpoly}[1][\polyvar]{\poly{\divpolynotat}{#1}}
+\newcommand{\hpoly}[2][\polyvar]{\poly{\hpolynotat_{#2}}{#1}}
+\newcommand{\hpolyplain}[1][\polyvar]{\poly{\hpolynotat}{#1}}
+
+%\newcommand{\totalepsilon}{2.1\cdot10^{-5}\xspace}
+%\newcommand{\totalepsilon}{2.3\cdot10^{-8}\xspace}
+\newcommand{\totalerrori}{4.5\cdot10^{-6}\xspace}
+\newcommand{\totalerrorii}{2.8\cdot10^{-9}\xspace}
+\newcommand{\blerror}{1.9\cdot10^{-6}\xspace}
+\newcommand{\commiterror}{7.4\cdot10^{-12}\xspace}
+\newcommand{\deltaerror}{6.4\cdot10^{-7}\xspace}
+\newcommand{\pcpkappag}{2.6\cdot10^{-6}\xspace}
+
+% pepper errors
+\newcommand{\pcpkappa}{7/9}
+\newcommand{\pepperpcperror}{2.3\cdot10^{-8}\xspace}
+% includes commitment error: 1000*2*\epsilon_3
+\newcommand{\peppertotalerror}{2.4\cdot10^{-8}\xspace}
+
+\newcommand{\hcost}{h}
+\newcommand{\dcost}{d}
+\newcommand{\ecost}{e}
+\newcommand{\fcost}{f}
+\newcommand{\foptcost}{f_{lazy}}
+\newcommand{\fdivcost}{f_{\textit{div}}}
+%\newcommand{\fmodcost}{f_{\textit{mod}}}
+% MW: above is b.s. see comment in eval. the concept is simple: field
+% multiplication, end of story. implying that there's a notion of field
+% multiplication APART from f_mod just makes no sense for this model.
+% moreover, our other papers have always assumed a baseline of GMP, not
+% native CPU, and we always make that clear.
+\newcommand{\fmodcost}{\fcost}
+\newcommand{\rcost}{c}
+\newcommand{\randcost}{c}
+\newcommand{\provervec}{w}
+\newcommand{\linfunc}{\phi}
+\newcommand{\degree}{D}
+
+\newcommand{\polylog}[1]{\mathrm{polylog}(#1)}
+\newcommand{\Interp}[1]{I(#1)}
+
+\newcommand{\Kiirel}{=}
+
+\newcommand{\lengthenc}{\xi}
+
+\newcommand{\eps}{\epsilon}
+
+\newcommand{\totalepsilon}{\eps_G}
+\newcommand{\commitepsilon}{\eps_C}
+\newcommand{\ssepsilon}{\eps_S}
+\newcommand{\bindingepsilon}{\eps_B}
+\newcommand{\linearityepsilon}{\eps_L}
+\newcommand{\blepsilon}{\eps_F}
+
+\newcommand{\errori}{\epsilon_1}
+\newcommand{\errorii}{\epsilon_2}
+\newcommand{\erroriii}{\epsilon_3}
+
+\newcommand{\fiso}{f_{iso}}
+
+\newcommand{\prop}{\Phi}
+\newcommand{\proppsi}{\Phi_{\Psi}}
+\newcommand{\spec}{$\mathscr{S}$\xspace}
+\newcommand{\mspec}{\mathscr{S}\xspace}
+
+\newcommand{\equalszero}{\textsc{equals-zero}\xspace}
+\newcommand{\notequalszero}{\textsc{not-equals-zero}\xspace}
+
+\newcommand{\ttlt}{\texttt{<}}
+\newcommand{\ttleq}{\texttt{<=}}
+\newcommand{\ttgt}{\texttt{>}}
+\newcommand{\ttgeq}{\texttt{>=}}
+\newcommand{\ttne}{\texttt{!=}}
+\newcommand{\tteq}{\texttt{==}}
+
+\newcommand{\compilei}{C1\xspace}
+\newcommand{\compileii}{C2\xspace}
+\newcommand{\compileiii}{C3\xspace}
+
+\newcommand*{\circfont}{\fontfamily{phv}\selectfont}
+\newcommand{\tobject}{\texttt{TObject}\xspace}
+\newcommand{\tobjects}{\texttt{TObject}s\xspace}
+\newcommand{\ranks}{\texttt{ranks}\xspace}
+\newcommand{\locks}{\texttt{locks}\xspace}
+\newcommand{\lockable}{lockable item\xspace}
+\newcommand{\lockables}{lockable items\xspace}
+\newcommand{\Lockable}{Lockable item\xspace}
+\newcommand{\Lockables}{Lockable items\xspace}
+\newcommand{\xmark}{$false$\xspace}
+\newcommand{\cmark}{$true$\xspace}
+
+
+
+
+\tikzset{%
+  longcircle/.style={%
+    shape=rounded rectangle,
+    rounded rectangle arc length=180,
+    inner sep=+.3em,
+    text depth=+.1ex}}
+
+\newcommand{\longcircled}[5][]{%
+  \resizebox{1.4em}{0.65em}{%
+  \tikz[baseline=#5]{%
+  \node[longcircle, draw=#4, fill=#3, text=white, #1]{\,\,\circfont #2\,\,};
+  }}}
+
+\newcommand{\leftcirc}[5][]{%
+  \resizebox{0.9em}{!}{%
+  \tikz[baseline=#5]{%
+  \begin{scope}
+  \clip(-1.1em,-0.7em) rectangle (0.4em,0.7em);
+  \node[longcircle, draw=#4, fill=#3, text=white, #1]{\circfont #2};
+  \end{scope}}}\,
+	}
+
+\newcommand{\rightcirc}[5][]{%
+  \resizebox{0.9em}{!}{%
+  \tikz[baseline=#5]{%
+  \begin{scope}
+  \clip(-0.4em,-0.7em) rectangle (1.1em,0.7em);
+  \node[longcircle, draw=#4, fill=#3, text=white, #1]{\circfont #2};
+  \end{scope}}}\,
+}
+
+
+\newcommand{\ccircled}[3][]{%
+  \longcircled{#2}{#3}{#3}{-4pt}\hspace{-0.2em}
+}
+
+\newcommand{\rcirc}[3][]{%
+  \rightcirc{\,\,\,#2}{#3}{#3}{-4pt}\kern -0.4em
+}
+
+\newcommand{\trcirc}[3][]{%
+  \rightcirc{\,\,\,#2}{#3}{#3}{-6pt}
+}
+
+\newcommand{\brcirc}[3][]{%
+  \rightcirc{\,\,\,#2}{#3}{#3}{-2pt}
+}
+
+\newcommand{\lcirc}[3][]{%
+  \leftcirc{#2\,\,\,}{#3}{#3}{-4pt}\kern - 0.3em
+}
+
+\newcommand{\tlcirc}[3][]{%
+  \leftcirc{#2\,\,\,}{#3}{#3}{-6pt}
+}
+
+\newcommand{\blcirc}[3][]{%
+  \leftcirc{#2\,\,\,}{#3}{#3}{-2pt}
+}
+
+
+% MW: our "house style" is not to italicize "et al". (we also don't
+% italicize "i.e." and "e.g.".) rationale: why draw attention to it?
+% italics mean "from a foreign language", but is it necessary to
+% emphasize the Latin-ness of "et al."?
+\newcommand{\etal}{et al.\xspace}
+\newcommand{\smcpit}[1]{#1}
+
+\makeatletter
+\def\imod#1{\allowbreak\mkern10mu({\operator@font mod}\,\,#1)}
+\makeatother
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+
+%\renewcommand{\vec}[1]{\mathbf{#1}}
+
+%\def\compactify{\leftmargin=\parindent \itemsep=0.01pt \topsep=0.01pt \partopsep=0pt \parsep=0.01pt}
+\def\compactify{\itemsep=0in \topsep=2pt \parsep=0.00in \partopsep=0pt
+\leftmargin=2em}
+\let\latexusecounter=\usecounter
+\newenvironment{CompactItemize}
+  {\def\usecounter{\compactify\latexusecounter}
+   \begin{itemize}\addtolength{\itemsep}{-0.075in}}
+  {\end{itemize}\let\usecounter=\latexusecounter}
+\newenvironment{CompactEnumerate}
+  {\def\usecounter{\compactify\latexusecounter}
+   \begin{enumerate}}
+  {\end{enumerate}\let\usecounter=\latexusecounter}
+
+\newenvironment{myitemize}%
+  {\begin{list}{\labelitemi}{\itemsep3pt \topsep3pt \parsep0.00in
+  \partopsep=3pt \leftmargin1.2em}}%
+  {\end{list}}
+\newenvironment{myitemize2}%
+  {\begin{list}{\labelitemi}{\itemsep1pt \topsep2pt \parsep0.00in
+  \partopsep=0pt \leftmargin1.2em}}%
+  {\end{list}}
+\newenvironment{myitemize4}%
+  {\begin{list}{\labelitemi}{\itemsep2pt \topsep2pt \parsep0.00in
+  \partopsep=0pt \leftmargin1.2em}}%
+  {\end{list}}
+\newenvironment{myitemize5}%
+  {\begin{list}{\threequartdash}{\itemsep3pt \topsep3pt \parsep0.00in
+  \partopsep=3pt \leftmargin1.5em}}%
+  {\end{list}}
+
+%\newenvironment{myitemize}%
+%  {\begin{list}{\labelitemi}{\itemsep4pt \topsep10pt \parsep0.00in
+%  \partopsep=0pt}}%
+%  {\end{list}}
+\newenvironment{myenumerate}
+  {\def\usecounter{\compactify\latexusecounter}
+   \begin{enumerate}}
+  {\end{enumerate}\let\usecounter=\latexusecounter}
+
+\def\compactsortof{\itemsep=0in \topsep=2pt \parsep=0.00in \partopsep=0pt
+\leftmargin=1.7em}
+\newenvironment{myenumerate2}
+  {\def\usecounter{\compactsortof\latexusecounter}
+   \begin{enumerate}}
+  {\end{enumerate}\let\usecounter=\latexusecounter}
+
+%\def\compactsortof{\itemsep=3pt \topsep3pt \parsep=0ex \partopsep=0pt
+%\leftmargin=1.55em}
+\newenvironment{myenumerate3}
+  {\def\usecounter{\compactsortof\latexusecounter}
+   \begin{enumerate}}
+  {\end{enumerate}\let\usecounter=\latexusecounter}
+
+\def\compactsqueeze{\itemsep=0pt \topsep0pt \parsep=0ex \partopsep=0pt
+\leftmargin=1.63em}
+\newenvironment{myenumerate4}
+  {\def\usecounter{\compactsqueeze\latexusecounter}
+   \begin{enumerate}}
+  {\end{enumerate}\let\usecounter=\latexusecounter}
+
+
+\newcounter{saveenumi}
+
+\newcommand{\astskip}{\smallskip\noindent\parbox{\linewidth}
+			{\center*\hspace{2.5em}*\hspace{2.5em}*\medskip\smallskip}}
+
+% uncomment to use regular paragraphs
+%\def\normalpar{}
+
+\ifx\normalpar\undefined
+  \newcommand{\mypar}[1]{\textbf{#1}}
+\else
+  \newcommand{\mypar}[1]{\paragraph{#1}}
+\fi
+
+\def\discretionaryslash{\discretionary{/}{}{/}}
+{\catcode`\/\active
+\gdef\URLprepare{\catcode`\/\active\let/\discretionaryslash
+        \def~{\char`\~}}}%
+\def\URL{\bgroup\URLprepare\realURL}%
+\def\realURL#1{\tt #1\egroup}%
+
+\newcommand{\dbupdate}{\textsc{update}}
+\newcommand{\dbselect}{\textsc{select}}
+\newcommand{\dbwhere}{\textsc{where}\xspace}
+\newcommand{\dbinsert}{\textsc{insert}}
+\newcommand{\dbdelete}{\textsc{delete}}
+\newcommand{\dbcreate}{\textsc{create}}
+\newcommand{\dbdrop}{\textsc{drop}}
+\newcommand{\dbindex}{\textsc{index}}
+\newcommand{\dbcf}{\textsc{columnfamily}}
+\newcommand{\dbtruncate}{\textsc{truncate}}
+\newcommand{\dbbatch}{\textsc{batch}}
+
+\newcommand\IN{$\in$}
+\newcommand\SIGMA{$\Sigma$}
+\newcommand\CUPEQ{$\stackrel{\cup}{=}$}
+\newcommand\OLDER {$\rightsquigarrow$}
+\newcommand\DEFEQ{$\stackrel{\Delta}{=}$}
+\newcommand\SUBI{\textsubscript{i}}
+\newcommand\SUBA{\textsubscript{a}}
+\newcommand\SUBB{\textsubscript{b}}
+\newcommand\SUBONE{\textsubscript{1}}
+\newcommand\SUBTWO{\textsubscript{2}}
+\newcommand\SUPT{\textsuperscript{T}}
+\newcommand\SUPP{\textsuperscript{p}}
+\newcommand\SUPI{\textsuperscript{i}}
+\newcommand\SUPD{\textsuperscript{d}}
+
+
+\newcommand\LAR{$\leftarrow$}
+\newcommand\RAR{$\rightarrow$}
+\newcommand\UAR{$\Uparrow$}
+\newcommand\RARONE{${\stackrel{1}{\rightarrow}}$}
+\newcommand\RARTWO{${\stackrel{2}{\rightarrow}}$}
+\newcommand\RARTHREE{${\stackrel{3}{\rightarrow}}$}
+\newcommand\RARK{${\stackrel{k}{\rightarrow}}$}
+\newcommand\RARI{${\stackrel{i}{\rightarrow}}$}
+\newcommand\RARD{${\stackrel{d}{\rightarrow}}$}
+\newcommand\IIE{${\stackrel{\mathfrak{ii}}{\mbox{---}}}$}
+
+
+\newcommand\SRZT{the serialization graph}
+\newcommand\SRZP{$\mathcal{S}^p$}
+\newcommand\SRZ{serialization graph}
+\newcommand\DEPT{$dep$}
+\newcommand\DEPP{$\mathcal{D}^p$}
+\newcommand\DEP{$\mathcal{D}$}
+\newcommand\CHP{$\mathcal{C}$}
+\newcommand\TRAR{${\leadsto}$}
+%\newcommand\AFNRAR{${\looparrowright}$}
+%\newcommand\AFNRAR{${\mathrlap{++}\rightarrow}$}
+
+\newcommand\ORAR{${\mathrlap{o}\rightarrow}$}
+\newcommand\NRAR{$\nrightarrow$}
+\newcommand\TRARI{${\stackrel{i}{\leadsto}}$}
+\newcommand\TRARD{${\stackrel{d}{\leadsto}}$}
+\newcommand\TSRAR{${\stackrel{\epsilon}\leadsto}$}
+\newcommand\SRAR{${\mathrlap{*}\rightarrow}$}
+
+
+\hyphenation{ra-tionale pseudo-constraint}
+
+%%
+%% Figure placeholder macros
+%%
+
+\definecolor{placeholderbg}{rgb}{0.85,0.85,0.85}
+\newcommand{\placeholder}[1]{%
+\fcolorbox{black}{placeholderbg}{\parbox[top][1.5in][t]{0.95\columnwidth}{#1}}}
+
+
+% Local Variables:
+% tex-command: "gmake;:"
+% tex-main-file: "icing.ltx"
+% tex-dvi-view-command: "gmake preview;:"
+% End:

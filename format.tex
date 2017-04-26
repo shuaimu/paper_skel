@@ -1,0 +1,167 @@
+% -*- mode: latex -*-
+% This contains format control, mostly hackings for more space.
+
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{1.00ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+\DefineFNsymbolsTM{myfnsymbols}{% def. from footmisc.sty "bringhurst" symbols
+	\textasteriskcentered *
+	\textdagger    \dagger
+	\textdaggerdbl \ddagger
+	\textsection   \mathsection
+	\textbardbl    \|%
+	\textparagraph \mathparagraph
+}%
+\setfnsymbol{myfnsymbols}
+%%% packages added for appendix.
+%boxruled, ruled, tworuled, plain
+%vlined, lined, noline
+%noend
+
+\newcommand{\realnewpage}{\onecolumn\twocolumn}
+
+%%%
+%%%  Fonts
+%%%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext,newtxmath}                        % Times/Times-like math symbols
+\usepackage{bm}
+\usepackage{courier}
+\usepackage[scaled=0.92]{helvet}
+
+
+%%%
+%%%  Space on section headings
+%%%
+%\usepackage[compact]{titlesec}
+\usepackage{titlesec}
+%\titlespacing{\paragraph}{0pt}{*1}{*1}      % SPACE
+%\titlespacing{\section}{0pt}{1pt}{1pt}      % SPACE
+%\titlespacing{\subsection}{0pt}{1pt}{1pt}      % SPACE
+%\usepackage[compact]{titlesec}              % SPACE
+%\titleformat{\section}%                     % IEEE/ACM: caps + period
+%  {\bf\large\uppercase}{\thesection.\quad}{0pt}{}
+
+
+
+%%%
+%%%  Space between figure and caption (assuming caption
+%%%  is below figure)
+%%%
+%\usepackage[font=bf,aboveskip=0pt]{caption} % SPACE
+%%  Space between caption and body text of document
+%\addtolength{\textfloatsep}{-7pt} % SPACE
+
+%%%
+%%%  Space control for Lists
+%%%
+\usepackage{enumitem}
+\setlist{itemsep=0pt,parsep=0pt}             % more compact lists
+
+%%%
+%%%  Space control for Header / Footer
+%%%
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+
+%%%
+%%%  Some other space savor.
+%%%
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-5em}   % This is your set screw
+%\setlength\floatsep{10pt}
+%\setlength\textfloatsep{10pt}
+%\setlength\intextsep{10pt}
+%\setlength{\abovecaptionskip}{2pt}
+%\setlength{\belowcaptionskip}{0pt}
+
+%%%
+%%%  Misc
+%%%
+%\usepackage[pdftex]{graphicx}
+%\usepackage{soul}
+% this allows \st and friends to work with citations
+%\soulregister\cite7
+%\soulregister\ref7
+%\soulregister\pageref7
+
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{\baselineskip}
+
+%\clubpenalty=10000  % Don't allow orphans
+%\widowpenalty=10000 % Don't allow widows
+
+
+%%%
+%%%  Footnotes / Endnotes
+%%%
+\interfootnotelinepenalty=10000  % Split footnotes are annoying
+
+
+%%%
+%%% fixing bug of section number missing on some Ubuntu distro.
+%%%
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+%%% end fixing
+
+
+\ifthenelse{\equal{\PAGENUMBERS}{yes}}{%
+  \pagestyle{plain}
+}{%
+  \pagestyle{empty}
+}
+
+%%%
+%%%  Page Setup
+%%%  OSDI 16: 6.5 * 9, with 0.25 column sep.
+%%%  SOSP 17: 7 * 9, with 0.33 column sep.
+%%%
+\special{papersize=8.5in,11in}
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{ifthen}
+\ifthenelse{\equal{\PAGENUMBERS}{yes}}{%
+  \usepackage[nohead,
+            left=1.0in,right=1.0in,top=1.0in,
+            footskip=0.5in,bottom=1in,     % Room for page numbers
+            columnsep=0.25in
+            ]{geometry}
+}{%
+\usepackage[noheadfoot,left=1.0in,right=1.0in,top=1.0in,
+            footskip=0.5in,bottom=1in,
+            columnsep=0.25in
+	    ]{geometry}
+}
+
+
+%%%
+%%%  PDF setup
+%%%
+\ifthenelse{\equal{\COLOR}{yes}}{%
+  \usepackage[colorlinks]{hyperref}%         % for online version
+}{%
+  \usepackage[pdfborder={0 0 0}]{hyperref}%  % for paper (B&W) version
+}
+\usepackage{url}
+
+
+%%%
+%%% Uncomment next line if your printer outputs black
+%%% boxes instead of drop shadows; older PDF interpreters
+%%% in printers can't handle those PDF 1.5 features
+%%%
+%\pdfminorversion=3
+%\pdfobjcompresslevel=2
+
+

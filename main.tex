@@ -1,133 +1,10 @@
+% -*- mode: latex -*-
+
+% This is the "main" file. 
+
 \documentclass[pdftex,twocolumn,10pt,letterpaper]{extarticle}
 
-
-% project related part
-%\newcommand{\name}{\textsc{Janus}\xspace}
-\newcommand{\name}{Janus\xspace}
-\newcommand{\serialgraph}{serialization graph\xspace}
-\newcommand{\Serialgraph}{Serialization graph\xspace}
-\newcommand{\depgraph}{dependency graph\xspace}
-
-
-%%% begin: packages added by Shuai
-\makeatletter
-\renewcommand{\paragraph}{%
-  \@startsection{paragraph}{4}%
-  {\z@}{1.00ex \@plus 1ex \@minus .2ex}{-1em}%
-  {\normalfont\normalsize\bfseries}%
-}
-\makeatother
-\usepackage{balance} % making the last page balanced
-\usepackage{cleveref}
-\usepackage{multirow}
-\usepackage[symbol*]{footmisc}
-\usepackage{mathtools}
-\DefineFNsymbolsTM{myfnsymbols}{% def. from footmisc.sty "bringhurst" symbols
-	\textasteriskcentered *
-	\textdagger    \dagger
-	\textdaggerdbl \ddagger
-	\textsection   \mathsection
-	\textbardbl    \|%
-	\textparagraph \mathparagraph
-}%
-\setfnsymbol{myfnsymbols}
-%%% packages added for appendix.
-%boxruled, ruled, tworuled, plain
-%vlined, lined, noline
-%noend
-\usepackage[linesnumbered,noresetcount,ruled,vlined]{algorithm2e}
-
-% Compact itemize and enumerate.  Note that they use the same counters and
-% symbols as the usual itemize and enumerate environments.
-\def\compactify{\itemsep=0pt \topsep=0pt \partopsep=0pt \parsep=0pt}
-\let\latexusecounter=\usecounter
-\def\paritemize{%
-        \setbox0\hbox{---}
-        \list{---}{%
-        \leftmargin\parindent
-        \labelwidth\parindent
-        \itemindent\z@
-        \listparindent\parindent
-        \parsep\z@
-}%
-}
-\let\endparitemize\endlist
-\newenvironment{CompactItemize}
-  {\def\usecounter{\compactify\latexusecounter}
-   \begin{itemize}}
-  {\end{itemize}\let\usecounter=\latexusecounter}
-\newenvironment{CompactEnumerate}
-  {\def\usecounter{\compactify\latexusecounter}
-   \begin{enumerate}}
-  {\end{enumerate}\let\usecounter=\latexusecounter}
-
-
-\def\codefontsmall{\fontsize{7}{8.75}\usefont{OT1}{phv}{m}{n}\selectfont}
-\def\codefont{\usefont{OT1}{phv}{m}{n}\selectfont\footnotesize}
-
-\newcommand{\tld}{\texttildelow}
-\newcommand{\realnewpage}{\onecolumn\twocolumn}
-
-\newcommand\KW[1]{\textbf{#1}} %keyword
-\newcommand\CM[1]{\emph{#1}}   %comment
-\newcommand\LA{$\gets$}  
-\newcommand\INF{$\infty$}
-\newcommand\GE{$\ge$}
-\newcommand\NE{$\ne$}
-\newcommand\TSCC{T\textsuperscript{SCC}}
-
-\newcommand\IN{$\in$}
-\newcommand\SIGMA{$\Sigma$}
-\newcommand\CUPEQ{$\stackrel{\cup}{=}$}
-\newcommand\OLDER {$\rightsquigarrow$}
-\newcommand\DEFEQ{$\stackrel{\Delta}{=}$}
-\newcommand\SUBI{\textsubscript{i}}
-\newcommand\SUBA{\textsubscript{a}}
-\newcommand\SUBB{\textsubscript{b}}
-\newcommand\SUBONE{\textsubscript{1}}
-\newcommand\SUBTWO{\textsubscript{2}}
-\newcommand\SUPT{\textsuperscript{T}}
-\newcommand\SUPP{\textsuperscript{p}}
-\newcommand\SUPI{\textsuperscript{i}}
-\newcommand\SUPD{\textsuperscript{d}}
-
-
-\newcommand\LAR{$\leftarrow$}
-\newcommand\RAR{$\rightarrow$}
-\newcommand\UAR{$\Uparrow$}
-\newcommand\RARONE{${\stackrel{1}{\rightarrow}}$}
-\newcommand\RARTWO{${\stackrel{2}{\rightarrow}}$}
-\newcommand\RARTHREE{${\stackrel{3}{\rightarrow}}$}
-\newcommand\RARK{${\stackrel{k}{\rightarrow}}$}
-\newcommand\RARI{${\stackrel{i}{\rightarrow}}$}
-\newcommand\RARD{${\stackrel{d}{\rightarrow}}$}
-\newcommand\IIE{${\stackrel{\mathfrak{ii}}{\mbox{---}}}$}
-
-
-\newcommand\SRZT{the serialization graph}
-\newcommand\SRZP{$\mathcal{S}^p$}
-\newcommand\SRZ{serialization graph}
-\newcommand\DEPT{$dep$}
-\newcommand\DEPP{$\mathcal{D}^p$}
-\newcommand\DEP{$\mathcal{D}$}
-\newcommand\CHP{$\mathcal{C}$}
-\newcommand\TRAR{${\leadsto}$}
-\newcommand\TSRAR{${\leadsto}$}
-%\newcommand\AFNRAR{${\looparrowright}$}
-%\newcommand\AFNRAR{${\mathrlap{++}\rightarrow}$}
-
-\newcommand\ORAR{${\mathrlap{o}\rightarrow}$}
-\newcommand\NRAR{$\nrightarrow$}
-\newcommand\TRARI{${\stackrel{i}{\leadsto}}$}
-\newcommand\TRARD{${\stackrel{d}{\leadsto}}$}
-%\newcommand\TSRAR{${\stackrel{\epsilon}\leadsto}$}
-
-\newcommand\SRAR{${\mathrlap{*}\rightarrow}$}
-
-%%% end: packages added by Shuai.
-
-
-
+%%%
 %%% Set these variables appropriately
 %%%
 %% Note:  Authors is hardcoded below, this line only used for the PDF info
@@ -141,96 +18,17 @@
 \newcommand{\comment}[1]{}
 \newcommand{\onlyAbstract}{no}
 
+
+\input{preamble}
+\input{format}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%
-%%%  Fonts
-%%%
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{newtxtext,newtxmath}                        % Times/Times-like math symbols
-\usepackage{bm}
-\usepackage{courier}
-\usepackage[scaled=0.92]{helvet}
-
-
-%%%
-%%%  Page Setup
-%%%
-\special{papersize=8.5in,11in}
-\setlength{\pdfpagewidth}{8.5in}
-\setlength{\pdfpageheight}{11in}
-
-\usepackage{ifthen}
-\ifthenelse{\equal{\PAGENUMBERS}{yes}}{%
-  \usepackage[nohead,
-            left=1.0in,right=1.0in,top=1.0in,
-            footskip=0.5in,bottom=1in,     % Room for page numbers
-            columnsep=0.25in
-            ]{geometry}
-}{%
-\usepackage[noheadfoot,left=1.0in,right=1.0in,top=1.0in,
-            footskip=0.5in,bottom=1in,
-            columnsep=0.25in
-	    ]{geometry}
-}
-
-%%%
-%%%  Captions
-%%%
-\usepackage[font=bf]{caption}
-\usepackage{subcaption}
-%%  Space between figure and caption (assuming caption
-%%  is below figure)
-%\usepackage[font=bf,aboveskip=0pt]{caption} % SPACE
-%%  Space between caption and body text of document
-%\addtolength{\textfloatsep}{-7pt} % SPACE
-
-%%%
-%%%  Section headings
-%%%
-%\usepackage[compact]{titlesec}
-\usepackage{titlesec}
-%\titlespacing{\paragraph}{0pt}{*1}{*1}      % SPACE
-%\titlespacing{\section}{0pt}{1pt}{1pt}      % SPACE
-%\titlespacing{\subsection}{0pt}{1pt}{1pt}      % SPACE
-%\usepackage[compact]{titlesec}              % SPACE
-%\titleformat{\section}%                     % IEEE/ACM: caps + period
-%  {\bf\large\uppercase}{\thesection.\quad}{0pt}{}
-
-%%% fixing bug of section number missing
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
-\patchcmd{\ttlh@hang}{\noindent}{}{}{}
-\makeatother
-%%% end fixing
-
-%%%
-%%%  Lists
-%%%
-\usepackage{enumitem}
-\setlist{itemsep=0pt,parsep=0pt}             % more compact lists
-
-%%%
-%%%  Header / Footer
-%%%
-\usepackage{fancyhdr}
-\renewcommand{\headrulewidth}{0pt}
-
-\ifthenelse{\equal{\PAGENUMBERS}{yes}}{%
-  \pagestyle{plain}
-}{%
-  \pagestyle{empty}
-}
-
-%%%
-%%%  Bibliography
+%%%  Bibliography, we use biber here.
 %%%
 %\usepackage[numbers,sort]{natbib}
 %\usepackage[backend=bibtex]{biblatex}
-
 \usepackage[
     backend=biber,
     firstinits=true,
@@ -242,7 +40,17 @@
     maxbibnames=10,
     eprint=false
 ]{biblatex}
-\bibliography{ref} 
+\bibliography{title} 
+\bibliography{sosp} 
+\bibliography{osdi} 
+\bibliography{sigmod} 
+\bibliography{vldb} 
+\bibliography{nsdi} 
+\bibliography{podc} 
+\bibliography{eurosys} 
+\bibliography{tocs} 
+\bibliography{misc} 
+
 
 %%% ACM bib style begin
 % remove colon after "in"
@@ -292,111 +100,58 @@
 
 %%% ACM bib style end
 
-%%%
-%%%  Footnotes / Endnotes
-%%%
-\interfootnotelinepenalty=10000  % Split footnotes are annoying
 
 % If you want endnodes, uncomment:
 %\usepackage{endnotes}
 %\usepackage{drafthead}
 %\let\footnote=\endnote
 
-%%%
-%%%  Tables
-%%%
-\usepackage{booktabs}
-\usepackage{color}
-\usepackage{colortbl}
-\usepackage{float}                           % Must appear before hyperref to
-                                             % avoid weird PDF compile issues
 
-%%%
-%%%  PDF setup
-%%%
-\ifthenelse{\equal{\COLOR}{yes}}{%
-  \usepackage[colorlinks]{hyperref}%         % for online version
-}{%
-  \usepackage[pdfborder={0 0 0}]{hyperref}%  % for paper (B&W) version
-}
-\usepackage{url}
+%\hypersetup{%
+%pdfauthor = {\AUTHORS},
+%pdftitle = {\TITLE},
+%pdfsubject = {\CONFERENCE},
+%pdfkeywords = {\KEYWORDS},
+%bookmarksopen = {true}
+%}
 
-\hypersetup{%
-pdfauthor = {\AUTHORS},
-pdftitle = {\TITLE},
-pdfsubject = {\CONFERENCE},
-pdfkeywords = {\KEYWORDS},
-bookmarksopen = {true}
-}
-
-% Uncomment next line if your printer outputs black
-% boxes instead of drop shadows; older PDF interpreters
-% in printers can't handle those PDF 1.5 features
-%\pdfminorversion=3
-%\pdfobjcompresslevel=2
-
-
-%%
-%% Figure placeholder macros
-%%
-
-\definecolor{placeholderbg}{rgb}{0.85,0.85,0.85}
-\newcommand{\placeholder}[1]{%
-\fcolorbox{black}{placeholderbg}{\parbox[top][1.5in][t]{0.95\columnwidth}{#1}}}
-
-
-%%%
-%%%  Misc
-%%%
-\usepackage[pdftex]{graphicx}
-\usepackage{soul}
-% this allows \st and friends to work with citations
-\soulregister\cite7
-\soulregister\ref7
-\soulregister\pageref7
-
-%\setlength{\parindent}{0pt}
-%\setlength{\parskip}{\baselineskip}
-
-%\clubpenalty=10000  % Don't allow orphans
-%\widowpenalty=10000 % Don't allow widows
 
 %%%
 %%%  To appear/appeared in text on title page
 %%%
-\usepackage[absolute]{textpos}
-\newcommand{\ToAppear}{%
-\begin{textblock*}{\textwidth}(0.95in,0.4in)
-\begin{flushright}
-    %\noindent{\fbox{\textsf{Under submission---please do not redistribute.}}}
-    %  --OR--
-    \noindent{\small To appear in \textit{Proceedings of the XYZ}\\
-    \noindent{\small \textit{Conference (XYZ'08)}, City, State, Month 2008}}
-    %  --OR--
-    %\noindent{\small In \textit{Proceedings of the XYZ}\\
-    %\noindent{\small \textit{Conference (XYZ'08)}, City, State, Month 2008}}
-\end{flushright}
-\end{textblock*}
-}
+%\usepackage[absolute]{textpos}
+%\newcommand{\ToAppear}{%
+%\begin{textblock*}{\textwidth}(0.95in,0.4in)
+%\begin{flushright}
+%    %\noindent{\fbox{\textsf{Under submission---please do not redistribute.}}}
+%    %  --OR--
+%    \noindent{\small To appear in \textit{Proceedings of the XYZ}\\
+%    \noindent{\small \textit{Conference (XYZ'08)}, City, State, Month 2008}}
+%    %  --OR--
+%    %\noindent{\small In \textit{Proceedings of the XYZ}\\
+%    %\noindent{\small \textit{Conference (XYZ'08)}, City, State, Month 2008}}
+%\end{flushright}
+%\end{textblock*}
+%}
 
 %%%
 %%%  Sample ACM Copyright Block
 %%%
-\newfloat{acmcr}{b}{acmcr}
-\newcommand{\AcmCopyright}{%
-\begin{acmcr}
-\parbox[b]{20pc}{%
-\footnotesize
-Permission to make digital or hard copies of all or part of this work
-for personal or classroom use is granted without fee provided that
-copies are not made or distributed for profit or commercial advantage
-and that copies bear this notice and the full citation on the first
-page.  To copy otherwise, to republish, to post on servers or to
-redistribute to lists, requires prior specific permission and/or a fee.
-
-{\em Conference}, Month Date--Date, Year, Location\\
-Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
-\end{acmcr}}
+%\newfloat{acmcr}{b}{acmcr}
+%\newcommand{\AcmCopyright}{%
+%\begin{acmcr}
+%\parbox[b]{20pc}{%
+%\footnotesize
+%Permission to make digital or hard copies of all or part of this work
+%for personal or classroom use is granted without fee provided that
+%copies are not made or distributed for profit or commercial advantage
+%and that copies bear this notice and the full citation on the first
+%page.  To copy otherwise, to republish, to post on servers or to
+%redistribute to lists, requires prior specific permission and/or a fee.
+%
+%{\em Conference}, Month Date--Date, Year, Location\\
+%Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
+%\end{acmcr}}
 
 %%%
 %%%  Comments
@@ -404,11 +159,6 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 \newcommand{\note}[2]{
     \ifthenelse{\equal{\showComments}{yes}}{\textcolor{#1}{#2}}{}
 }
-
-% Change these to your own initials as you like...
-\newcommand{\dga}[1]{\note{blue}{Author1: #1}}
-\newcommand{\mk}[1]{\note{red}{Author2: #1}}
-\newcommand{\srini}[1]{\note{green}{Author3: #1}}
 
 \date{}
 \title{\textbf{\TITLE}}
@@ -420,22 +170,6 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 
 %%%%%%%%%%%%%%%%%%%%  START DOCUMENT  %%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-%%%%%%%%%%% space savor
-%%%%%%%%%%% space savor
-%%%%%%%%%%% space savor
-%%%%%%%%%%% space savor
-
-
-%\usepackage{titling}
-%\setlength{\droptitle}{-5em}   % This is your set screw
-%\setlength\floatsep{10pt}
-%\setlength\textfloatsep{10pt}
-%\setlength\intextsep{10pt}
-%\setlength{\abovecaptionskip}{2pt}
-%\setlength{\belowcaptionskip}{0pt}
 
 \begin{document}
 
@@ -457,27 +191,12 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 \input{related}
 \input{concl}
 \input{ack}
-%\realnewpage
-%\input{bg}
-
-%\input{appendix_sources}
-
-%\vspace{-0.1in}
-%\section*{Acknowledgments}
-% Comments for people we need to ack in the final version
-
-%% Bibliography
-%\setlength{\bibsep}{2pt plus 1pt}  % plus 1pt seems to avoid widows/orphans
 \small 
 % \footnotesize % SPACE
-%\nocite{*}
+%\nocite{*} % show all the citations
 \newpage
 \balance
 \printbibliography
-%\bibliographystyle{abbrv}
-%\bibliography{ref}
-%\bibliographystyle{abbrvnat_noaddr} % SPACE
-%\theendnotes % ENDNOTES
 }{% !onlyAbstract
 }
 
