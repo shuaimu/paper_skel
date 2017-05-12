@@ -1,9 +1,10 @@
 
 @inproceedings{castro99practical,
-  title={Practical Byzantine fault tolerance},
+  title={Practical byzantine fault tolerance},
   author={Castro, Miguel and Liskov, Barbara and others},
   booktitle=osdi,
-  year={1999}
+  year={1999},
+  month = feb,
 }
 
 @inproceedings{adya02farsite,
@@ -12,6 +13,7 @@
   author={Adya, Atul and Bolosky, William J and Castro, Miguel and Cermak, Gerald and Chaiken, Ronnie and Douceur, John R and Howell, Jon and Lorch, Jacob R and Theimer, Marvin and Wattenhofer, Roger P},
   booktitle=osdi,
   year={2002},
+  month = dec,
 }
 
 @inproceedings{renesse04chain,
@@ -20,14 +22,24 @@
   title = {{Chain replication for supporting high throughput and availability}},
   booktitle = osdi,
   year = {2004},
+  month = dec,
 } 
 
+@inproceedings{cowling06hq,
+  title={HQ replication: A hybrid quorum protocol for byzantine fault tolerance},
+  author={Cowling, James and Myers, Daniel and Liskov, Barbara and Rodrigues, Rodrigo and Shrira, Liuba},
+  booktitle=osdi,
+  year={2006},
+  month = nov,
+}
+
 @inproceedings{chang06bigtable,
- ids = {bigtable:osdi06},
- author = "Fay Chang and Jeffrey Dean and Sanjay Ghemawat and Wilson C. Hsieh and Deborah A. Wallach and Mike Burrows and Tushar Chandra and Andrew Fikes and Robert E. Gruber",
- title = "Bigtable: A Distributed Storage System for Structured Data",
- booktitle = osdi,
- year = 2006,
+  ids = {bigtable:osdi06},
+  author = "Fay Chang and Jeffrey Dean and Sanjay Ghemawat and Wilson C. Hsieh and Deborah A. Wallach and Mike Burrows and Tushar Chandra and Andrew Fikes and Robert E. Gruber",
+  title = "Bigtable: A Distributed Storage System for Structured Data",
+  booktitle = osdi,
+  year = 2006,
+  month = nov,
 }
 
 @inproceedings{weil06ceph,
@@ -36,6 +48,7 @@
   author={Weil, Sage A and Brandt, Scott A and Miller, Ethan L and Long, Darrell DE and Maltzahn, Carlos},
   booktitle=osdi,
   year={2006},
+  month = nov,
 }
 
 @inproceedings{burrows06chubby,
@@ -44,6 +57,7 @@
   title = {The Chubby Lock Service for Loosely-Coupled Distributed Systems},
   booktitle = osdi,
   year = {2006},
+  month = nov,
 }
 
 @inproceedings{mao08mencius,
@@ -51,7 +65,8 @@
   title={Mencius: building efficient replicated state machines for WANs},
   author={Mao, Yanhua and Junqueira, Flavio Paiva and Marzullo, Keith},
   booktitle=osdi,
-  year={2008}
+  year={2008},
+  month = dec,
 }
 
 @inproceedings{peng12large,
@@ -60,13 +75,15 @@
   author={Peng, Daniel and Dabek, Frank},
   booktitle=osdi,
   year={2010},
+  month = oct,
 }
 
 @inproceedings{ford10availability,
   title={Availability in globally distributed storage systems},
   author={Ford, Daniel and Labelle, Fran{\c{c}}ois and Popovici, Florentina I and Stokely, Murray and Truong, Van-Anh and Barroso, Luiz and Grimes, Carrie and Quinlan, Sean},
   booktitle=osdi,
-  year={2010}
+  year={2010},
+  month = oct,
 }
 
 @inproceedings{li12making,
@@ -74,7 +91,8 @@
   title={Making geo-replicated systems fast as possible, consistent when necessary},
   author={Li, Cheng and Porto, Daniel and Clement, Allen and Gehrke, Johannes and Pregui{\c{c}}a, Nuno and Rodrigues, Rodrigo},
   booktitle=osdi,
-  year={2012}
+  year={2012},
+  month = oct,
 }
 
 @inproceedings{corbett12spanner,
@@ -83,6 +101,7 @@
   author={Corbett, James C and Dean, Jeffrey and Epstein, Michael and Fikes, Andrew and Frost, Christopher and Furman, JJ and Ghemawat, Sanjay and Gubarev, Andrey and Heiser, Christopher and Hochschild, Peter and others},
   booktitle=osdi,
   year={2012},
+  month = oct,
 }
 
 @inproceedings{mu14extracting,
@@ -91,6 +110,7 @@
   title = {Extracting more concurrency from distributed transactions},
   booktitle = osdi,
   year = {2014},
+  month = oct,
 } 
 
 @inproceedings{xie14salt,
@@ -98,7 +118,8 @@
   title={{Salt: Combining ACID and BASE in a distributed batabase}},
   author={Xie, Chao and Su, Chunzhi and Kapritsos, Manos and Wang, Yang and Yaghmazadeh, Navid and Alvisi, Lorenzo and Mahajan, Prince},
   booktitle=osdi,
-  year = {2014}
+  year = {2014},
+  month = oct,
 }
 
 @inproceedings{muralidhar14f4,
@@ -106,7 +127,16 @@
   title={{f4: Facebook's warm BLOB storage system}},
   author={Muralidhar, Subramanian and Lloyd, Wyatt and Roy, Sabyasachi and Hill, Cory and Lin, Ernest and Liu, Weiwen and Pan, Satadru and Shankar, Shiva and Sivakumar, Viswanath and Tang, Linpeng and others},
   booktitle=osdi,
-  year={2014}
+  year={2014},
+  month = oct,
+}
+
+@inproceedings{narula14phase,
+  title={Phase reconciliation for contended in-Memory transactions.},
+  author={Narula, Neha and Cutler, Cody and Kohler, Eddie and Morris, Robert},
+  booktitle=osdi,
+  year={2014},
+  month = oct,
 }
 
 @inproceedings{mu16consolidating,
@@ -115,19 +145,30 @@
   author={Mu, Shuai and Nelson, Lamont and Lloyd, Wyatt and Li, Jinyang},
   booktitle=osdi,
   year={2016},
+  month = oct,
 }
 
 @inproceedings{lu16snow,
   title={{The SNOW theorem and latency-optimal read-only transactions}},
   author={Lu, Haonan and Hodsdon, Christopher and Ngo, Khiem and Mu, Shuai and Lloyd, Wyatt},
   booktitle=osdi,
-  year={2016}
+  year={2016},
+  month = oct,
 }
 
 @inproceedings{li16just,
   title={Just say NO to Paxos overhead: Replacing consensus with network ordering},
   author={Li, Jialin and Michael, Ellis and Sharma, Naveen Kr and Szekeres, Adriana and Ports, Dan RK},
   booktitle=osdi,
-  year={2016}
+  year={2016},
+  month = oct,
+}
+
+@inproceedings{gu16certikos,
+  title={CertiKOS: an extensible architecture for building certified concurrent OS kernels},
+  author={Gu, Ronghui and Shao, Zhong and Chen, Hao and Wu, Xiongnan Newman and Kim, Jieung and Sj{\"o}berg, Vilhelm and Costanzo, David},
+  booktitle=osdi,
+  year={2016},
+  month = oct,
 }
 
