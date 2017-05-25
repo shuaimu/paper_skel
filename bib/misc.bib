@@ -1,4 +1,56 @@
 
+
+@inproceedings{mckenney11read,
+  title={Read-copy update},
+  author={McKenney, Paul E. and Appavoo, Jonathan and Kleen, Andi and Krieger, Orran and Russell, Rusty and Sarma, Dipankar and Soni, Maneesh},
+  booktitle=ols,
+  year = 2001,
+  month = jul,
+}
+
+@inproceedings{boyd12nonscalable,
+  title={Non-scalable locks are dangerous},
+  author={Boyd-Wickizer, Silas and Kaashoek, M. Frans and Morris, Robert and Zeldovich, Nickolai},
+  booktitle=ols,
+  year={2012},
+  month = jul,
+}
+
+@article{ritchie84evolution,
+  title={The evolution of the UNIX time-sharing system},
+  author={Ritchie, Dennis},
+  journal={Bell Labs Technical Journal},
+  volume={63},
+  number={6},
+  year={1984},
+  month= oct,
+}
+
+@inproceedings{brocker14iseeyou,
+  title = {iSeeYou: Disabling the MacBook Webcam Indicator LED.},
+  author = {Brocker, Matthew and Checkoway, Stephen},
+  booktitle = security,
+  year = {2014},
+  month = aug,
+}
+
+@article{hardy88confused,
+  author = {Hardy, Norm},
+  title = {The confused deputy: (or why capabilities might have been invented)},
+  journal = osr,
+  volume = {22},
+  number = {4},
+  month = oct,
+  year = {1988},
+} 
+
+@inproceedings{bomberger92keykos,
+  title={The KeyKOS nanokernel architecture},
+  author={Bomberger, Alan C and Hardy, Norman and Peri, A and Charles, Frantz and Landau, R and Frantz, William S and Shapiro, Jonathan S and Hardy, Ann C},
+  booktitle={In Proceedings of the USENIX Workshop on Micro-kernels and Other Kernel Architectures},
+  year={1992}
+}
+
 @inproceedings{escriva12hyperdex,
   ids={Hyperdex:sigcomm12},
   author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
@@ -26,6 +78,13 @@
   month = nov,
 } 
 
+@inproceedings{appel91virtual,
+  author = {Appel, Andrew W. and Li, Kai},
+  title = {Virtual memory primitives for user programs},
+  booktitle = asplos,
+  year = {1991},
+  month = apr,
+} 
 
 @inproceedings{kubiatowicz2000oceanstore,
   ids={oceanstore:asplos00},
@@ -78,6 +137,14 @@
   month = feb,
 }
 
+@inproceedings{ramadan09committing,
+  title={Committing conflicting transactions in an STM},
+  author={Ramadan, Hany E and Roy, Indrajit and Herlihy, Maurice and Witchel, Emmett},
+  booktitle=ppopp,
+  year={2009},
+  month = feb,
+}
+
 @inproceedings{mu14when,
   title={{When Paxos meets erasure code: reduce network and storage cost in state machine replication}},
   author={Mu, Shuai and Chen, Kang and Wu, Yongwei and Zheng, Weimin},
@@ -93,6 +160,7 @@
   year={2012},
   month = may,
 }
+
 
 @inproceedings{baker11megastore,
   ids={megastore:cidr11},
@@ -174,7 +242,7 @@
   author={Rhea, Sean and Eaton, Patrick and Geels, Dennis and Weatherspoon, Hakim and Zhao, Ben and Kubiatowicz, John},
   booktitle=fast,
   year={2003},
-  month = feb,
+  month = mar,
 }
 
 @inproceedings{zhang16efficient,
@@ -195,11 +263,10 @@
 
 
 @inproceedings{dimakis07networkcoding,
-  author = {Ros G. Dimakis and P. Brighten Godfrey and Yunnan Wu and Martin O. Wainwright and Kannan Ramch},
-  title = {Network coding for distributed storage systems},
-  booktitle = infocom,
-  year = {2007},
-  month = may,
+    author = {Ros G. Dimakis and P. Brighten Godfrey and Yunnan Wu and Martin O. Wainwright and Kannan Ramch},
+    title = {Network coding for distributed storage systems},
+    booktitle = infocom,
+    year = {2007}
 }
 
 @inproceedings{abulibdeh10racs,
@@ -207,7 +274,7 @@
   author = {Abu-Libdeh, Hussam and Princehouse, Lonnie and Weatherspoon, Hakim},
   title = {{RACS: a case for cloud storage diversity}},
   booktitle = socc,
-  year = 2010,
+  year = {2010},
   month = jun,
 }
 
@@ -216,20 +283,31 @@
   author={Moraru, Iulian and Andersen, David G and Kaminsky, Michael},
   booktitle=socc,
   year={2014},
+  month = nov,
+}
+
+@inproceedings{lamport04cheap,
+  title={Cheap {Paxos}},
+  author={Lamport, Leslie and Massa, Mike},
+  booktitle=dsn,
+  year={2004},
+  month = jun,
 }
 
 @inproceedings{junqueira11zab,
-  title={Zab: High-performance broadcast for primary-backup systems},
+  title={Zab: high-performance broadcast for primary-backup systems},
   author={Junqueira, Flavio P and Reed, Benjamin C and Serafini, Marco},
   booktitle=dsn,
-  year={2011},
+  year=2011,
+  month = jun,
 }
 
 @inproceedings{lamport11byzantizing,
-  title={Byzantizing Paxos by refinement},
+  title={Byzantizing {Paxos} by refinement},
   author={Lamport, Leslie},
   booktitle=disc,
   year={2011},
+  month = july,
 }
 
 @inproceedings{shah07auditing,
@@ -261,8 +339,8 @@
   journal=toplas,
   volume={12},
   number={3},
+  pages={463--492},
   year={1990},
-  month = jul,
 }
 
 @article{dewitt90gamma,
@@ -272,6 +350,7 @@
   journal=tkde,
   volume={2},
   number={1},
+  pages={44--62},
   year={1990},
 }
 
@@ -282,6 +361,7 @@
   journal=tkde,
   volume={2},
   number={1},
+  pages={4--24},
   year={1990},
   publisher={IEEE}
 }
@@ -293,6 +373,7 @@
   journal=tods,
   volume={11},
   number={4},
+  pages={378--396},
   year={1986},
 }
 
@@ -302,6 +383,7 @@
   journal={Information Systems},
   volume={24},
   number={8},
+  pages={673--698},
   year={1999},
   publisher={Elsevier}
 }
@@ -312,6 +394,7 @@
   journal=vldbj,
   volume={1},
   number={2},
+  pages={181--239},
   year={1992},
 }
 
@@ -321,6 +404,7 @@
   journal=tods,
   volume={8},
   number={2},
+  pages={186--213},
   year={1983},
 }
 
@@ -331,6 +415,7 @@
   journal=sigact,
   volume={32},
   number={4},
+  pages={18--25},
   year={2001}
 }
 
@@ -340,6 +425,7 @@
   journal=sigact,
   volume={41},
   number={1},
+  pages={63--73},
   year={2010},
 }
 
@@ -349,6 +435,7 @@
   journal=tods,
   volume={12},
   number={4},
+  pages={609--654},
   year={1987},
 }
 
@@ -360,6 +447,7 @@
   journal=tods,
   volume={20},
   number={3},
+  pages={325--363},
   year={1995},
 }
 
@@ -376,6 +464,7 @@
   journal=tc,
   volume={100},
   number={5},
+  pages={391--399},
   year={1984},
 }
 
@@ -385,6 +474,7 @@
   journal=tkde,
   volume={4},
   number={6},
+  pages={509--516},
   year={1992},
   publisher={IEEE}
 }
@@ -409,6 +499,7 @@
   journal=osr,
   volume={44},
   number={2},
+  pages={35--40},
   year={2010},
   publisher={ACM}
 }
@@ -419,6 +510,7 @@
   journal=csur,
   volume={13},
   number={2},
+  pages={185--221},
   year={1981},
   publisher={ACM}
 }
@@ -434,6 +526,15 @@
   publisher={ACM}
 }
 
+@article{viotti16consistency,
+  author = {Viotti, Paolo and Vukoli\'{c}, Marko},
+  title = {Consistency in non-transactional distributed storage systems},
+  journal = csur,
+  volume = {49},
+  number = {1},
+  month = jul,
+  year = {2016},
+} 
 @book{weikum01transactional,
   title={{Transactional information systems: theory, algorithms, and the practice of concurrency control and recovery}},
   author={Weikum, Gerhard and Vossen, Gottfried},
@@ -457,6 +558,7 @@
   journal=tods,
   volume={6},
   number={2},
+  pages={213--226},
   year={1981},
 }
 
@@ -467,6 +569,7 @@
   journal=sicomp,
   volume={1},
   number={2},
+  pages={146--160},
   year={1972},
 }
 
@@ -476,6 +579,7 @@
   journal=tods,
   volume={3},
   number={2},
+  pages={178--198},
   year={1978},
 }
 
@@ -485,14 +589,55 @@
   journal=tods,
   volume={31},
   number={1},
+  pages={133--160},
   year={2006},
 }
+
+@article{ritchie74unix,
+ author = {Ritchie, Dennis M. and Thompson, Ken},
+ title = {The {UNIX} time-sharing system},
+ journal = cacm,
+ volume = {17},
+ number = {7},
+ month = jul,
+ year = {1974},
+} 
 
 @article{lamport78time,
  author = {Leslie Lamport},
  title = {Time, clocks, and the ordering of events in a distributed system},
  journal = cacm,
  year = {1978},
+}
+
+@article{thompson84reflections,
+  title={Reflections on trusting trust},
+  author={Thompson, Ken},
+  journal=cacm,
+  volume=27,
+  number=8,
+  year=1984,
+  month = aug, 
+}
+
+@article{wadler15propositions,
+ author = {Wadler, Philip},
+ title = {Propositions As Types},
+ journal = cacm,
+ volume = {58},
+ number = {12},
+ month = nov,
+ year = {2015},
+} 
+
+@article{bessey10few,
+  title={A few billion lines of code later: using static analysis to find bugs in the real world},
+  author={Bessey, Al and Block, Ken and Chelf, Ben and Chou, Andy and Fulton, Bryan and Hallem, Seth and Henri-Gros, Charles and Kamsky, Asya and McPeak, Scott and Engler, Dawson},
+  journal=cacm,
+  volume={53},
+  number={2},
+  year={2010},
+  month = feb,
 }
 
 @article{schneider90implementing,
@@ -512,6 +657,7 @@
   journal={IEEE Transactions on Dependable and Secure Computing},
   volume={12},
   number={4},
+  pages={472--484},
   year={2015},
   publisher={IEEE}
 }
@@ -549,6 +695,16 @@
 	year = {2005},
 }
 
+@article{lamport06fast,
+  title={Fast {Paxos}},
+  author={Lamport, Leslie},
+  journal=dc,
+  volume={19},
+  number={2},
+  year={2006},
+  month = oct,
+}
+
 @techreport{mazieres07paxos,
   title={Paxos made practical},
   author={Mazieres, David},
@@ -564,13 +720,13 @@
 }
 
 @techreport{warp:tr14,
-  title={{Warp: Lightweight Multi-Key Transactions for Key-Value Stores}},
+  title={Warp: Lightweight Multi-Key Transactions for Key-Value Stores},
   author={Escriva, Robert and Wong, Bernard and Sirer, Emin G{\"u}n},
   year={2014},
 }
 
 @techreport{rococo:tr14,
-  title={{Extracting More Concurrency from Distribted Transactions}},
+  title={Extracting more concurrency from distribted transactions},
   author={Mu, Shuai and Cui, Yang and Zhang, Yang and Lloyd, Wyatt and Li, Jinyang},
   institution={New York Univ., Courant Institute of Mathematical Sciences},
   number={TR2014-970},
@@ -668,7 +824,7 @@ howpublished={http://www.tpc.org/tpcc/}
 
 
 @inproceedings{borthakur2010hdfs,
-  title={HDFS RAID},
+  title={Hdfs raid},
   author={Borthakur, D and Schmidt, R and Vadali, R and Chen, S and Kling, P},
   booktitle={Hadoop user group meeting},
   year={2010}
@@ -695,14 +851,14 @@ howpublished={http://www.tpc.org/tpcc/}
   howpublished = {\url{http://www.usatoday.com/story/experience/2016/05/26/microsoft-facebook-undersea-cable-google-marea-amazon/84984882}},
   month={May},
   year={2016},
-  publisher={USE Today}
-};
+  publisher={USE Today},
+}
 
 @misc{bib:FA-1,
   title = {Fiber-Optic Link Around the Globe},
   howpublished = {\url{https://en.wikipedia.org/wiki/Fiber-Optic\_Link\_Around\_the\_Globe}},
   publisher={Wikipedia}
-};
+}
 
 @article{mears1986low,
   title={Low-threshold tunable CW and Q-switched fibre laser operating at 1.55 $\mu$m},
@@ -710,6 +866,7 @@ howpublished={http://www.tpc.org/tpcc/}
   journal={Electronics Letters},
   volume={3},
   number={22},
+  pages={159--160},
   year={1986}
 }
 
@@ -719,9 +876,11 @@ howpublished={http://www.tpc.org/tpcc/}
   journal={Optics Express},
   volume={19},
   number={17},
+  pages={16665--16671},
   year={2011},
   publisher={Optical Society of America}
 }
+
 
 @article{gelles17oscars,
   title={Oscars Mistake Casts Unwanted Spotlight on {PwC}},
@@ -729,6 +888,30 @@ howpublished={http://www.tpc.org/tpcc/}
   journal={The New York Times},
   month=Feb # " 27",
   year={2017}
+}
+
+@inproceedings{konnov17short,
+  author = {Konnov, Igor and Lazi\'{c}, Marijana and Veith, Helmut and Widder, Josef},
+  title = {A short counterexample property for safety and liveness verification of fault-tolerant distributed algorithms},
+  booktitle = popl,
+  year = {2017},
+  month = jan,
+} 
+
+@inproceedings{woos16planning,
+  author = {Woos, Doug and Wilcox, James R. and Anton, Steve and Tatlock, Zachary and Ernst, Michael D. and Anderson, Thomas},
+  title = {Planning for change in a formal verification of the {Raft} consensus protocol},
+  booktitle = {Proceedings of the ACM SIGPLAN Conference on Certified Programs and Proofs (CPP)},
+  year = 2016,
+  month = jan,
+} 
+
+@inproceedings{manovit06testing,
+  title={Testing implementations of transactional memory},
+  author={Manovit, Chaiyasit and Hangal, Sudheendra and Chafi, Hassan and McDonald, Austen and Kozyrakis, Christos and Olukotun, Kunle},
+  booktitle=pact,
+  year=2006,
+  month = sep,
 }
 
 @article{weatherspoon05long,
