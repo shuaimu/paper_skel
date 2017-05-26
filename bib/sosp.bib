@@ -1,3 +1,10 @@
+@inproceedings{lampson83hints,
+  author = {Lampson, Butler W.},
+  title = {Hints for computer system design},
+  booktitle = sosp,
+  year = {1983},
+  month =  oct,
+}
 
 @inproceedings{birman87exploiting,
   ids={isis:sosp87},
@@ -9,6 +16,14 @@
   month = nov
 }
 
+@inproceedings{liedtke93improving,
+  title={Improving IPC by kernel design},
+  author={Liedtke, Jochen},
+  booktitle = sosp,
+  year = {1993},
+  month = dec,
+}
+
 @inproceedings{cheriton93understanding,
   ids={catocs:sosp93},
   title={Understanding the limitations of causally and totally ordered communication},
@@ -16,6 +31,30 @@
   booktitle = sosp,
   year = {1993},
   month = dec,
+}
+
+@inproceedings{wahbe93efficient,
+  title = {Efficient software-based fault isolation},
+  author = {Wahbe, Robert and Lucco, Steven and Anderson, Thomas E and Graham, Susan L},
+  booktitle = sosp,
+  year = {1993},
+  month = dec,
+}
+
+@inproceedings{engler95exokernel,
+  title={Exokernel: An operating system architecture for application-level resource management},
+  author={Engler, Dawson R. and Kaashoek, M. Frans and O'Toole Jr., James},
+  booktitle=sosp,
+  year={1995},
+  month = dec,
+}
+
+@inproceedings{kaashoek97application,
+  title={Application performance and flexibility on exokernel systems},
+  author={Kaashoek, M. Frans and Engler, Dawson R and Ganger, Gregory R. and Briceno, H{\'e}ctor M and Hunt, Russell and Mazi\`{e}res, David and Pinckney, Thomas and Grimm, Robert and Jannotti, John and Mackenzie, Kenneth},
+  booktitle=sosp,
+  year={1997},
+  month=oct,
 }
 
 @inproceedings{ghemawat03google,
@@ -27,6 +66,14 @@
   month = oct
 }
 
+@inproceedings{qin05rx,
+  title={Rx: treating bugs as allergies---a safe method to survive software failures},
+  author={Qin, Feng and Tucek, Joseph and Sundaresan, Jagadeesan and Zhou, Yuanyuan},
+  booktitle=sosp,
+  year={2005},
+  month = oct,
+}
+
 @inproceedings{decandia07dynamo,
   ids={dynamo:sosp07},
   author = {DeCandia, Giuseppe and Hastorun, Deniz and Jampani, Madan and Kakulapati, Gunavardhan and Lakshman, Avinash and Pilchin, Alex and Sivasubramanian, Swaminathan and Vosshall, Peter and Vogels, Werner},
@@ -36,7 +83,8 @@
   month = oct,
 } 
 
-@inproceedings{zyzzyva:sosp07,
+@inproceedings{kotla07zyzzyva,
+  ids={zyzzyva:sosp07},
   title={Zyzzyva: speculative byzantine fault tolerance},
   author={Kotla, Ramakrishna and Alvisi, Lorenzo and Dahlin, Mike and Clement, Allen and Wong, Edmund},
   booktitle=sosp,
@@ -53,10 +101,26 @@
   month = oct,
 }
 
+@inproceedings{clement09upright,
+  title={Upright cluster services},
+  author={Clement, Allen and Kapritsos, Manos and Lee, Sangmin and Wang, Yang and Alvisi, Lorenzo and Dahlin, Mike and Riche, Taylor},
+  booktitle=sosp,
+  year={2009},
+  month=oct,
+}
+
 @inproceedings{calder11windows,
   ids={azure:sosp11},
   title={Windows Azure Storage: a highly available cloud storage service with strong consistency},
   author={Calder, Brad and Wang, Ju and Ogus, Aaron and Nilakantan, Niranjan and Skjolsvold, Arild and McKelvie, Sam and Xu, Yikang and Srivastav, Shashwat and Wu, Jiesheng and Simitci, Huseyin and others},
+  booktitle=sosp,
+  year={2011},
+  month = oct,
+}
+
+@inproceedings{glendenning11scalable,
+  title={Scalable consistency in {Scatter}},
+  author={Glendenning, Lisa and Beschastnikh, Ivan and Krishnamurthy, Arvind and Anderson, Thomas},
   booktitle=sosp,
   year={2011},
   month = oct,
@@ -75,6 +139,14 @@
   ids={walter:sosp11},
   title={{Transactional storage for geo-replicated systems}},
   author={Sovran, Yair and Power, Russell and Aguilera, Marcos K and Li, Jinyang},
+  booktitle=sosp,
+  year={2011},
+  month = oct,
+}
+
+@inproceedings{leners11detecting,
+  title={Detecting failures in distributed systems with the falcon spy network},
+  author={Leners, Joshua B and Wu, Hao and Hung, Wei-Lun and Aguilera, Marcos K and Walfish, Michael},
   booktitle=sosp,
   year={2011},
   month = oct,
@@ -113,6 +185,31 @@
   author={Clements, Austin T and Kaashoek, M Frans and Zeldovich, Nickolai and Morris, Robert T and Kohler, Eddie},
   year={2013},
   booktitle=sosp,
+  month = nov,
+}
+
+@inproceedings{david13everything,
+  title={Everything you always wanted to know about synchronization but were afraid to ask},
+  author={David, Tudor and Guerraoui, Rachid and Trigonakis, Vasileios},
+  booktitle=sosp,
+  year={2013},
+  month = nov,
+}
+
+@inproceedings{wang13towards,
+  title={Towards optimization-safe systems: analyzing the impact of undefined behavior},
+  author={Wang, Xi and Zeldovich, Nickolai and Kaashoek, M Frans and Solar-Lezama, Armando},
+  booktitle = sosp,
+  year={2013},
+  month = nov,
+}
+
+@inproceedings{amit15virtual,
+  title={Virtual {CPU} validation},
+  author={Amit, Nadav and Tsafrir, Dan and Schuster, Assaf and Ayoub, Ahmad and Shlomo, Eran},
+  booktitle=sosp,
+  year={2015},
+  month = oct,
 }
 
 @inproceedings{xie15high,
@@ -145,6 +242,46 @@
 @inproceedings{chen15using,
   title={Using Crash Hoare logic for certifying the {FSCQ} file system},
   author={Chen, Haogang and Ziegler, Daniel and Chajed, Tej and Chlipala, Adam and Kaashoek, M Frans and Zeldovich, Nickolai},
+  booktitle=sosp,
+  year={2015},
+  month = oct,
+}
+
+@inproceedings{matveev15read,
+  author = {Matveev, Alexander and Shavit, Nir and Felber, Pascal and Marlier, Patrick},
+  title = {Read-log-update: a lightweight synchronization mechanism for concurrent programming},
+  booktitle = sosp,
+  year = {2015},
+  month = oct,
+} 
+
+@inproceedings{aguilera15yesquel,
+  author = {Aguilera, Marcos K. and Leners, Joshua B. and Walfish, Michael},
+  title = {Yesquel: scalable sql storage for web applications},
+  booktitle = sosp,
+  year = {2015},
+  month = oct,
+} 
+
+@inproceedings{dragojevic15no,
+  title={No compromises: distributed transactions with consistency, availability, and performance},
+  author={Dragojevi{\'c}, Aleksandar and Narayanan, Dushyanth and Nightingale, Edmund B and Renzelmann, Matthew and Shamis, Alex and Badam, Anirudh and Castro, Miguel},
+  booktitle = sosp,
+  year={2015},
+  month = oct,
+}
+
+@inproceedings{lee15implementing,
+  title={Implementing linearizability at large scale and low latency},
+  author={Lee, Collin and Park, Seo Jin and Kejriwal, Ankita and Matsushita, Satoshi and Ousterhout, John},
+  booktitle=sosp,
+  year={2015},
+  month = oct,
+}
+
+@inproceedings{wei15fast,
+  title={Fast in-memory transaction processing using RDMA and HTM},
+  author={Wei, Xingda and Shi, Jiaxin and Chen, Yanzhe and Chen, Rong and Chen, Haibo},
   booktitle=sosp,
   year={2015},
   month = oct,
