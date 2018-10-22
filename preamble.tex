@@ -17,7 +17,6 @@
 \usepackage{enumerate}
 \usepackage{textpos}
 \usepackage{balance} % making the last page balanced
-\usepackage{cleveref}
 \usepackage{multirow}
 \usepackage[symbol*]{footmisc}
 \usepackage{mathtools}
@@ -85,6 +84,15 @@
 %\usepackage{minted}
 %\usemintedstyle{xcode}
 %\usepackage[noeka]{mathrmletter}
+
+\ifthenelse{\equal{\COLOR}{yes}}{%
+  \usepackage[colorlinks]{hyperref}%         % for online version
+}{%
+  \usepackage[pdfborder={0 0 0}]{hyperref}%  % for paper (B&W) version
+}
+\usepackage{url}
+\usepackage{cleveref}
+
 
 \renewcommand{\ttdefault}{cmtt}
 \newcommand{\mintcpp}[1]{\mintinline{cpp}{#1}}
@@ -707,8 +715,3 @@ Appendix #1~\cite{braun13verifyingextended}%
 \fcolorbox{black}{placeholderbg}{\parbox[top][1.5in][t]{0.95\columnwidth}{#1}}}
 
 
-% Local Variables:
-% tex-command: "gmake;:"
-% tex-main-file: "icing.ltx"
-% tex-dvi-view-command: "gmake preview;:"
-% End:
