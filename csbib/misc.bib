@@ -1,4 +1,9 @@
-
+@phdthesis{adya99weak,
+  author = {Adya, Atul},
+  title = {Weak Consistency: A Generalized Theory and Optimistic Implementations
+           for Distributed Transactions},
+  year = {1999}
+}
 
 @inproceedings{mckenney11read,
   title={Read-copy update},
@@ -44,30 +49,22 @@
   year = {1988},
 } 
 
+@article{weihl88commutativity,
+  title = {Commutativity-Based Concurrency Control for Abstract Data Types},
+  author = {William E. Weihl},
+  journal = tc,
+  volume = 37,
+  number = 12,
+  year = 1988,
+  month = dec,
+}
+
 @inproceedings{bomberger92keykos,
   title={The KeyKOS nanokernel architecture},
   author={Bomberger, Alan C and Hardy, Norman and Peri, A and Charles, Frantz and Landau, R and Frantz, William S and Shapiro, Jonathan S and Hardy, Ann C},
   booktitle={In Proceedings of the USENIX Workshop on Micro-kernels and Other Kernel Architectures},
   year={1992}
 }
-
-@inproceedings{escriva12hyperdex,
-  ids={Hyperdex:sigcomm12},
-  author = {Escriva, Robert and Wong, Bernard and Sirer, Emin G\"{u}n},
-  title = {{HyperDex}: A distributed, searchable key-value Store},
-  booktitle = sigcomm,
-  year = {2012},
-  month = aug,
-} 
-
-@inproceedings{angel2013verifiable,
-  title={Verifiable auctions for online ad exchanges},
-  author={Angel, Sebastian and Walfish, Michael},
-  booktitle = sigcomm,
-  year={2013},
-  month = aug,
-}
-
 
 @inproceedings{bowers09hail,
   ids={hail:ccs09},
@@ -77,48 +74,6 @@
   year = {2009},
   month = nov,
 } 
-
-@inproceedings{appel91virtual,
-  author = {Appel, Andrew W. and Li, Kai},
-  title = {Virtual memory primitives for user programs},
-  booktitle = asplos,
-  year = {1991},
-  month = apr,
-} 
-
-@inproceedings{kubiatowicz2000oceanstore,
-  ids={oceanstore:asplos00},
-  title={Oceanstore: An architecture for global-scale persistent storage},
-  author={Kubiatowicz, John and Bindel, David and Chen, Yan and Czerwinski, Steven and Eaton, Patrick and Geels, Dennis and Gummadi, Ramakrishan and Rhea, Sean and Weatherspoon, Hakim and Weimer, Westley and others},
-  booktitle=asplos,
-  year={2000},
-  month = nov,
-}
-
-@inproceedings{saito04fab,
-  ids={fab:asplos04},
-  title={{FAB: building distributed enterprise disk arrays from commodity components}},
-  author={Saito, Yasushi and Fr{\o}lund, Svend and Veitch, Alistair and Merchant, Arif and Spence, Susan},
-  booktitle=asplos,
-  year={2004},
-  month = oct,
-}
-
-@inproceedings{zhang16lock,
-  title={Lock-free transactions without rollbacks for linked data structures},
-  author={Zhang, Deli and Dechev, Damian},
-  booktitle=spaa,
-  year={2016},
-  month = jul,
-}
-
-@inproceedings{saad16extending,
-  title={On extending TM primitives using low level semantics},
-  author={Saad, Mohamed M and Palmieri, Roberto and Hassan, Ahmed and Ravindran, Binoy},
-  year={2016},
-  booktitle=spaa,
-  month = jul,
-}
 
 @inproceedings{golan11automatic,
   title={Automatic fine-grain locking using shape properties},
@@ -161,97 +116,6 @@
   month = may,
 }
 
-
-@inproceedings{baker11megastore,
-  ids={megastore:cidr11},
-  title={Megastore: providing scalable, highly available storage for interactive services},
-  author={Baker, Jason and Bond, Chris and Corbett, James and Furman, JJ and Khorlin, Andrey and Larson, James and L{\'e}on, Jean-Michel and Li, Yawei and Lloyd, Alexander and Yushprakh, Vadim},
-  booktitle=cidr,
-  year={2011},
-  month = jan,
-}
-
-@inproceedings{keeton04designing,
-  title={Designing for disasters},
-  author={Keeton, Kimberly and Santos, Cipriano and Beyer, Dirk and Chase, Jeffrey and 	Wilkes, John},
-  booktitle=fast,
-  year={2004},
-  month = mar,
-}
-
-@inproceedings{abd05ursa,
-  title={Ursa minor: versatile cluster-based storage},
-  author={Abd-El-Malek, Michael and Courtright II, William V and Cranor, Chuck and Ganger, Gregory R and Hendricks, James and Klosterman, Andrew J and Mesnier, Michael P and Prasad, Manish and Salmon, Brandon and Sambasivan, Raja R and others},
-  booktitle=fast,
-  year={2005},
-  month = dec,
-}
-
-@inproceedings{welch08scalable,
-  title={Scalable Performance of the Panasas Parallel File System.},
-  author={Welch, Brent and Unangst, Marc and Abbasi, Zainul and Gibson, Garth A and Mueller, Brian and Small, Jason and Zelenka, Jim and Zhou, Bin},
-  booktitle=fast,
-  year={2008},
-  month =feb,
-}
-
-@inproceedings{plank09performance,
-  title={A performance evaluation and examination of open-source erasure coding libraries for storage.},
-  author={Plank, James S and Luo, Jianqiang and Schuman, Catherine D and Xu, Lihao and Wilcox-O'Hearn, Zooko and others},
-  booktitle=fast,
-  year={2009},
-  month = feb,
-}
-
-@inproceedings{vrable09cumulus,
-  author = {Vrable, Michael and Savage, Stefan and Voelker, Geoffrey M.},
-  title = {Cumulus: Filesystem backup to the cloud},
-  booktitle=fast,
-  year = {2009},
-  month = feb,
-} 
-
-@inproceedings{meyer11study,
-  author = {Meyer, Dutch T. and Bolosky, William J.},
-  title = {A study of practical deduplication},
-  booktitle=fast,
-  year = {2011},
-  month = feb,
-} 
-
-@inproceedings{khan12rethinking,
-  title={Rethinking erasure codes for cloud file systems: Minimizing I/O for recovery and degraded reads},
-  author={Khan, Osama and Burns, Randal and Plank, James and Pierce, William and Huang, Cheng},
-  booktitle=fast,
-  year={2012},
-  month = feb,
-}
-
-@inproceedings{hu12nccloud,
-  ids={nccloud:fast12},
-  title={{NCCloud: applying network coding for the storage repair in a cloud-of-clouds}},
-  author={Hu, Y. and Chen, H.C.H. and Lee, P.P.C. and Tang, Y.},
-  booktitle=fast,
-  year={2012},
-  month = feb,
-}
-
-@inproceedings{rhea03pond,
-  ids={pond:fast03},
-  title={Pond: the OceanStore prototype},
-  author={Rhea, Sean and Eaton, Patrick and Geels, Dennis and Weatherspoon, Hakim and Zhao, Ben and Kubiatowicz, John},
-  booktitle=fast,
-  year={2003},
-  month = mar,
-}
-
-@inproceedings{zhang16efficient,
-  title={Efficient and available in-memory KV-store with hybrid erasure coding and replication},
-  author={Zhang, Heng and Dong, Mingkai and Chen, Haibo},
-  booktitle=fast,
-  year={2016},
-  month = feb,
-}
 
 @inproceedings{liscov99providing,
   ids={clocc:ecoop99},
@@ -315,7 +179,16 @@
  title = {Auditing to keep online storage services honest},
  booktitle = hotos,
  year = {2007},
+ month = may,
 } 
+
+@inproceedings{mcsherry15scalability,
+  title={Scalability! But at what COST?},
+  author={McSherry, Frank and Isard, Michael and Murray, Derek Gordon},
+  booktitle= hotos,
+  year={2015},
+  month = may,
+}
 
 @inproceedings{weatherspoon02erasure,
   title={Erasure coding vs. replication: A quantitative comparison},
@@ -331,51 +204,6 @@
   year={2008}
 }
 
-
-@article{herlihy90linearizability,
-  ids={linearizability:toplas90},
-  title={{Linearizability: A correctness condition for concurrent objects}},
-  author={Herlihy, Maurice P and Wing, Jeannette M},
-  journal=toplas,
-  volume={12},
-  number={3},
-  pages={463--492},
-  year={1990},
-}
-
-@article{dewitt90gamma,
-  ids={gamma:tkde90},
-  title={{The Gamma database machine project}},
-  author={DeWitt, David J and Ghandeharizadeh, Shahram and Schneider, Donovan A. and Bricker, Allan and Hsiao, Hui-I and Rasmussen, Rick},
-  journal=tkde,
-  volume={2},
-  number={1},
-  pages={44--62},
-  year={1990},
-}
-
-@article{boral90prototyping,
-  ids={bubba:tkde90},
-  title={{Prototyping Bubba, a highly parallel database system}},
-  author={Boral, Haran and Alexander, William and Clay, Larry and Copeland, George and Danforth, Scott and Franklin, Michael and Hart, Brian and Smith, Marc and Valduriez, Patrick},
-  journal=tkde,
-  volume={2},
-  number={1},
-  pages={4--24},
-  year={1990},
-  publisher={IEEE}
-}
-
-@article{mohan86transaction,
-  ids={r:tods86},
-  title={{Transaction management in the R* distributed database management system}},
-  author={Mohan, C and Lindsay, Bruce and Obermarck, Ron},
-  journal=tods,
-  volume={11},
-  number={4},
-  pages={378--396},
-  year={1986},
-}
 
 @article{bernstein99concurrency,
   title={{Concurrency control for step-decomposed transactions}},
@@ -398,14 +226,6 @@
   year={1992},
 }
 
-@article{garcia83using,
-  title={{Using semantic knowledge for transaction processing in a distributed database}},
-  author={Garcia-Molina, Hector},
-  journal=tods,
-  volume={8},
-  number={2},
-  pages={186--213},
-  year={1983},
 }
 
 
@@ -415,7 +235,6 @@
   journal=sigact,
   volume={32},
   number={4},
-  pages={18--25},
   year={2001}
 }
 
@@ -427,28 +246,6 @@
   number={1},
   pages={63--73},
   year={2010},
-}
-
-@article{agrawal87concurrency,
-  title={{Concurrency control performance modeling: alternatives and implications}},
-  author={Agrawal, Rakesh and Carey, Michael J and Livny, Miron},
-  journal=tods,
-  volume={12},
-  number={4},
-  pages={609--654},
-  year={1987},
-}
-
-
-@article{shasha95transaction,
-  ids={chopping:tods95},
-  title={{Transaction chopping: Algorithms and performance studies}},
-  author={Shasha, Dennis and Llirbat, Francois and Simon, Eric and Valduriez, Patrick},
-  journal=tods,
-  volume={20},
-  number={3},
-  pages={325--363},
-  year={1995},
 }
 
 @inproceedings{whitney97high,
@@ -466,17 +263,6 @@
   number={5},
   pages={391--399},
   year={1984},
-}
-
-@article{garcia92main,
-  title={{Main memory database systems: An overview}},
-  author={Garcia-Molina, Hector and Salem, Kenneth},
-  journal=tkde,
-  volume={4},
-  number={6},
-  pages={509--516},
-  year={1992},
-  publisher={IEEE}
 }
 
 @inproceedings{li88multiprocessor,
@@ -504,37 +290,6 @@
   publisher={ACM}
 }
 
-@article{bernstein81concurrency,
-  title={{Concurrency control in distributed database systems}},
-  author={Bernstein, Philip A and Goodman, Nathan},
-  journal=csur,
-  volume={13},
-  number={2},
-  pages={185--221},
-  year={1981},
-  publisher={ACM}
-}
-
-@article{van15paxos,
-  title={Paxos made moderately complex},
-  author={Van Renesse, Robbert and Altinbuken, Deniz},
-  journal=csur,
-  volume={47},
-  number={3},
-  month={February},
-  year={2015},
-  publisher={ACM}
-}
-
-@article{viotti16consistency,
-  author = {Viotti, Paolo and Vukoli\'{c}, Marko},
-  title = {Consistency in non-transactional distributed storage systems},
-  journal = csur,
-  volume = {49},
-  number = {1},
-  month = jul,
-  year = {2016},
-} 
 @book{weikum01transactional,
   title={{Transactional information systems: theory, algorithms, and the practice of concurrency control and recovery}},
   author={Weikum, Gerhard and Vossen, Gottfried},
@@ -551,17 +306,6 @@
  address = {Stanford, CA, USA},
 } 
 
-@article{kung81optimistic,
-  ids={occ:tods81},
-  title={{On optimistic methods for concurrency control}},
-  author={Kung, Hsiang-Tsung and Robinson, John T},
-  journal=tods,
-  volume={6},
-  number={2},
-  pages={213--226},
-  year={1981},
-}
-
 @article{tarjan72depth,
   ids={dfs},
   title={{Depth-first search and linear graph algorithms}},
@@ -571,73 +315,6 @@
   number={2},
   pages={146--160},
   year={1972},
-}
-
-@article{rosenkrantz78system,
-  title={{System level concurrency control for distributed database systems}},
-  author={Rosenkrantz, Daniel J and Stearns, Richard E and Lewis II, Philip M},
-  journal=tods,
-  volume={3},
-  number={2},
-  pages={178--198},
-  year={1978},
-}
-
-@article{gray06consensus,
-  title={{Consensus on transaction commit}},
-  author={Gray, Jim and Lamport, Leslie},
-  journal=tods,
-  volume={31},
-  number={1},
-  pages={133--160},
-  year={2006},
-}
-
-@article{ritchie74unix,
- author = {Ritchie, Dennis M. and Thompson, Ken},
- title = {The {UNIX} time-sharing system},
- journal = cacm,
- volume = {17},
- number = {7},
- month = jul,
- year = {1974},
-} 
-
-@article{lamport78time,
- author = {Leslie Lamport},
- title = {Time, clocks, and the ordering of events in a distributed system},
- journal = cacm,
- year = {1978},
-}
-
-@article{thompson84reflections,
-  title={Reflections on trusting trust},
-  author={Thompson, Ken},
-  journal=cacm,
-  volume=27,
-  number=8,
-  year=1984,
-  month = aug, 
-}
-
-@article{wadler15propositions,
- author = {Wadler, Philip},
- title = {Propositions As Types},
- journal = cacm,
- volume = {58},
- number = {12},
- month = nov,
- year = {2015},
-} 
-
-@article{bessey10few,
-  title={A few billion lines of code later: using static analysis to find bugs in the real world},
-  author={Bessey, Al and Block, Ken and Chelf, Ben and Chou, Andy and Fulton, Bryan and Hallem, Seth and Henri-Gros, Charles and Kamsky, Asya and McPeak, Scott and Engler, Dawson},
-  journal=cacm,
-  volume={53},
-  number={2},
-  year={2010},
-  month = feb,
 }
 
 @article{schneider90implementing,
@@ -928,4 +605,38 @@ howpublished={http://www.tpc.org/tpcc/}
 @misc{cockroachdb,
   title={{CockroachDB}},
   howpublished = {\url{http://www.cockroachlabs.com/}}
+}
+
+@misc{onedrive,
+  title={{OneDrive}},
+  howpublished = {\url{http://www.onedrive.com/}}
+}
+
+@misc{akamai,
+  title={{Akamai}},
+  howpublished = {\url{http://www.akamai.com/}}
+}
+
+@misc{dcfailure1,
+  title={{Microsoft Azure’s southern U.S. data center goes down for hours, impacting Office365 and Active Directory customers}},
+  howpublished = {\url{https://www.geekwire.com/2018/microsoft-azures-southern-u-s-data-center-goes-hours-impacting-office365-active-directory-customers/}}
+}
+
+@misc{dcfailure2,
+  title={{The year in downtime: the top 10 outages of 2013}},
+  howpublished = {\url{https://www.datacenterknowledge.com/archives/2013/12/16/year-downtime-top-10-outages-2013}}
+}
+
+@misc{janusdb,
+  title={{The JanusDB project}},
+  howpublished = {\url{https://github.com/nyu-news/janusdb}}
+}
+@article{dang16paxos,
+  title={Paxos made switch-y},
+  author={Dang, Huynh Tu and Canini, Marco and Pedone, Fernando and Soul{\'e}, Robert},
+  journal=ccr,
+  volume={46},
+  number={2},
+  year={2016},
+  month=apr,
 }
